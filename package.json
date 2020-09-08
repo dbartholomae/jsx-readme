@@ -23,10 +23,16 @@
     "MD",
     "Readme"
   ],
-  "author": "Daniel Bartholomae (daniel@bartholomae.name)",
+  "author": "Daniel Bartholomae <daniel@bartholomae.name> (https://startup-cto.net)",
   "license": "MIT",
   "homepage": "https://dbartholomae.github.io/jsx-readme",
   "repository": "git@github.com:dbartholomae/jsx-readme.git",
+  "bugs": "https://github.com/dbartholomae/jsx-readme/issues",
+  "directories": {
+    "lib": "lib",
+    "doc": "docs",
+    "example": "examples"
+  },
   "dependencies": {
     "jsx-md": "^1.2.0"
   },
