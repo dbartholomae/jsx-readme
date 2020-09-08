@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig.build.json",
     "docs": "typedoc && touch docs/.nojekyll",
-    "lint": "eslint src/**/*.ts src/**/*.tsx examples/**/*.tsx test/**/*.tsx",
+    "lint": "eslint src/**/*.ts src/**/*.tsx examples/**/*.tsx",
     "test": "jest && pkg-ok"
   },
   "engines": {
@@ -34,7 +34,7 @@
     "example": "examples"
   },
   "dependencies": {
-    "jsx-md": "^1.2.0"
+    "jsx-readme": "^1.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
