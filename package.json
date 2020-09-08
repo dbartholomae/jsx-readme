@@ -27,6 +27,9 @@
   "license": "MIT",
   "homepage": "https://dbartholomae.github.io/jsx-readme",
   "repository": "git@github.com:dbartholomae/jsx-readme.git",
+  "dependencies": {
+    "jsx-md": "^1.2.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
