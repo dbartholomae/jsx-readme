@@ -1,37 +1,57 @@
-# jsx-md
+# jsx-readme
 
-[![npm version](https://badge.fury.io/js/jsx-md.svg)](https://npmjs.org/package/jsx-md)
-[![downloads](https://img.shields.io/npm/dw/jsx-md.svg)](https://npmjs.org/package/jsx-md)
-[![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-md.svg)](https://github.com/dbartholomae/jsx-md/issues)
-[![build status](https://github.com/dbartholomae/jsx-md/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-md/actions?query=workflow%3A"Build+and+deploy")
-[![codecov](https://codecov.io/gh/dbartholomae/jsx-md/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-md)
-[![dependency status](https://david-dm.org/dbartholomae/jsx-md.svg?theme=shields.io)](https://david-dm.org/dbartholomae/jsx-md)
-[![devDependency status](https://david-dm.org/dbartholomae/jsx-md/dev-status.svg)](https://david-dm.org/dbartholomae/jsx-md?type=dev)
+[![npm version](https://badge.fury.io/js/jsx-readme.svg)](https://npmjs.org/package/jsx-readme)
+[![downloads](https://img.shields.io/npm/dw/jsx-readme.svg)](https://npmjs.org/package/jsx-readme)
+[![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg)](https://github.com/dbartholomae/jsx-readme/issues)
+[![build status](https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy")
+[![codecov](https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-readme)
+[![semantic release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release#badge)
+[![dependency status](https://david-dm.org/dbartholomae/jsx-readme.svg?theme=shields.io)](https://david-dm.org/dbartholomae/jsx-readme)
+[![devDependency status](https://david-dm.org/dbartholomae/jsx-readme/dev-status.svg)](https://david-dm.org/dbartholomae/jsx-readme?type=dev)
 
-Generate markdown files with a React\-like syntax\.
+Generate Readme files with a React\-like syntax and package\.json\-aware helpers\.
 
-## Usage
+## Installation
+
+Add `jsx-readme` to your `devDependencies` and install it. I recommend using it with `ts-node`. Then all you need to do is add a file like in the example below and run it via `ts-node` whenever you want to create a new version of the `README`.
+
+## Examples
+
+### README.md.tsx
 
 ```tsx
 // We need to tell the JSX transpiler that in this file,
 // instead of React we use the custom createElement and Fragment
-// functions from jsx-md
+// functions from jsx-readme
 /* @jsx MD */
 /* @jsxFrag Fragment */
-import MD, { Component, Fragment, Heading, LineBreak, render, Text } from "jsx-md";
-import { writeFileSync } from "fs";
+import MD, { Component, ExamplesFromPkg, Fragmen, HeaderFromPkg, HomepageFromPkg, renderToFile } from "jsx-readme";
 import pkg from "./package.json";
 
 const Readme: Component = () => (
   <>
-    <Heading level={1}>{pkg.name}</Heading>
-    <Text>{pkg.description}</Text>
-    <LineBreak />
+    {/* Create a header with title, description and badges inferred from package.json */}
+    {/* Enable an additional badge via override. */}
+    <HeaderFromPkg
+      pkg={pkg}
+      overrideBadges={{ codecov: true, githubWorkflow: 'Build and deploy' }}
+    />
+
+    {/* You can use the components from jsx-md to build custom markdown. */}
+    <Heading level={2}>Installation</Heading>
+    Add <InlineCode>jsx-readme</InlineCode> to your <InlineCode>devDependencies</InlineCode> and install it.
+    I recommend using it with <InlineCode>ts-node</InlineCode>. Then all you need to do is add a file like in
+    the example below and run it via <InlineCode>ts-node</InlineCode> whenever you want to create a new version
+    of the <InlineCode>README</InlineCode>.
+    <LineBreak /><LineBreak />
+
+    {/* Create an example section based on all files from the example directory set up in package.json */}
+    <ExamplesFromPkg pkg={pkg} />
+
+    {/* Create a section linking to the homepage from package.json */}
+    <HomepageFromPkg pkg={pkg} />
   </>
 );
 
-// Currently, the rendering function is not always necessary.
-// This might change in the future, though, so do not rely on any
-// intermediate results from creating elements.
-writeFileSync("README.md", render(<Readme />));
+renderToFile("README.md", <Readme />);
 ```

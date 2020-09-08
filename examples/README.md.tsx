@@ -16,40 +16,42 @@ import pkg from "../package.json";
 const Readme: Component = () => (
   <Fragment>
     <Heading level={1}>{pkg.name}</Heading>
-    <Link to="https://npmjs.org/package/jsx-md">
-      <Image src="https://badge.fury.io/js/jsx-md.svg">npm version</Image>
+    <Link to="https://npmjs.org/package/jsx-readme">
+      <Image src="https://badge.fury.io/js/jsx-readme.svg">npm version</Image>
     </Link>
     <LineBreak />
-    <Link to="https://npmjs.org/package/jsx-md">
-      <Image src="https://img.shields.io/npm/dw/jsx-md.svg">downloads</Image>
+    <Link to="https://npmjs.org/package/jsx-readme">
+      <Image src="https://img.shields.io/npm/dw/jsx-readme.svg">
+        downloads
+      </Image>
     </Link>
     <LineBreak />
-    <Link to="https://github.com/dbartholomae/jsx-md/issues">
-      <Image src="https://img.shields.io/github/issues-raw/dbartholomae/jsx-md.svg">
+    <Link to="https://github.com/dbartholomae/jsx-readme/issues">
+      <Image src="https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg">
         open issues
       </Image>
     </Link>
     <LineBreak />
-    <Link to='https://github.com/dbartholomae/jsx-md/actions?query=workflow%3A"Build+and+deploy"'>
-      <Image src="https://github.com/dbartholomae/jsx-md/workflows/Build%20and%20deploy/badge.svg?branch=main">
+    <Link to='https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build+and+deploy"'>
+      <Image src="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main">
         build status
       </Image>
     </Link>
     <LineBreak />
-    <Link to="https://codecov.io/gh/dbartholomae/jsx-md">
-      <Image src="https://codecov.io/gh/dbartholomae/jsx-md/branch/main/graph/badge.svg">
+    <Link to="https://codecov.io/gh/dbartholomae/jsx-readme">
+      <Image src="https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg">
         codecov
       </Image>
     </Link>
     <LineBreak />
-    <Link to="https://david-dm.org/dbartholomae/jsx-md">
-      <Image src="https://david-dm.org/dbartholomae/jsx-md.svg?theme=shields.io">
+    <Link to="https://david-dm.org/dbartholomae/jsx-readme">
+      <Image src="https://david-dm.org/dbartholomae/jsx-readme.svg?theme=shields.io">
         dependency status
       </Image>
     </Link>
     <LineBreak />
-    <Link to="https://david-dm.org/dbartholomae/jsx-md?type=dev">
-      <Image src="https://david-dm.org/dbartholomae/jsx-md/dev-status.svg">
+    <Link to="https://david-dm.org/dbartholomae/jsx-readme?type=dev">
+      <Image src="https://david-dm.org/dbartholomae/jsx-readme/dev-status.svg">
         devDependency status
       </Image>
     </Link>
@@ -62,10 +64,10 @@ const Readme: Component = () => (
     <CodeBlock language="tsx">
       {`// We need to tell the JSX transpiler that in this file,
 // instead of React we use the custom createElement and Fragment
-// functions from jsx-md
+// functions from jsx-readme
 /* @jsx MD */
 /* @jsxFrag Fragment */
-import MD, { Component, Fragment, Heading, LineBreak, render, Text } from "jsx-md";
+import MD, { Component, Fragment, Heading, LineBreak, render, Text } from "jsx-readme";
 import { writeFileSync } from "fs";
 import pkg from "./package.json";
 
