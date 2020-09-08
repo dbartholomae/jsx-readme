@@ -3,5 +3,5 @@
   "plugin": ["typedoc-plugin-param-names", "typedoc-plugin-sourcefile-url"],
   "stripInternal": true,
   "tsconfig": "./tsconfig.build.json",
-  "sourcefile-url-prefix": "https://github.com/dbartholomae/jsx-md/blob/main/src/"
+  "sourcefile-url-prefix": "https://github.com/dbartholomae/jsx-readme/blob/main/src/"
 }
