@@ -2,9 +2,8 @@
  * @packageDocumentation
  * @internal
  */
-import { createElement } from "./createElement";
+import MD, { Component, Fragment } from "jsx-md";
+export { Component, Fragment };
 
-export * from "./elements";
-export * from "./model";
-export * from "./render";
-export default createElement;
+export * from "./renderToFile";
+export default MD;

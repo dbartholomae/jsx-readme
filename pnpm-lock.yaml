@@ -5,6 +5,7 @@ devDependencies:
   '@commitlint/config-conventional': 9.1.2
   '@semantic-release/git': 9.0.0_semantic-release@17.1.1
   '@types/jest': 26.0.10
+  '@types/mock-fs': 4.10.0
   '@types/react': 16.9.49
   '@typescript-eslint/eslint-plugin': 4.1.0_b6bc46430148c1bc3b139457a4312fe7
   '@typescript-eslint/parser': 4.1.0_eslint@7.8.1+typescript@4.0.2
@@ -15,6 +16,7 @@ devDependencies:
   husky: 4.2.5
   jest: 26.4.2
   lint-staged: 10.2.13
+  mock-fs: 4.13.0
   pkg-ok: 2.3.1
   prettier: 2.1.0
   rimraf: 3.0.2
@@ -1013,6 +1015,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
+  /@types/mock-fs/4.10.0:
+    dependencies:
+      '@types/node': 14.6.4
+    dev: true
+    resolution:
+      integrity: sha512-FQ5alSzmHMmliqcL36JqIA4Yyn9jyJKvRSGV3mvPh108VFatX7naJDzSG4fnFQNZFq9dIx0Dzoe6ddflMB2Xkg==
   /@types/node/14.6.0:
     dev: true
     resolution:
@@ -4631,6 +4639,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+  /mock-fs/4.13.0:
+    dev: true
+    resolution:
+      integrity: sha512-DD0vOdofJdoaRNtnWcrXe6RQbpHkPPmtqGq14uRX0F8ZKJ5nv89CVTYl/BZdppDxBDaV0hl75htg3abpEWlPZA==
   /modify-values/1.0.1:
     dev: true
     engines:
@@ -6997,6 +7009,7 @@ specifiers:
   '@commitlint/config-conventional': ^9.1.2
   '@semantic-release/git': ^9.0.0
   '@types/jest': ^26.0.10
+  '@types/mock-fs': ^4.10.0
   '@types/react': ^16.9.49
   '@typescript-eslint/eslint-plugin': ^4.1.0
   '@typescript-eslint/parser': ^4.1.0
@@ -7008,6 +7021,7 @@ specifiers:
   jest: ^26.4.2
   jsx-md: ^1.2.0
   lint-staged: ^10.2.13
+  mock-fs: ^4.13.0
   pkg-ok: ^2.3.1
   prettier: ^2.1.0
   rimraf: ^3.0.2
