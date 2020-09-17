@@ -3,6 +3,7 @@ import MD, { render } from "jsx-md";
 import { BadgesFromPkg } from "./BadgesFromPkg";
 import { GithubIssuesBadge } from "./badges/GithubIssuesBadge";
 import { JsxReadmeBadge } from "./badges/JsxReadmeBadge";
+import { NpmVersionBadge } from "./badges/NpmVersionBadge";
 
 describe("BadgesFromPkg", () => {
   it("shows an npm version badge by default", () => {
@@ -10,17 +11,7 @@ describe("BadgesFromPkg", () => {
       name: "package-name",
     };
     expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-      "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
-    );
-  });
-
-  it("does not show an npm version badge if the package is private", () => {
-    const pkg = {
-      name: "package-name",
-      private: true,
-    };
-    expect(render(<BadgesFromPkg pkg={pkg} />)).not.toContain(
-      "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
+      render(<NpmVersionBadge pkg={pkg} />)
     );
   });
 
@@ -35,9 +26,7 @@ describe("BadgesFromPkg", () => {
       };
       expect(
         render(<BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(
-        "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
-      );
+      ).not.toContain(render(<NpmVersionBadge pkg={pkg} />));
     });
   });
 

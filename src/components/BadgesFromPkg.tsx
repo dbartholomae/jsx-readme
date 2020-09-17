@@ -19,7 +19,7 @@ export function BadgesFromPkg({ pkg, overrideBadges }: Props) {
   const badgesToRender = {
     "github-issues": true,
     "jsx-readme": true,
-    "npm-version": !pkg.private,
+    "npm-version": true,
     ...overrideBadges,
   };
   return (
