@@ -7,7 +7,7 @@ describe("Badge", () => {
     expect(
       render(
         <Badge
-          to="https://npmjs.org/package/package-name"
+          link="https://npmjs.org/package/package-name"
           imageSource="https://badge.fury.io/js/package-name.svg"
         >
           npm package

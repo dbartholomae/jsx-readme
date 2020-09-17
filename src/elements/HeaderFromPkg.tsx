@@ -30,7 +30,7 @@ export const HeaderFromPkg: Component<Props> = ({
   };
   const JsxReadmeBadge = () => (
     <Badge
-      to="https://dbartholomae.github.io/jsx-readme"
+      link="https://dbartholomae.github.io/jsx-readme"
       imageSource="https://img.shields.io/badge/jsx--readme-lightgrey"
     >
       jsx-readme
@@ -38,7 +38,7 @@ export const HeaderFromPkg: Component<Props> = ({
   );
   const NpmVersionBadge = () => (
     <Badge
-      to={`https://npmjs.org/package/${name}`}
+      link={`https://npmjs.org/package/${name}`}
       imageSource={`https://badge.fury.io/js/${name}.svg`}
     >
       npm package

@@ -4,15 +4,15 @@ import MD, { Fragment, Image, LineBreak, Link } from "jsx-md";
 export function Badge({
   children,
   imageSource,
-  to,
+  link,
 }: {
-  to: string;
+  link: string;
   imageSource: string;
   children: string;
 }) {
   return (
     <Fragment>
-      <Link to={to}>
+      <Link to={link}>
         <Image src={imageSource}>{children}</Image>
       </Link>
       <LineBreak />
