@@ -25,7 +25,7 @@ export function BadgesFromPkg({ pkg, overrideBadges }: Props) {
   return (
     <Fragment>
       {badgesToRender["npm-version"] && <NpmVersionBadge pkg={pkg} />}
-      {badgesToRender["github-issues"] && <GithubIssuesBadge />}
+      {badgesToRender["github-issues"] && <GithubIssuesBadge pkg={pkg} />}
       {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
     </Fragment>
   );

@@ -1,9 +1,10 @@
 /* @jsx MD */
 import MD, { render } from "jsx-md";
 import { BadgesFromPkg } from "./BadgesFromPkg";
+import { GithubIssuesBadge } from "./badges/GithubIssuesBadge";
 
 describe("BadgesFromPkg", () => {
-  it("renders a npm version badge by default", () => {
+  it("shows an npm version badge by default", () => {
     const pkg = {
       name: "package-name",
     };
@@ -12,7 +13,7 @@ describe("BadgesFromPkg", () => {
     );
   });
 
-  it("does not render an npm version badge if the package is private", () => {
+  it("does not show an npm version badge if the package is private", () => {
     const pkg = {
       name: "package-name",
       private: true,
@@ -27,7 +28,7 @@ describe("BadgesFromPkg", () => {
       "npm-version": false,
     };
 
-    it("does not render an npm version badge", () => {
+    it("does not show an npm version badge", () => {
       const pkg = {
         name: "package-name",
       };
@@ -47,12 +48,12 @@ describe("BadgesFromPkg", () => {
 
     it("shows a github-issues badge", () => {
       expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-        "[![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg)](https://github.com/dbartholomae/jsx-readme/issues)\n"
+        render(<GithubIssuesBadge pkg={pkg} />)
       );
     });
   });
 
-  it("renders a jsx-readme badge", () => {
+  it("shows a jsx-readme badge", () => {
     const pkg = {
       name: "package-name",
     };
@@ -66,7 +67,7 @@ describe("BadgesFromPkg", () => {
       "jsx-readme": false,
     };
 
-    it("does not render a jsx-readme badge", () => {
+    it("does not show a jsx-readme badge", () => {
       const pkg = {
         name: "package-name",
       };
