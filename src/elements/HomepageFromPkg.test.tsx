@@ -3,6 +3,13 @@ import Md, { render } from "jsx-md";
 import { HomepageFromPkg } from "./HomepageFromPkg";
 
 describe("HomepageFromPkg", () => {
+  it("renders nothing if there is no homepage", () => {
+    const pkg = {
+      name: "test-package",
+    };
+    expect(render(<HomepageFromPkg pkg={pkg} />)).toBe("");
+  });
+
   it("renders a 'Homepage' heading", () => {
     const pkg = {
       homepage: "https://dbartholomae.github.io/jsx-readme",
