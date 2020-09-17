@@ -21,7 +21,7 @@ devDependencies:
   prettier: 2.1.0
   rimraf: 3.0.2
   semantic-release: 17.1.1_semantic-release@17.1.1
-  ts-jest: 26.2.0_jest@26.4.2+typescript@4.0.2
+  ts-jest: 26.3.0_typescript@4.0.2
   tslib: 2.0.1
   typedoc: 0.19.1_typescript@4.0.2
   typedoc-plugin-param-names: 1.0.2_typedoc@0.19.1
@@ -685,7 +685,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.3
       '@types/istanbul-reports': 3.0.0
-      '@types/node': 14.6.0
+      '@types/node': 14.6.4
       '@types/yargs': 15.0.5
       chalk: 4.1.0
     dev: true
@@ -3973,7 +3973,7 @@ packages:
   /jest-util/26.3.0:
     dependencies:
       '@jest/types': 26.3.0
-      '@types/node': 14.6.0
+      '@types/node': 14.6.4
       chalk: 4.1.0
       graceful-fs: 4.2.4
       is-ci: 2.0.0
@@ -6513,13 +6513,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-n5up2e+odkw4dpi8v+sshI8RrbM=
-  /ts-jest/26.2.0_jest@26.4.2+typescript@4.0.2:
+  /ts-jest/26.3.0_typescript@4.0.2:
     dependencies:
       '@types/jest': 26.0.10
       bs-logger: 0.2.6
       buffer-from: 1.1.1
       fast-json-stable-stringify: 2.1.0
-      jest: 26.4.2
       jest-util: 26.3.0
       json5: 2.1.3
       lodash.memoize: 4.1.2
@@ -6534,9 +6533,9 @@ packages:
     hasBin: true
     peerDependencies:
       jest: '>=26 <27'
-      typescript: '>=3.8 <4.0'
+      typescript: '>=3.8 <5.0'
     resolution:
-      integrity: sha512-9+y2qwzXdAImgLSYLXAb/Rhq9+K4rbt0417b8ai987V60g2uoNWBBmMkYgutI7D8Zhu+IbCSHbBtrHxB9d7xyA==
+      integrity: sha512-Jq2uKfx6bPd9+JDpZNMBJMdMQUC3sJ08acISj8NXlVgR2d5OqslEHOR2KHMgwymu8h50+lKIm0m0xj/ioYdW2Q==
   /tslib/1.13.0:
     dev: true
     resolution:
@@ -7026,7 +7025,7 @@ specifiers:
   prettier: ^2.1.0
   rimraf: ^3.0.2
   semantic-release: ^17.1.1
-  ts-jest: ^26.2.0
+  ts-jest: ^26.3.0
   tslib: ^2.0.1
   typedoc: ^0.19.1
   typedoc-plugin-param-names: ^1.0.2
