@@ -1,9 +1,7 @@
 /* @jsx MD */
 import MD, { Fragment } from "jsx-md";
 import { PackageJSON } from "../PackageJSON";
-import { JsxReadmeBadge } from "./badges/JsxReadmeBadge";
-import { NpmVersionBadge } from "./badges/NpmVersionBadge";
-import { GithubIssuesBadge } from "./badges/GithubIssuesBadge";
+import { badges } from "./badges";
 
 export type OverrideBadges = {
   [badgeName: string]: boolean | string;
@@ -16,6 +14,7 @@ interface Props {
 }
 
 export function BadgesFromPkg({ pkg, overrideBadges }: Props) {
+  const badgeNames = Object.keys(badges) as Array<keyof typeof badges>;
   const badgesToRender = {
     "github-issues": true,
     "jsx-readme": true,
@@ -24,9 +23,13 @@ export function BadgesFromPkg({ pkg, overrideBadges }: Props) {
   };
   return (
     <Fragment>
-      {badgesToRender["npm-version"] && <NpmVersionBadge pkg={pkg} />}
-      {badgesToRender["github-issues"] && <GithubIssuesBadge pkg={pkg} />}
-      {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
+      {badgeNames.map((name) => {
+        const Badge = badges[name];
+        if (!badgesToRender[name]) {
+          return null;
+        }
+        return <Badge key={name} pkg={pkg} />;
+      })}
     </Fragment>
   );
 }
