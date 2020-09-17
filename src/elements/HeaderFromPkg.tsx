@@ -1,14 +1,7 @@
 /* @jsx MD */
-import MD, {
-  Component,
-  Fragment,
-  Heading,
-  Image,
-  LineBreak,
-  Link,
-  Text,
-} from "jsx-md";
+import MD, { Component, Fragment, Heading, LineBreak, Text } from "jsx-md";
 import { PackageJSON } from "../PackageJSON";
+import { Badge } from "./Badge";
 
 /** @internal */
 interface Props {
@@ -36,22 +29,20 @@ export const HeaderFromPkg: Component<Props> = ({
     ...overrideBadges,
   };
   const JsxReadmeBadge = () => (
-    <Fragment>
-      <Link to="https://dbartholomae.github.io/jsx-readme">
-        <Image src="https://img.shields.io/badge/jsx--readme-lightgrey">
-          jsx-readme
-        </Image>
-      </Link>
-      <LineBreak />
-    </Fragment>
+    <Badge
+      to="https://dbartholomae.github.io/jsx-readme"
+      imageSource="https://img.shields.io/badge/jsx--readme-lightgrey"
+    >
+      jsx-readme
+    </Badge>
   );
   const NpmVersionBadge = () => (
-    <Fragment>
-      <Link to={`https://npmjs.org/package/${name}`}>
-        <Image src={`https://badge.fury.io/js/${name}.svg`}>npm package</Image>
-      </Link>
-      <LineBreak />
-    </Fragment>
+    <Badge
+      to={`https://npmjs.org/package/${name}`}
+      imageSource={`https://badge.fury.io/js/${name}.svg`}
+    >
+      npm package
+    </Badge>
   );
   return (
     <Fragment>
