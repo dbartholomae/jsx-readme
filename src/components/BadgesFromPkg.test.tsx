@@ -1,69 +1,38 @@
 /* @jsx MD */
 import MD, { render } from "jsx-md";
 import { BadgesFromPkg } from "./BadgesFromPkg";
-import { GithubIssuesBadge } from "./badges/GithubIssuesBadge";
-import { JsxReadmeBadge } from "./badges/JsxReadmeBadge";
-import { NpmVersionBadge } from "./badges/NpmVersionBadge";
+import { badges } from "./badges";
 
 describe("BadgesFromPkg", () => {
-  it("shows an npm version badge by default", () => {
-    const pkg = {
-      name: "package-name",
-    };
-    expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-      render(<NpmVersionBadge pkg={pkg} />)
-    );
-  });
+  it.each(["npm-version", "jsx-readme", "github-issues"])(
+    "shows an %s badge by default",
+    (badgeName) => {
+      const Badge = badges[badgeName as keyof typeof badges];
 
-  describe("with npm-version disabled", () => {
-    const overrideBadges = {
-      "npm-version": false,
-    };
-
-    it("does not show an npm version badge", () => {
       const pkg = {
         name: "package-name",
+        repository: "git@github.com:dbartholomae/jsx-readme.git",
       };
-      expect(
-        render(<BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(render(<NpmVersionBadge pkg={pkg} />));
-    });
-  });
-
-  describe("with a github repository", () => {
-    const pkg = {
-      name: "package-name",
-      repository: "git@github.com:dbartholomae/jsx-readme.git",
-    };
-
-    it("shows a github-issues badge", () => {
       expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-        render(<GithubIssuesBadge pkg={pkg} />)
+        render(<Badge pkg={pkg} />)
       );
-    });
-  });
+    }
+  );
 
-  it("shows a jsx-readme badge", () => {
-    const pkg = {
-      name: "package-name",
-    };
-    expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-      render(<JsxReadmeBadge />)
-    );
-  });
-
-  describe("with jsx-readme disabled", () => {
+  describe.each(Object.keys(badges))("with %s disabled", (badgeName) => {
     const overrideBadges = {
-      "jsx-readme": false,
+      [badgeName]: false,
     };
 
-    it("does not show a jsx-readme badge", () => {
+    const Badge = badges[badgeName as keyof typeof badges];
+
+    it(`does not show a ${badgeName} badge`, () => {
       const pkg = {
         name: "package-name",
       };
       expect(
         render(<BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(render(<JsxReadmeBadge />));
+      ).not.toContain(render(<Badge pkg={pkg} />));
     });
   });
 });
