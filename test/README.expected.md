@@ -63,3 +63,7 @@ const Readme: Component = () => (
 
 renderToFile("./test/README.md", <Readme />);
 ```
+
+## Homepage
+
+You can find more about this on [https://dbartholomae.github.io/jsx-readme](https://dbartholomae.github.io/jsx-readme).
