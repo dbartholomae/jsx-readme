@@ -21,65 +21,67 @@ describe("HeaderFromPkg", () => {
     );
   });
 
-  it("renders a npm version badge by default", () => {
-    const pkg = {
-      name: "package-name",
-    };
-    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
-      "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
-    );
-  });
-
-  it("does not render an npm version badge if the package is private", () => {
-    const pkg = {
-      name: "package-name",
-      private: true,
-    };
-    expect(render(<HeaderFromPkg pkg={pkg} />)).not.toContain(
-      "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
-    );
-  });
-
-  describe("with npm-version disabled", () => {
-    const overrideBadges = {
-      "npm-version": false,
-    };
-
-    it("does not render an npm version badge", () => {
+  describe("badges", () => {
+    it("renders a npm version badge by default", () => {
       const pkg = {
         name: "package-name",
       };
-      expect(
-        render(<HeaderFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(
+      expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
         "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
       );
     });
-  });
 
-  it("renders a jsx-readme badge", () => {
-    const pkg = {
-      name: "package-name",
-    };
-    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
-      "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
-    );
-  });
+    it("does not render an npm version badge if the package is private", () => {
+      const pkg = {
+        name: "package-name",
+        private: true,
+      };
+      expect(render(<HeaderFromPkg pkg={pkg} />)).not.toContain(
+        "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
+      );
+    });
 
-  describe("with jsx-readme disabled", () => {
-    const overrideBadges = {
-      "jsx-readme": false,
-    };
+    describe("with npm-version disabled", () => {
+      const overrideBadges = {
+        "npm-version": false,
+      };
 
-    it("does not render a jsx-readme badge", () => {
+      it("does not render an npm version badge", () => {
+        const pkg = {
+          name: "package-name",
+        };
+        expect(
+          render(<HeaderFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
+        ).not.toContain(
+          "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
+        );
+      });
+    });
+
+    it("renders a jsx-readme badge", () => {
       const pkg = {
         name: "package-name",
       };
-      expect(
-        render(<HeaderFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(
+      expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
         "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
       );
+    });
+
+    describe("with jsx-readme disabled", () => {
+      const overrideBadges = {
+        "jsx-readme": false,
+      };
+
+      it("does not render a jsx-readme badge", () => {
+        const pkg = {
+          name: "package-name",
+        };
+        expect(
+          render(<HeaderFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
+        ).not.toContain(
+          "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
+        );
+      });
     });
   });
 });
