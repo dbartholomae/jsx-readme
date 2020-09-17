@@ -6,6 +6,7 @@ import MD, {
   Image,
   LineBreak,
   Link,
+  Text,
 } from "jsx-md";
 import { PackageJSON } from "../PackageJSON";
 
@@ -27,7 +28,7 @@ interface Props {
  *   '![Alternative text](./image.png "Title")'
  */
 export const HeaderFromPkg: Component<Props> = ({
-  pkg: { name },
+  pkg: { description, name },
   overrideBadges = {},
 }) => {
   const badgesToRender = {
@@ -48,6 +49,10 @@ export const HeaderFromPkg: Component<Props> = ({
     <Fragment>
       <Heading level={1}>{name}</Heading>
       {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
+      <LineBreak />
+      <Text>{description}</Text>
+      <LineBreak />
+      <LineBreak />
     </Fragment>
   );
 };

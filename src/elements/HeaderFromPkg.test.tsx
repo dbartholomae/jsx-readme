@@ -11,6 +11,16 @@ describe("HeaderFromPkg", () => {
     expect(render(<HeaderFromPkg pkg={pkg} />)).toContain("# package-name\n");
   });
 
+  it("renders the package description", () => {
+    const pkg = {
+      name: "package-name",
+      description: "This is a description.",
+    };
+    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
+      "This is a description\\.\n"
+    );
+  });
+
   it("renders a jsx-readme badge", () => {
     const pkg = {
       name: "package-name",
