@@ -10,4 +10,13 @@ describe("HeaderFromPkg", () => {
     };
     expect(render(<HeaderFromPkg pkg={pkg} />)).toContain("# package-name\n");
   });
+
+  it("renders a jsx-readme badge", () => {
+    const pkg = {
+      name: "package-name",
+    };
+    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
+      "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
+    );
+  });
 });

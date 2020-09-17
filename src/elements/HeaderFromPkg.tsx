@@ -1,5 +1,12 @@
 /* @jsx MD */
-import MD, { Component, Fragment, Heading } from "jsx-md";
+import MD, {
+  Component,
+  Fragment,
+  Heading,
+  Image,
+  LineBreak,
+  Link,
+} from "jsx-md";
 import { PackageJSON } from "../PackageJSON";
 
 /** @internal */
@@ -16,8 +23,21 @@ interface Props {
  *   ===
  *   '![Alternative text](./image.png "Title")'
  */
-export const HeaderFromPkg: Component<Props> = ({ pkg: { name } }) => (
-  <Fragment>
-    <Heading level={1}>{name}</Heading>
-  </Fragment>
-);
+export const HeaderFromPkg: Component<Props> = ({ pkg: { name } }) => {
+  const JsxReadmeBadge = () => (
+    <Fragment>
+      <Link to="https://dbartholomae.github.io/jsx-readme">
+        <Image src="https://img.shields.io/badge/jsx--readme-lightgrey">
+          jsx-readme
+        </Image>
+      </Link>
+      <LineBreak />
+    </Fragment>
+  );
+  return (
+    <Fragment>
+      <Heading level={1}>{name}</Heading>
+      <JsxReadmeBadge />
+    </Fragment>
+  );
+};
