@@ -1,5 +1,5 @@
 /* @jsx MD */
-import MD, { Fragment } from "jsx-md";
+import MD, { Component, Fragment } from "jsx-md";
 import { PackageJSON } from "../PackageJSON";
 import { badges } from "./badges";
 
@@ -13,7 +13,10 @@ interface Props {
   pkg: PackageJSON;
 }
 
-export function BadgesFromPkg({ pkg, overrideBadges }: Props) {
+export const BadgesFromPkg: Component<Props> = ({
+  pkg,
+  overrideBadges,
+}: Props) => {
   const badgeNames = Object.keys(badges) as Array<keyof typeof badges>;
   const badgesToRender = {
     "github-issues": true,
@@ -32,4 +35,4 @@ export function BadgesFromPkg({ pkg, overrideBadges }: Props) {
       })}
     </Fragment>
   );
-}
+};

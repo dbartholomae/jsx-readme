@@ -1,9 +1,13 @@
 /* @jsx MD */
-import MD from "jsx-md";
+import MD, { Component } from "jsx-md";
 import { PackageJSON } from "../../PackageJSON";
 import { Badge } from "../Badge";
 
-export const NpmVersionBadge = ({ pkg }: { pkg: PackageJSON }) => {
+interface Props {
+  pkg: PackageJSON;
+}
+
+export const NpmVersionBadge: Component<Props> = ({ pkg }: Props) => {
   if (pkg.private) {
     return null;
   }

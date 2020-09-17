@@ -2,7 +2,6 @@
 import MD, { render } from "jsx-md";
 
 import { HeaderFromPkg } from ".";
-import { BadgesFromPkg } from "./BadgesFromPkg";
 import { Badge } from "./Badge";
 
 describe("HeaderFromPkg", () => {

@@ -2,7 +2,6 @@
 import MD, { render } from "jsx-md";
 import { Badge } from "../Badge";
 import { NpmVersionBadge } from "./NpmVersionBadge";
-import { BadgesFromPkg } from "../BadgesFromPkg";
 
 describe("NpmVersionBadge", () => {
   it("shows an npm version badge", () => {

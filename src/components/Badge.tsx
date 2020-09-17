@@ -1,15 +1,17 @@
 /* @jsx MD */
-import MD, { Fragment, Image, LineBreak, Link } from "jsx-md";
+import MD, { Component, Fragment, Image, LineBreak, Link } from "jsx-md";
 
-export function Badge({
-  children,
-  imageSource,
-  link,
-}: {
+interface Props {
   link: string;
   imageSource: string;
   children: string;
-}) {
+}
+
+export const Badge: Component<Props> = ({
+  children,
+  imageSource,
+  link,
+}: Props) => {
   return (
     <Fragment>
       <Link to={link}>
@@ -18,4 +20,4 @@ export function Badge({
       <LineBreak />
     </Fragment>
   );
-}
+};

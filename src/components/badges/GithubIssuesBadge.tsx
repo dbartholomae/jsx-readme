@@ -1,9 +1,13 @@
 /* @jsx MD */
-import MD from "jsx-md";
+import MD, { Component } from "jsx-md";
 import { Badge } from "../Badge";
 import { PackageJSON } from "../../PackageJSON";
 
-export const GithubIssuesBadge = ({ pkg }: { pkg: PackageJSON }) => {
+interface Props {
+  pkg: PackageJSON;
+}
+
+export const GithubIssuesBadge: Component<Props> = () => {
   const owner = "dbartholomae";
   const repoName = "jsx-readme";
   return (
