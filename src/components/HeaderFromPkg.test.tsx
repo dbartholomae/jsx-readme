@@ -58,6 +58,19 @@ describe("HeaderFromPkg", () => {
       });
     });
 
+    describe("with a github repository", () => {
+      const pkg = {
+        name: "package-name",
+        repository: "git@github.com:dbartholomae/jsx-readme.git",
+      };
+
+      it("shows a github-issues badge", () => {
+        expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
+          "[![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg)](https://github.com/dbartholomae/jsx-readme/issues)\n"
+        );
+      });
+    });
+
     it("renders a jsx-readme badge", () => {
       const pkg = {
         name: "package-name",

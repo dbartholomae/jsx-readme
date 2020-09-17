@@ -25,6 +25,7 @@ export const HeaderFromPkg: Component<Props> = ({
   overrideBadges = {},
 }) => {
   const badgesToRender = {
+    "github-issues": true,
     "jsx-readme": true,
     "npm-version": !pkg.private,
     ...overrideBadges,
@@ -45,10 +46,21 @@ export const HeaderFromPkg: Component<Props> = ({
       npm package
     </Badge>
   );
+  const owner = "dbartholomae";
+  const repoName = "jsx-readme";
+  const GithubIssuesBadge = () => (
+    <Badge
+      link={`https://github.com/${owner}/${repoName}/issues`}
+      imageSource={`https://img.shields.io/github/issues-raw/${owner}/${repoName}.svg`}
+    >
+      open issues
+    </Badge>
+  );
   return (
     <Fragment>
       <Heading level={1}>{pkg.name}</Heading>
       {badgesToRender["npm-version"] && <NpmVersionBadge />}
+      {badgesToRender["github-issues"] && <GithubIssuesBadge />}
       {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
       <LineBreak />
       <Text>{pkg.description}</Text>
