@@ -2,6 +2,7 @@
 import MD, { render } from "jsx-md";
 import { BadgesFromPkg } from "./BadgesFromPkg";
 import { GithubIssuesBadge } from "./badges/GithubIssuesBadge";
+import { JsxReadmeBadge } from "./badges/JsxReadmeBadge";
 
 describe("BadgesFromPkg", () => {
   it("shows an npm version badge by default", () => {
@@ -58,7 +59,7 @@ describe("BadgesFromPkg", () => {
       name: "package-name",
     };
     expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-      "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
+      render(<JsxReadmeBadge />)
     );
   });
 
@@ -73,9 +74,7 @@ describe("BadgesFromPkg", () => {
       };
       expect(
         render(<BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(
-        "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
-      );
+      ).not.toContain(render(<JsxReadmeBadge />));
     });
   });
 });
