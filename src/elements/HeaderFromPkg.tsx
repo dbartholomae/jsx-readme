@@ -45,9 +45,18 @@ export const HeaderFromPkg: Component<Props> = ({
       <LineBreak />
     </Fragment>
   );
+  const NpmVersionBadge = () => (
+    <Fragment>
+      <Link to={`https://npmjs.org/package/${name}`}>
+        <Image src={`https://badge.fury.io/js/${name}.svg`}>npm package</Image>
+      </Link>
+      <LineBreak />
+    </Fragment>
+  );
   return (
     <Fragment>
       <Heading level={1}>{name}</Heading>
+      <NpmVersionBadge />
       {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
       <LineBreak />
       <Text>{description}</Text>

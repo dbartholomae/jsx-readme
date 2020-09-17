@@ -21,6 +21,15 @@ describe("HeaderFromPkg", () => {
     );
   });
 
+  it("renders a npm version badge by default", () => {
+    const pkg = {
+      name: "package-name",
+    };
+    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
+      "[![npm package](https://badge.fury.io/js/package-name.svg)](https://npmjs.org/package/package-name)"
+    );
+  });
+
   it("renders a jsx-readme badge", () => {
     const pkg = {
       name: "package-name",
