@@ -11,6 +11,9 @@ import { PackageJSON } from "../PackageJSON";
 
 /** @internal */
 interface Props {
+  overrideBadges?: {
+    [badgeName: string]: boolean | string;
+  };
   pkg: PackageJSON;
 }
 
@@ -23,7 +26,14 @@ interface Props {
  *   ===
  *   '![Alternative text](./image.png "Title")'
  */
-export const HeaderFromPkg: Component<Props> = ({ pkg: { name } }) => {
+export const HeaderFromPkg: Component<Props> = ({
+  pkg: { name },
+  overrideBadges = {},
+}) => {
+  const badgesToRender = {
+    "jsx-readme": true,
+    ...overrideBadges,
+  };
   const JsxReadmeBadge = () => (
     <Fragment>
       <Link to="https://dbartholomae.github.io/jsx-readme">
@@ -37,7 +47,7 @@ export const HeaderFromPkg: Component<Props> = ({ pkg: { name } }) => {
   return (
     <Fragment>
       <Heading level={1}>{name}</Heading>
-      <JsxReadmeBadge />
+      {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
     </Fragment>
   );
 };

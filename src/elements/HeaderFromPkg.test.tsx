@@ -19,4 +19,21 @@ describe("HeaderFromPkg", () => {
       "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
     );
   });
+
+  describe("with jsx-readme disabled", () => {
+    const overrideBadges = {
+      "jsx-readme": false,
+    };
+
+    it("does not render a jsx-readme badge", () => {
+      const pkg = {
+        name: "package-name",
+      };
+      expect(
+        render(<HeaderFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
+      ).not.toContain(
+        "[![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)\n"
+      );
+    });
+  });
 });
