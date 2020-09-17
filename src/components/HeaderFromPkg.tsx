@@ -21,11 +21,12 @@ interface Props {
  *   '![Alternative text](./image.png "Title")'
  */
 export const HeaderFromPkg: Component<Props> = ({
-  pkg: { description, name },
+  pkg,
   overrideBadges = {},
 }) => {
   const badgesToRender = {
     "jsx-readme": true,
+    "npm-version": !pkg.private,
     ...overrideBadges,
   };
   const JsxReadmeBadge = () => (
@@ -38,19 +39,19 @@ export const HeaderFromPkg: Component<Props> = ({
   );
   const NpmVersionBadge = () => (
     <Badge
-      link={`https://npmjs.org/package/${name}`}
-      imageSource={`https://badge.fury.io/js/${name}.svg`}
+      link={`https://npmjs.org/package/${pkg.name}`}
+      imageSource={`https://badge.fury.io/js/${pkg.name}.svg`}
     >
       npm package
     </Badge>
   );
   return (
     <Fragment>
-      <Heading level={1}>{name}</Heading>
-      <NpmVersionBadge />
+      <Heading level={1}>{pkg.name}</Heading>
+      {badgesToRender["npm-version"] && <NpmVersionBadge />}
       {badgesToRender["jsx-readme"] && <JsxReadmeBadge />}
       <LineBreak />
-      <Text>{description}</Text>
+      <Text>{pkg.description}</Text>
       <LineBreak />
       <LineBreak />
     </Fragment>
