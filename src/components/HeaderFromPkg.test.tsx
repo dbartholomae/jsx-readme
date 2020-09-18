@@ -3,29 +3,25 @@ import MD, { render } from "jsx-md";
 
 import { HeaderFromPkg } from ".";
 import { Badge } from "./Badge";
+import pkg from "../../test/package.json";
+import { JsxReadmeBadge } from "./badges";
 
 describe("HeaderFromPkg", () => {
   it("renders the pkg title into the heading", () => {
-    const pkg = {
-      name: "package-name",
-    };
-    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain("# package-name\n");
+    const name = "package-name";
+    expect(render(<HeaderFromPkg pkg={{ ...pkg, name }} />)).toContain(
+      "# package-name\n"
+    );
   });
 
   it("renders the package description", () => {
-    const pkg = {
-      name: "package-name",
-      description: "This is a description.",
-    };
-    expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
+    const description = "This is a description.";
+    expect(render(<HeaderFromPkg pkg={{ ...pkg, description }} />)).toContain(
       "This is a description\\.\n"
     );
   });
 
   it("renders a jsx-readme badge", () => {
-    const pkg = {
-      name: "package-name",
-    };
     expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
       render(
         <Badge
