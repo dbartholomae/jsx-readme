@@ -50,4 +50,13 @@ describe("GithubIssuesBadge", () => {
 
     expect(render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
   });
+
+  it("shows nothing if the repository is a bitbucket repo", () => {
+    const pkg = {
+      name: "package-name",
+      repository: "bitbucket:user/repo",
+    };
+
+    expect(render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
+  });
 });
