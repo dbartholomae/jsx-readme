@@ -10,12 +10,12 @@ import { CodecovBadge } from "./CodecovBadge";
 export { GithubIssuesBadge, JsxReadmeBadge, NpmVersionBadge };
 
 export const badges = {
-  codecov: CodecovBadge,
-  githubIssues: GithubIssuesBadge,
-  githubWorkflow: GithubWorkflowBadge,
-  jsxReadme: JsxReadmeBadge,
   npmVersion: NpmVersionBadge,
   npmDownloads: NpmDownloadsBadge,
+  githubIssues: GithubIssuesBadge,
+  githubWorkflow: GithubWorkflowBadge,
+  codecov: CodecovBadge,
+  jsxReadme: JsxReadmeBadge,
 } as const;
 
 type Badges = typeof badges;
@@ -23,12 +23,12 @@ export type BadgeName = keyof Badges;
 export const badgeNames = Object.keys(badges) as BadgeName[];
 
 export const defaultBadges: Record<BadgeName, boolean> = {
-  codecov: false,
+  npmVersion: true,
+  npmDownloads: true,
   githubIssues: true,
   githubWorkflow: false,
+  codecov: false,
   jsxReadme: true,
-  npmDownloads: true,
-  npmVersion: true,
 } as const;
 
 export type BadgeOptions = {
