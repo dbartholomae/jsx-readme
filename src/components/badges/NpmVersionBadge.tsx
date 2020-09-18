@@ -3,7 +3,7 @@ import MD, { Component } from "jsx-md";
 import { PackageJSON } from "../../PackageJSON";
 import { Badge } from "../Badge";
 
-interface Props {
+export interface Props {
   pkg: PackageJSON;
 }
 
