@@ -25,6 +25,19 @@ describe("BadgesFromPkg", () => {
     );
   });
 
+  // eslint-disable-next-line jest/expect-expect
+  it("prevents enabling GithubWorkflowBadge without options", () => {
+    render(
+      <BadgesFromPkg
+        pkg={pkg}
+        overrideBadges={{
+          // @ts-expect-error - Should be options object
+          githubWorkflow: true,
+        }}
+      />
+    );
+  });
+
   it.each(["npmVersion", "jsxReadme", "githubIssues"] as const)(
     "shows an %s badge by default",
     (badgeName) => {
