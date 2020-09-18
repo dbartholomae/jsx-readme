@@ -1,23 +1,24 @@
 /* @jsx MD */
-import MD, { Component, Fragment } from "jsx-md";
-import { PackageJSON } from "../PackageJSON";
+import type { Component } from "jsx-md";
+import MD, { Fragment } from "jsx-md";
+import type { PackageJSON } from "../PackageJSON";
 import { badges } from "./badges";
 
-export type OverrideBadges = {
+export interface OverrideBadges {
   [badgeName: string]: boolean | string;
-};
+}
 
 /** @internal */
 interface Props {
-  overrideBadges?: OverrideBadges;
-  pkg: PackageJSON;
+  overrideBadges?: Readonly<OverrideBadges>;
+  pkg: Readonly<PackageJSON>;
 }
 
-export const BadgesFromPkg: Component<Props> = ({
+export const BadgesFromPkg: Component<Readonly<Props>> = ({
   pkg,
   overrideBadges,
-}: Props) => {
-  const badgeNames = Object.keys(badges) as Array<keyof typeof badges>;
+}) => {
+  const badgeNames = Object.keys(badges) as (keyof typeof badges)[];
   const badgesToRender = {
     "github-issues": true,
     "jsx-readme": true,

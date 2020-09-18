@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
@@ -18,6 +19,13 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": [
       2,
       { "ts-expect-error": "allow-with-description" },
+    ],
+    "@typescript-eslint/naming-convention": [
+      2,
+      {
+        selector: "variable",
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+      },
     ],
   },
 };

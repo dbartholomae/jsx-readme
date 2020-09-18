@@ -1,5 +1,6 @@
 /* @jsx MD */
-import MD, { Component } from "jsx-md";
+import type { Component } from "jsx-md";
+import MD from "jsx-md";
 import { Badge } from "../Badge";
 
 export const JsxReadmeBadge: Component = () => (

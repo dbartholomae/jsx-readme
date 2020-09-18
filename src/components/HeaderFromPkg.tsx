@@ -1,12 +1,14 @@
 /* @jsx MD */
-import MD, { Component, Fragment, Heading, LineBreak, Text } from "jsx-md";
-import { PackageJSON } from "../PackageJSON";
-import { BadgesFromPkg, OverrideBadges } from "./BadgesFromPkg";
+import type { Component } from "jsx-md";
+import MD, { Fragment, Heading, LineBreak, Text } from "jsx-md";
+import type { PackageJSON } from "../PackageJSON";
+import type { OverrideBadges } from "./BadgesFromPkg";
+import { BadgesFromPkg } from "./BadgesFromPkg";
 
 /** @internal */
 interface Props {
-  overrideBadges?: OverrideBadges;
-  pkg: PackageJSON;
+  overrideBadges?: Readonly<OverrideBadges>;
+  pkg: Readonly<PackageJSON>;
 }
 
 /**
@@ -18,7 +20,7 @@ interface Props {
  *   ===
  *   '![Alternative text](./image.png "Title")'
  */
-export const HeaderFromPkg: Component<Props> = ({
+export const HeaderFromPkg: Component<Readonly<Props>> = ({
   pkg,
   overrideBadges = {},
 }) => {

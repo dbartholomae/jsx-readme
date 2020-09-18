@@ -1,5 +1,6 @@
 /* @jsx MD */
-import MD, { Component, Fragment, Image, LineBreak, Link } from "jsx-md";
+import type { Component } from "jsx-md";
+import MD, { Fragment, Image, LineBreak, Link } from "jsx-md";
 
 interface Props {
   link: string;
@@ -7,11 +8,11 @@ interface Props {
   children: string;
 }
 
-export const Badge: Component<Props> = ({
+export const Badge: Component<Readonly<Props>> = ({
   children,
   imageSource,
   link,
-}: Props) => {
+}) => {
   return (
     <Fragment>
       <Link to={link}>

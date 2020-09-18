@@ -26,8 +26,8 @@ Add `jsx-readme` to your `devDependencies` and install it. I recommend using it 
 // functions from jsx-readme
 /* @jsx MD */
 /* @jsxFrag Fragment */
+import type { Component } from "jsx-readme";
 import MD, {
-  Component,
   ExamplesFromPkg,
   Fragment,
   HeaderFromPkg,
@@ -62,7 +62,7 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-renderToFile("./test/README.md", <Readme />);
+void renderToFile("./test/README.md", <Readme />);
 ```
 
 ## Homepage

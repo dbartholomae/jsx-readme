@@ -2,7 +2,6 @@
 import MD, { render } from "jsx-md";
 
 import { HeaderFromPkg } from ".";
-import { Badge } from "./Badge";
 import pkg from "../../test/package.json";
 import { JsxReadmeBadge } from "./badges";
 

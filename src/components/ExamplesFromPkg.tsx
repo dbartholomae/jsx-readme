@@ -1,6 +1,7 @@
 /* @jsx Md */
-import Md, { Component, Heading } from "jsx-md";
-import { PackageJSON } from "../PackageJSON";
+import type { Component } from "jsx-md";
+import Md, { Heading } from "jsx-md";
+import type { PackageJSON } from "../PackageJSON";
 
 interface Props {
   pkg: PackageJSON;

@@ -1,10 +1,11 @@
 /* @jsx MD */
-import MD, { Component } from "jsx-md";
+import MD from "jsx-md";
+import type { Component } from "jsx-md";
 import { Badge } from "../Badge";
 import type { PackageJSON, Repository } from "../../PackageJSON";
 
 export interface Props {
-  pkg: PackageJSON;
+  pkg: Readonly<PackageJSON>;
 }
 
 function extractGithubOwnerAndRepo(
@@ -24,7 +25,7 @@ function extractGithubOwnerAndRepo(
   return [owner, repo];
 }
 
-export const GithubIssuesBadge: Component<Props> = ({ pkg }) => {
+export const GithubIssuesBadge: Component<Readonly<Props>> = ({ pkg }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {
     return null;

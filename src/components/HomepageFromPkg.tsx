@@ -1,12 +1,15 @@
 /* @jsx Md */
-import Md, { Component, Fragment, Heading, LineBreak, Link } from "jsx-md";
-import { PackageJSON } from "../PackageJSON";
+import type { Component } from "jsx-md";
+import Md, { Fragment, Heading, LineBreak, Link } from "jsx-md";
+import type { PackageJSON } from "../PackageJSON";
 
 interface Props {
-  pkg: PackageJSON;
+  pkg: Readonly<PackageJSON>;
 }
 
-export const HomepageFromPkg: Component<Props> = ({ pkg: { homepage } }) => {
+export const HomepageFromPkg: Component<Readonly<Props>> = ({
+  pkg: { homepage },
+}) => {
   if (homepage === undefined) {
     return null;
   }

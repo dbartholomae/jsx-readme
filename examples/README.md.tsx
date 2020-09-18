@@ -3,8 +3,8 @@
 // functions from jsx-readme
 /* @jsx MD */
 /* @jsxFrag Fragment */
+import type { Component } from "..";
 import MD, {
-  Component,
   ExamplesFromPkg,
   Fragment,
   HeaderFromPkg,
@@ -39,4 +39,4 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-renderToFile("./test/README.md", <Readme />);
+void renderToFile("./test/README.md", <Readme />);

@@ -1,5 +1,6 @@
 import * as fs from "fs";
-import { MarkdownElement, render } from "jsx-md";
+import type { MarkdownElement } from "jsx-md";
+import { render } from "jsx-md";
 
 /** Renders a markdown element into file. */
 export async function renderToFile(

@@ -6,7 +6,8 @@ describe("README creation script", () => {
     const childProcess = child_process.exec("ts-node ./examples/README.md.tsx");
     await new Promise((resolve, reject) => {
       childProcess.on("exit", (code) => {
-        if (code !== 0) {
+        const SUCCESSFUL_EXIT_CODE = 0;
+        if (code !== SUCCESSFUL_EXIT_CODE) {
           return reject("Fork failed");
         }
         resolve();
