@@ -1,14 +1,10 @@
 /* @jsx MD */
 import type { Component } from "jsx-md";
 import MD from "jsx-md";
-import type { PackageJSON } from "../../PackageJSON";
 import { Badge } from "../Badge";
+import { BadgeProps } from "./utils/BadgeProps";
 
-export interface Props {
-  pkg: Readonly<PackageJSON>;
-}
-
-export const NpmVersionBadge: Component<Readonly<Props>> = ({ pkg }) => {
+export const NpmVersionBadge: Component<Readonly<BadgeProps>> = ({ pkg }) => {
   if (pkg.private !== undefined && pkg.private) {
     return null;
   }
