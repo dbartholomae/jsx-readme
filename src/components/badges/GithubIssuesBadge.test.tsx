@@ -40,6 +40,24 @@ describe("GithubIssuesBadge", () => {
     );
   });
 
+  it("shows a github-issues badge if repository is in npm shortform", () => {
+    const pkg = {
+      name: "package-name",
+      repository: "github:dbartholomae/jsx-readme",
+    };
+
+    expect(render(<GithubIssuesBadge pkg={pkg} />)).toContain(
+      render(
+        <Badge
+          imageSource="https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg"
+          link="https://github.com/dbartholomae/jsx-readme/issues"
+        >
+          open issues
+        </Badge>
+      )
+    );
+  });
+
   it("shows a github-issues badge if repository is an ssh url in a repository object", () => {
     const pkg = {
       name: "package-name",
