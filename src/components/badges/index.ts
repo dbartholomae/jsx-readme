@@ -4,10 +4,10 @@ import { NpmVersionBadge } from "./NpmVersionBadge";
 import { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 
 export const badges = {
-  "github-issues": GithubIssuesBadge,
-  "jsx-readme": JsxReadmeBadge,
-  "npm-version": NpmVersionBadge,
-  "npm-downloads": NpmDownloadsBadge,
+  githubIssues: GithubIssuesBadge,
+  jsxReadme: JsxReadmeBadge,
+  npmVersion: NpmVersionBadge,
+  npmDownloads: NpmDownloadsBadge,
 } as const;
 
 export { GithubIssuesBadge, JsxReadmeBadge, NpmVersionBadge };

@@ -5,7 +5,7 @@ import { badges } from "./badges";
 import pkg from "../../test/package.json";
 
 describe("BadgesFromPkg", () => {
-  it.each(["npm-version", "jsx-readme", "github-issues"])(
+  it.each(["npmVersion", "jsxReadme", "githubIssues"])(
     "shows an %s badge by default",
     (badgeName) => {
       const Badge = badges[badgeName as keyof typeof badges];

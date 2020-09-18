@@ -20,9 +20,10 @@ export const BadgesFromPkg: Component<Readonly<Props>> = ({
 }) => {
   const badgeNames = Object.keys(badges) as (keyof typeof badges)[];
   const badgesToRender = {
-    "github-issues": true,
-    "jsx-readme": true,
-    "npm-version": true,
+    githubIssues: true,
+    jsxReadme: true,
+    npmDownloads: true,
+    npmVersion: true,
     ...overrideBadges,
   };
   return (
