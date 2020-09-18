@@ -23,14 +23,7 @@ describe("HeaderFromPkg", () => {
 
   it("renders a jsx-readme badge", () => {
     expect(render(<HeaderFromPkg pkg={pkg} />)).toContain(
-      render(
-        <Badge
-          imageSource="https://img.shields.io/badge/jsx--readme-lightgrey"
-          link="https://dbartholomae.github.io/jsx-readme"
-        >
-          jsx-readme
-        </Badge>
-      )
+      render(<JsxReadmeBadge />)
     );
   });
 });
