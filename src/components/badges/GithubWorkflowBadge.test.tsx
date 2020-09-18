@@ -28,6 +28,31 @@ describe("GithubWorkflowBadge", () => {
     );
   });
 
+  it("shows a github-workflow badge with a non-default branch", () => {
+    const pkg = {
+      name: "package-name",
+      repository: "github:dbartholomae/jsx-readme",
+    };
+
+    const options = {
+      branch: "master",
+      workflowName: "Build and deploy",
+    };
+
+    expect(
+      render(<GithubWorkflowBadge pkg={pkg} options={options} />)
+    ).toContain(
+      render(
+        <Badge
+          imageSource="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=master"
+          link='https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy"'
+        >
+          build status
+        </Badge>
+      )
+    );
+  });
+
   it("shows nothing if there is no repository", () => {
     const pkg = {
       name: "package-name",
