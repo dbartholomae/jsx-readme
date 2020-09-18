@@ -2,6 +2,7 @@
 import MD, { render } from "jsx-md";
 import { BadgesFromPkg } from "./BadgesFromPkg";
 import { badges } from "./badges";
+import pkg from "../../test/package.json";
 
 describe("BadgesFromPkg", () => {
   it.each(["npm-version", "jsx-readme", "github-issues"])(
@@ -9,10 +10,6 @@ describe("BadgesFromPkg", () => {
     (badgeName) => {
       const Badge = badges[badgeName as keyof typeof badges];
 
-      const pkg = {
-        name: "package-name",
-        repository: "git@github.com:dbartholomae/jsx-readme.git",
-      };
       expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
         render(<Badge pkg={pkg} />)
       );
@@ -27,9 +24,6 @@ describe("BadgesFromPkg", () => {
     const Badge = badges[badgeName as keyof typeof badges];
 
     it(`does not show a ${badgeName} badge`, () => {
-      const pkg = {
-        name: "package-name",
-      };
       expect(
         render(<BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
       ).not.toContain(render(<Badge pkg={pkg} />));
