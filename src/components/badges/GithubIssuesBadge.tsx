@@ -1,11 +1,10 @@
 /* @jsx MD */
-import type { Component } from "jsx-md";
 import MD from "jsx-md";
 import { Badge } from "../Badge";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
-import { BadgeProps } from "./utils/BadgeProps";
+import type { BadgeComponent } from "./utils/BadgeComponent";
 
-export const GithubIssuesBadge: Component<Readonly<BadgeProps>> = ({ pkg }) => {
+export const GithubIssuesBadge: BadgeComponent = ({ pkg }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {
     return null;

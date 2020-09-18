@@ -1,10 +1,9 @@
 /* @jsx MD */
-import type { Component } from "jsx-md";
 import MD from "jsx-md";
 import { Badge } from "../Badge";
-import { BadgeProps } from "./utils/BadgeProps";
+import type { BadgeComponent } from "./utils/BadgeComponent";
 
-export const NpmVersionBadge: Component<Readonly<BadgeProps>> = ({ pkg }) => {
+export const NpmVersionBadge: BadgeComponent = ({ pkg }) => {
   if (pkg.private !== undefined && pkg.private) {
     return null;
   }
