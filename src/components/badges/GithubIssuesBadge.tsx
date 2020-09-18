@@ -1,42 +1,48 @@
 /* @jsx MD */
-import MD from "jsx-md";
 import type { Component } from "jsx-md";
+import MD from "jsx-md";
 import { Badge } from "../Badge";
 import type { PackageJSON, Repository } from "../../PackageJSON";
 
 export interface Props {
   pkg: Readonly<PackageJSON>;
 }
-
-function extractGithubOwnerAndRepo(
-  repository?: Repository | string
-): [string, string] | undefined {
-  if (repository === undefined) {
-    return undefined;
-  }
-  const url = typeof repository === "string" ? repository : repository.url;
-  const ownerRegex = /^git@github\.com:([-\w]+)\/([-\w]+)\.git$/;
-  const regexResult = ownerRegex.exec(url);
-  if (regexResult === null) {
-    return undefined;
-  }
-  const owner = regexResult[1];
-  const repo = regexResult[2];
-  return [owner, repo];
-}
-
 export const GithubIssuesBadge: Component<Readonly<Props>> = ({ pkg }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {
     return null;
   }
-  const [owner, repoName] = ownerAndRepo;
+  const { owner, repo } = ownerAndRepo;
   return (
     <Badge
-      link={`https://github.com/${owner}/${repoName}/issues`}
-      imageSource={`https://img.shields.io/github/issues-raw/${owner}/${repoName}.svg`}
+      link={`https://github.com/${owner}/${repo}/issues`}
+      imageSource={`https://img.shields.io/github/issues-raw/${owner}/${repo}.svg`}
     >
       open issues
     </Badge>
   );
 };
+
+interface OwnerAndRepo {
+  owner: string;
+  repo: string;
+}
+
+function extractGithubOwnerAndRepo(
+  repository?: Repository | string
+): OwnerAndRepo | undefined {
+  if (repository === undefined) {
+    return undefined;
+  }
+  const url = getUrlFromRepository(repository);
+  return getGithubOwnerAndRepoFromUrl(url);
+}
+
+function getUrlFromRepository(repository: Repository | string): string {
+  return typeof repository === "string" ? repository : repository.url;
+}
+
+function getGithubOwnerAndRepoFromUrl(url: string): OwnerAndRepo | undefined {
+  return /^git@github\.com:(?<owner>[-\w]+)\/(?<repo>[-\w]+)\.git$/.exec(url)
+    ?.groups as OwnerAndRepo | undefined;
+}
