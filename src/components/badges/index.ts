@@ -12,7 +12,10 @@ export const badges = {
   npmDownloads: NpmDownloadsBadge,
 } as const;
 
-export const defaultBadges = {
+type BadgeName = keyof typeof badges;
+export const badgeNames = Object.keys(badges) as BadgeName[];
+
+export const defaultBadges: Record<BadgeName, boolean> = {
   githubIssues: true,
   jsxReadme: true,
   npmDownloads: true,
