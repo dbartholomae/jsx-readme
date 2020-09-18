@@ -43,6 +43,10 @@ function getUrlFromRepository(repository: Repository | string): string {
 }
 
 function getGithubOwnerAndRepoFromUrl(url: string): OwnerAndRepo | undefined {
-  return /^git@github\.com:(?<owner>[-\w]+)\/(?<repo>[-\w]+)\.git$/.exec(url)
-    ?.groups as OwnerAndRepo | undefined;
+  const regexResult =
+    /^git@github\.com:(?<owner>[-\w]+)\/(?<repo>[-\w]+)\.git$/.exec(url) ??
+    /^https:\/\/(?:www\.)?github\.com\/(?<owner>[-\w]+)\/(?<repo>[-\w]+)\.git$/.exec(
+      url
+    );
+  return regexResult?.groups as OwnerAndRepo | undefined;
 }
