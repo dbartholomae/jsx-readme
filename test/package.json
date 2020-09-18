@@ -34,7 +34,7 @@
     "example": "examples"
   },
   "dependencies": {
-    "jsx-readme": "^1.2.0"
+    "jsx-md": "^1.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
