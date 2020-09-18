@@ -26,15 +26,6 @@ describe("NpmVersionBadge", () => {
       name: "package-name",
       private: true,
     };
-    expect(render(<NpmVersionBadge pkg={pkg} />)).not.toContain(
-      render(
-        <Badge
-          imageSource="https://badge.fury.io/js/package-name.svg"
-          link="https://npmjs.org/package/package-name"
-        >
-          npm package
-        </Badge>
-      )
-    );
+    expect(render(<NpmVersionBadge pkg={pkg} />)).toBe("");
   });
 });
