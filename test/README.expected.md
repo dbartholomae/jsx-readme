@@ -1,7 +1,7 @@
 # jsx-readme
 
 [![npm package](https://badge.fury.io/js/jsx-readme.svg)](https://npmjs.org/package/jsx-readme)
-[![downloads](https://img.shields.io/npm/dw/jsx-readme.svg)](https://npmjs.org/package/jsx-readme)
+[![downloads](https://img.shields.io/npm/dw/jsx-readme.svg)](https://npm-stat.com/charts.html?package=jsx-readme)
 [![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg)](https://github.com/dbartholomae/jsx-readme/issues)
 [![build status](https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy")
 [![codecov](https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-readme)
