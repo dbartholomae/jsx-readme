@@ -5,4 +5,19 @@ export interface BadgeProps {
   pkg: Readonly<PackageJSON>;
 }
 
-export type BadgeComponent = Component<Readonly<BadgeProps>>;
+export interface BadgePropsWithOptions<Options> {
+  options: Options;
+  pkg: Readonly<PackageJSON>;
+}
+
+export type BadgeComponent<Options = never> = Component<
+  Readonly<
+    [Options] extends [never] ? BadgeProps : BadgePropsWithOptions<Options>
+  >
+>;
+
+export type BadgeComponentOptions<Badge> = Badge extends BadgeComponent<
+  infer Options
+>
+  ? Options
+  : never;

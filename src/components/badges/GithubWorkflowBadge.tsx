@@ -1,21 +1,15 @@
 /* @jsx MD */
-import type { Component } from "jsx-md";
 import MD from "jsx-md";
 import { Badge } from "../Badge";
-import type { PackageJSON } from "../../PackageJSON";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
+import { BadgeComponent } from "./utils/BadgeComponent";
 
-interface Options {
+export interface Options {
   branch?: string;
   workflowName: string;
 }
 
-export interface Props {
-  options: Readonly<Options>;
-  pkg: Readonly<PackageJSON>;
-}
-
-export const GithubWorkflowBadge: Component<Readonly<Props>> = ({
+export const GithubWorkflowBadge: BadgeComponent<Options> = ({
   pkg,
   options: { branch = "main", workflowName },
 }) => {

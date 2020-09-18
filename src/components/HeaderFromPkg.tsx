@@ -2,12 +2,12 @@
 import type { Component } from "jsx-md";
 import MD, { Fragment, Heading, LineBreak, Text } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
-import type { OverrideBadges } from "./BadgesFromPkg";
 import { BadgesFromPkg } from "./BadgesFromPkg";
+import { BadgeOptions } from "./badges";
 
 /** @internal */
 interface Props {
-  overrideBadges?: Readonly<OverrideBadges>;
+  overrideBadges?: Readonly<Partial<BadgeOptions>>;
   pkg: Readonly<PackageJSON>;
 }
 

@@ -20,7 +20,10 @@ const Readme: Component = () => (
     {/* Enable an additional badge via override. */}
     <HeaderFromPkg
       pkg={pkg}
-      overrideBadges={{ codecov: true, githubWorkflow: "Build and deploy" }}
+      overrideBadges={{
+        codecov: true,
+        githubWorkflow: { workflowName: "Build and deploy" },
+      }}
     />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>Installation</Heading>

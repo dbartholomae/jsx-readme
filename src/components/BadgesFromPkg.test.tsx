@@ -1,14 +1,14 @@
 /* @jsx MD */
 import MD, { render } from "jsx-md";
 import { BadgesFromPkg } from "./BadgesFromPkg";
-import { badges } from "./badges";
+import { badges, defaultBadges } from "./badges";
 import pkg from "../../test/package.json";
 
 describe("BadgesFromPkg", () => {
-  it.each(["npmVersion", "jsxReadme", "githubIssues"])(
+  it.each(["npmVersion", "jsxReadme", "githubIssues"] as const)(
     "shows an %s badge by default",
     (badgeName) => {
-      const Badge = badges[badgeName as keyof typeof badges];
+      const Badge = badges[badgeName];
 
       expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
         render(<Badge pkg={pkg} />)
@@ -16,17 +16,16 @@ describe("BadgesFromPkg", () => {
     }
   );
 
-  describe.each(Object.keys(badges))("with %s disabled", (badgeName) => {
-    const overrideBadges = {
-      [badgeName]: false,
-    };
+  describe("with all badges disabled", () => {
+    const overrideBadges = Object.fromEntries(
+      Object.keys(defaultBadges).map((key) => [key, true])
+    );
 
-    const Badge = badges[badgeName as keyof typeof badges];
-
-    it(`does not show a ${badgeName} badge`, () => {
+    it("does not show any badge", () => {
+      const START_OF_A_BADGE = "[[!";
       expect(
         render(<BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />)
-      ).not.toContain(render(<Badge pkg={pkg} />));
+      ).not.toContain(START_OF_A_BADGE);
     });
   });
 });
