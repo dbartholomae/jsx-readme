@@ -21,4 +21,12 @@ describe("GithubIssuesBadge", () => {
       )
     );
   });
+
+  it("shows nothing if there is no repository", () => {
+    const pkg = {
+      name: "package-name",
+    };
+
+    expect(render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
+  });
 });
