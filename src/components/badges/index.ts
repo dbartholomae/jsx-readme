@@ -3,6 +3,8 @@ import { JsxReadmeBadge } from "./JsxReadmeBadge";
 import { NpmVersionBadge } from "./NpmVersionBadge";
 import { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 
+export { GithubIssuesBadge, JsxReadmeBadge, NpmVersionBadge };
+
 export const badges = {
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
@@ -10,4 +12,9 @@ export const badges = {
   npmDownloads: NpmDownloadsBadge,
 } as const;
 
-export { GithubIssuesBadge, JsxReadmeBadge, NpmVersionBadge };
+export const defaultBadges = {
+  githubIssues: true,
+  jsxReadme: true,
+  npmDownloads: true,
+  npmVersion: true,
+} as const;

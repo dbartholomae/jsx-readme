@@ -2,7 +2,7 @@
 import type { Component } from "jsx-md";
 import MD, { Fragment } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
-import { badges } from "./badges";
+import { badges, defaultBadges } from "./badges";
 
 export interface OverrideBadges {
   [badgeName: string]: boolean | string;
@@ -20,10 +20,7 @@ export const BadgesFromPkg: Component<Readonly<Props>> = ({
 }) => {
   const badgeNames = Object.keys(badges) as (keyof typeof badges)[];
   const badgesToRender = {
-    githubIssues: true,
-    jsxReadme: true,
-    npmDownloads: true,
-    npmVersion: true,
+    ...defaultBadges,
     ...overrideBadges,
   };
   return (
