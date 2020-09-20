@@ -8,3 +8,4 @@ export { BadgesFromPkg } from "./BadgesFromPkg";
 export { ExamplesFromPkg } from "./ExamplesFromPkg";
 export { HeaderFromPkg } from "./HeaderFromPkg";
 export { HomepageFromPkg } from "./HomepageFromPkg";
+export { TitleFromPkg } from "./TitleFromPkg";
