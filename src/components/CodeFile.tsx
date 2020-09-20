@@ -8,10 +8,7 @@ interface Props {
   children: string;
 }
 
-export const ExampleFile: Component<Props> = ({
-  children,
-  fileName,
-}: Props) => (
+export const CodeFile: Component<Props> = ({ children, fileName }: Props) => (
   <Fragment>
     <Heading level={3}>{fileName}</Heading>
     <CodeBlock language={path.parse(fileName).ext.slice(1)}>

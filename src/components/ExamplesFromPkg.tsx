@@ -4,7 +4,7 @@ import Md, { Fragment, Heading } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 import * as fs from "fs";
 import * as path from "path";
-import { ExampleFile } from "./ExampleFile";
+import { CodeFile } from "./CodeFile";
 
 interface Props {
   encoding?: BufferEncoding;
@@ -31,9 +31,9 @@ export const ExamplesFromPkg: Component<Props> = ({
     <Fragment>
       <Heading level={2}>Examples</Heading>
       {examples.map(({ fileName, content }) => (
-        <ExampleFile key={fileName} fileName={fileName}>
+        <CodeFile key={fileName} fileName={fileName}>
           {content}
-        </ExampleFile>
+        </CodeFile>
       ))}
     </Fragment>
   );

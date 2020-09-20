@@ -2,7 +2,7 @@
 import Md, { render } from "jsx-md";
 import { ExamplesFromPkg } from "./ExamplesFromPkg";
 import mockFs from "mock-fs";
-import { ExampleFile } from "./ExampleFile";
+import { CodeFile } from "./CodeFile";
 
 describe("ExamplesFromPkg", () => {
   describe("with an examples directory with a json file", () => {
@@ -31,7 +31,7 @@ describe("ExamplesFromPkg", () => {
 
     it("renders the example.json file as an ExampleFile", () => {
       expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
-        render(<ExampleFile fileName="example.json">{"{}"}</ExampleFile>)
+        render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
       );
     });
   });
