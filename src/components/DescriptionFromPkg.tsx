@@ -9,10 +9,15 @@ interface Props {
 
 export const DescriptionFromPkg: Component<Props> = ({
   pkg: { description },
-}: Props) => (
-  <Fragment>
-    <Text>{description}</Text>
-    <LineBreak />
-    <LineBreak />
-  </Fragment>
-);
+}: Props) => {
+  if (description === undefined) {
+    return null;
+  }
+  return (
+    <Fragment>
+      <Text>{description}</Text>
+      <LineBreak />
+      <LineBreak />
+    </Fragment>
+  );
+};

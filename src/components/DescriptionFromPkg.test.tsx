@@ -11,4 +11,11 @@ describe("DescriptionFromPkg", () => {
       render(<DescriptionFromPkg pkg={{ ...pkg, description }} />)
     ).toContain("This is a description\\.\n");
   });
+
+  it("renders nothing if the package has no description", () => {
+    const description = undefined;
+    expect(render(<DescriptionFromPkg pkg={{ ...pkg, description }} />)).toBe(
+      ""
+    );
+  });
 });
