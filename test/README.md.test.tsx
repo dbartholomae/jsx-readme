@@ -1,18 +1,10 @@
 import * as fs from "fs";
-import * as child_process from "child_process";
+import { runTypeScriptFile } from "./utils/runTypeScriptFile";
 
 describe("README creation script", () => {
   it("creates the README file of the repo", async () => {
-    const childProcess = child_process.exec("ts-node ./examples/README.md.tsx");
-    await new Promise((resolve, reject) => {
-      childProcess.on("exit", (code) => {
-        const SUCCESSFUL_EXIT_CODE = 0;
-        if (code !== SUCCESSFUL_EXIT_CODE) {
-          return reject("Fork failed");
-        }
-        resolve();
-      });
-    });
+    const scriptPath = "./examples/README.md.tsx";
+    await runTypeScriptFile(scriptPath);
 
     const expectedFile = fs.readFileSync("./test/README.expected.md", {
       encoding: "utf8",
