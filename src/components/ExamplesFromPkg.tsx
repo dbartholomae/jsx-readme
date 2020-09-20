@@ -23,7 +23,6 @@ export const ExamplesFromPkg: Component<Props> = ({
   const filenames = fs.readdirSync(examplesFolder);
   const examples = filenames.map((fileName) => ({
     fileName,
-    fileType: path.parse(fileName).ext.slice(1),
     content: fs.readFileSync(path.join(examplesFolder, fileName), {
       encoding,
     }),
@@ -31,8 +30,8 @@ export const ExamplesFromPkg: Component<Props> = ({
   return (
     <Fragment>
       <Heading level={2}>Examples</Heading>
-      {examples.map(({ fileName, content, fileType }) => (
-        <ExampleFile key={fileName} fileName={fileName} language={fileType}>
+      {examples.map(({ fileName, content }) => (
+        <ExampleFile key={fileName} fileName={fileName}>
           {content}
         </ExampleFile>
       ))}

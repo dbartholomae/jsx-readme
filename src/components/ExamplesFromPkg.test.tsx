@@ -31,11 +31,7 @@ describe("ExamplesFromPkg", () => {
 
     it("renders the example.json file as an ExampleFile", () => {
       expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
-        render(
-          <ExampleFile fileName="example.json" language="json">
-            {"{}"}
-          </ExampleFile>
-        )
+        render(<ExampleFile fileName="example.json">{"{}"}</ExampleFile>)
       );
     });
   });
