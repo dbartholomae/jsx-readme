@@ -14,6 +14,7 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "npmVersion",
   "npmDownloads",
   "githubIssues",
+  "semanticRelease",
   "jsxReadme",
 ] as const;
 

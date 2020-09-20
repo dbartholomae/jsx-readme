@@ -21,6 +21,7 @@ export const badgeComponents = {
   npmDownloads: NpmDownloadsBadge,
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
+  semanticRelease: SemanticReleaseBadge,
 } as const;
 
 export type BadgeName = keyof typeof badgeComponents;
