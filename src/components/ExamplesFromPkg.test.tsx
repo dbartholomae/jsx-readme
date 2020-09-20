@@ -52,6 +52,26 @@ describe("ExamplesFromPkg", () => {
         render(<ExamplesFromPkg pkg={{ ...pkg, name: "test-package" }} />)
       ).toContain('import something from "test-package";');
     });
+
+    it("does not replace .. imports if replacePackageImportsWithPackageName is false", () => {
+      mockFs({
+        examples: {
+          "example.ts": 'import something from "..";',
+        },
+      });
+
+      expect(
+        render(
+          <ExamplesFromPkg
+            pkg={{
+              ...pkg,
+              name: "test-package",
+            }}
+            replacePackageImportsWithPackageName={false}
+          />
+        )
+      ).toContain('import something from "..";');
+    });
   });
 
   it("renders nothing if directories is not defined", () => {
