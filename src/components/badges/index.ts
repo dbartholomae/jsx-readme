@@ -4,6 +4,7 @@ import { NpmVersionBadge } from "./NpmVersionBadge";
 import { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 import { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 import { CodecovBadge } from "./CodecovBadge";
+import { SemanticReleaseBadge } from "./SemanticReleaseBadge";
 
 export {
   GithubIssuesBadge,
@@ -12,6 +13,7 @@ export {
   NpmDownloadsBadge,
   GithubWorkflowBadge,
   CodecovBadge,
+  SemanticReleaseBadge,
 };
 
 export const badgeComponents = {
