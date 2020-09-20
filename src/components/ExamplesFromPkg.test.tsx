@@ -35,6 +35,12 @@ describe("ExamplesFromPkg", () => {
       );
     });
 
+    it("with latin1 encoding it renders the example.json file as an ExampleFile", () => {
+      expect(render(<ExamplesFromPkg pkg={pkg} encoding="latin1" />)).toContain(
+        render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
+      );
+    });
+
     it("replaces .. imports by imports to the package name", () => {
       mockFs({
         examples: {
