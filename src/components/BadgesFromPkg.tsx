@@ -45,7 +45,7 @@ export const BadgesFromPkg: Component<Readonly<Props>> = ({
   disabledBadges = [],
 }) => {
   const badgesToRender = defaultBadges.filter(
-    (badge) => !disabledBadges?.includes(badge)
+    (badge) => !disabledBadges.includes(badge)
   );
   return (
     <Fragment>
