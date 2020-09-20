@@ -33,9 +33,9 @@ type BadgeName = keyof typeof badgeComponents;
 export const defaultBadges: ReadonlyArray<BadgeName> = [
   "npmVersion",
   "npmDownloads",
+  "githubIssues",
   "dependenciesBadge",
   "devDependenciesBadge",
-  "githubIssues",
   "semanticRelease",
   "jsxReadme",
 ] as const;
