@@ -29,9 +29,11 @@ Add `jsx-readme` to your `devDependencies` and install it. I recommend using it 
 import type { Component } from "jsx-readme";
 import MD, {
   BadgesFromPkg,
+  CodecovBadge,
   DescriptionFromPkg,
   ExamplesFromPkg,
   Fragment,
+  GithubWorkflowBadge,
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
