@@ -1,7 +1,6 @@
 /* @jsx MD */
 import MD, { render } from "jsx-md";
-import { BadgesFromPkg, defaultBadges } from "./BadgesFromPkg";
-import { badgeComponents } from "./badges";
+import { badgeComponents, BadgesFromPkg, defaultBadges } from "./BadgesFromPkg";
 import pkg from "../../test/package.json";
 
 describe("BadgesFromPkg", () => {

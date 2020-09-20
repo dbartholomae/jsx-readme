@@ -9,4 +9,3 @@ export { ExamplesFromPkg } from "./ExamplesFromPkg";
 export { HomepageFromPkg } from "./HomepageFromPkg";
 export { TitleFromPkg } from "./TitleFromPkg";
 export { DescriptionFromPkg } from "./DescriptionFromPkg";
-export { defaultBadges } from "./BadgesFromPkg";
