@@ -1,9 +1,10 @@
 /* @jsx MD */
 import type { Component } from "jsx-md";
-import MD, { Fragment, Heading, LineBreak, Text } from "jsx-md";
+import MD, { Fragment, LineBreak, Text } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 import { BadgesFromPkg } from "./BadgesFromPkg";
 import { BadgeOptions } from "./badges";
+import { TitleFromPkg } from "./TitleFromPkg";
 
 /** @internal */
 interface Props {
@@ -26,7 +27,7 @@ export const HeaderFromPkg: Component<Readonly<Props>> = ({
 }) => {
   return (
     <Fragment>
-      <Heading level={1}>{pkg.name}</Heading>
+      <TitleFromPkg pkg={pkg} />
       <BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />
       <LineBreak />
       <Text>{pkg.description}</Text>
