@@ -5,3 +5,4 @@ export { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 export { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 export { CodecovBadge } from "./CodecovBadge";
 export { SemanticReleaseBadge } from "./SemanticReleaseBadge";
+export { DependenciesBadge } from "./DependenciesBadge";
