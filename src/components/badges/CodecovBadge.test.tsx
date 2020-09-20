@@ -39,4 +39,12 @@ describe("CodecovBadge", () => {
       )
     );
   });
+
+  it("shows nothing if there is no repository", () => {
+    const pkg = {
+      name: "package-name",
+    };
+
+    expect(render(<CodecovBadge pkg={pkg} />)).toBe("");
+  });
 });
