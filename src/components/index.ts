@@ -9,3 +9,4 @@ export { ExamplesFromPkg } from "./ExamplesFromPkg";
 export { HeaderFromPkg } from "./HeaderFromPkg";
 export { HomepageFromPkg } from "./HomepageFromPkg";
 export { TitleFromPkg } from "./TitleFromPkg";
+export { DescriptionFromPkg } from "./DescriptionFromPkg";
