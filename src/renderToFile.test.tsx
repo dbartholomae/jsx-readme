@@ -19,4 +19,11 @@ describe("renderToFile", () => {
     const actualFile = fs.readFileSync(filename, { encoding: "utf-8" });
     expect(actualFile).toBe("Content");
   });
+
+  it("rejects if trying to write to a non-existing folder", async () => {
+    const filename = "non-existing-folder/README.md";
+    await expect(
+      renderToFile(filename, <Fragment>Content</Fragment>)
+    ).rejects.toBeDefined();
+  });
 });
