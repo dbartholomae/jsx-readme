@@ -30,4 +30,12 @@ describe("SemanticReleaseBadge", () => {
     };
     expect(render(<SemanticReleaseBadge pkg={pkg} />)).toBe("");
   });
+
+  it("does not show if there are no devDependencies", () => {
+    const pkg = {
+      name: "package-name",
+      devDependencies: undefined,
+    };
+    expect(render(<SemanticReleaseBadge pkg={pkg} />)).toBe("");
+  });
 });
