@@ -22,4 +22,12 @@ describe("SemanticReleaseBadge", () => {
       )
     );
   });
+
+  it("does not show if semantic-release is not a devDependency", () => {
+    const pkg = {
+      name: "package-name",
+      devDependencies: {},
+    };
+    expect(render(<SemanticReleaseBadge pkg={pkg} />)).toBe("");
+  });
 });
