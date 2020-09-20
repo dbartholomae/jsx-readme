@@ -4,6 +4,7 @@ import MD, { Fragment } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 import {
   DependenciesBadge,
+  DevDependenciesBadge,
   GithubIssuesBadge,
   JsxReadmeBadge,
   NpmDownloadsBadge,
@@ -21,6 +22,7 @@ export const badgeComponents = {
   npmVersion: NpmVersionBadge,
   npmDownloads: NpmDownloadsBadge,
   dependenciesBadge: DependenciesBadge,
+  devDependenciesBadge: DevDependenciesBadge,
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
   semanticRelease: SemanticReleaseBadge,
@@ -32,6 +34,7 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "npmVersion",
   "npmDownloads",
   "dependenciesBadge",
+  "devDependenciesBadge",
   "githubIssues",
   "semanticRelease",
   "jsxReadme",
