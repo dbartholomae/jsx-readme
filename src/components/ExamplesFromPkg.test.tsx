@@ -28,6 +28,12 @@ describe("ExamplesFromPkg", () => {
       expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain("## Examples\n");
     });
 
+    it("renders the filename as heading for each example", () => {
+      expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
+        "### example.json\n"
+      );
+    });
+
     it("renders the content of an file in the examples folder defined in package.json", () => {
       expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
         "```json\n{}\n```"

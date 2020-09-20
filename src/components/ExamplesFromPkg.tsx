@@ -1,9 +1,10 @@
 /* @jsx Md */
 import type { Component } from "jsx-md";
-import Md, { CodeBlock, Fragment, Heading } from "jsx-md";
+import Md, { Fragment, Heading } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 import * as fs from "fs";
 import * as path from "path";
+import { ExampleFile } from "./ExampleFile";
 
 interface Props {
   encoding?: BufferEncoding;
@@ -31,9 +32,9 @@ export const ExamplesFromPkg: Component<Props> = ({
     <Fragment>
       <Heading level={2}>Examples</Heading>
       {examples.map(({ fileName, content, fileType }) => (
-        <CodeBlock key={fileName} language={fileType}>
+        <ExampleFile key={fileName} fileName={fileName} language={fileType}>
           {content}
-        </CodeBlock>
+        </ExampleFile>
       ))}
     </Fragment>
   );
