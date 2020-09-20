@@ -3,6 +3,7 @@ import type { Component } from "jsx-md";
 import MD, { Fragment } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 import {
+  DependenciesBadge,
   GithubIssuesBadge,
   JsxReadmeBadge,
   NpmDownloadsBadge,
@@ -19,6 +20,7 @@ interface Props {
 export const badgeComponents = {
   npmVersion: NpmVersionBadge,
   npmDownloads: NpmDownloadsBadge,
+  dependenciesBadge: DependenciesBadge,
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
   semanticRelease: SemanticReleaseBadge,
@@ -29,6 +31,7 @@ type BadgeName = keyof typeof badgeComponents;
 export const defaultBadges: ReadonlyArray<BadgeName> = [
   "npmVersion",
   "npmDownloads",
+  "dependenciesBadge",
   "githubIssues",
   "semanticRelease",
   "jsxReadme",
