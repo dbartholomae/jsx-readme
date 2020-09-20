@@ -34,5 +34,17 @@ describe("ExamplesFromPkg", () => {
         render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
       );
     });
+
+    it("replaces .. imports by imports to the package name", () => {
+      mockFs({
+        examples: {
+          "example.ts": 'import something from "..";',
+        },
+      });
+
+      expect(
+        render(<ExamplesFromPkg pkg={{ ...pkg, name: "test-package" }} />)
+      ).toContain('import something from "test-package";');
+    });
   });
 });

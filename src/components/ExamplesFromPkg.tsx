@@ -8,12 +8,14 @@ import { CodeFile } from "./CodeFile";
 
 interface Props {
   encoding?: BufferEncoding;
+  replacePackageImportsWithPackageName?: boolean;
   pkg: PackageJSON;
 }
 
 export const ExamplesFromPkg: Component<Props> = ({
   pkg,
   encoding = "utf8",
+  replacePackageImportsWithPackageName = true,
 }) => {
   const examplesFolder = pkg.directories?.example;
   if (examplesFolder === undefined) {
@@ -27,11 +29,25 @@ export const ExamplesFromPkg: Component<Props> = ({
       encoding,
     }),
   }));
+
+  const replacements = replacePackageImportsWithPackageName
+    ? [
+        {
+          find: /from ".."/g,
+          replace: `from "${pkg.name}"`,
+        },
+      ]
+    : [];
+
   return (
     <Fragment>
       <Heading level={2}>Examples</Heading>
       {examples.map(({ fileName, content }) => (
-        <CodeFile key={fileName} fileName={fileName}>
+        <CodeFile
+          key={fileName}
+          fileName={fileName}
+          replacements={replacements}
+        >
           {content}
         </CodeFile>
       ))}

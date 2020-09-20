@@ -13,5 +13,5 @@ describe("README creation script", () => {
       encoding: "utf8",
     });
     expect(actualFile).toBe(expectedFile);
-  }, 10000);
+  }, 20000);
 });
