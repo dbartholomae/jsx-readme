@@ -20,4 +20,15 @@ describe("CodeFile", () => {
       render(<CodeFile fileName="example.json">{"{}\n"}</CodeFile>)
     ).toContain("```json\n{}\n```");
   });
+
+  it("replaces findStr with replaceStr", () => {
+    const replacements = [{ find: /\{\}/g, replace: "replacements" }];
+    expect(
+      render(
+        <CodeFile fileName="example.json" replacements={replacements}>
+          {"{}\n"}
+        </CodeFile>
+      )
+    ).toContain("```json\nreplacements\n```");
+  });
 });
