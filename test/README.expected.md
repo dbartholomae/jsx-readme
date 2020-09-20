@@ -46,11 +46,8 @@ const Readme: Component = () => (
     <BadgesFromPkg pkg={pkg} />
     {/* Add additional badges. */}
     <CodecovBadge pkg={pkg} />
-    <GithubWorkflowBadge
-      options={{ workflowName: "Build and deploy" }}
-      pkg={pkg}
-    />
-    <LineBreak /><LineBreak />
+    <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
+    <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>Installation</Heading>

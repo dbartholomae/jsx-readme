@@ -4,19 +4,16 @@ import { Badge } from "../Badge";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
 import { PackageJSON } from "../../PackageJSON";
 
-export interface Options {
+interface Props {
   branch?: string;
   workflowName: string;
-}
-
-interface Props {
-  options: Options;
   pkg: Readonly<PackageJSON>;
 }
 
 export const GithubWorkflowBadge: Component<Props> = ({
   pkg,
-  options: { branch = "main", workflowName },
+  branch = "main",
+  workflowName,
 }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {

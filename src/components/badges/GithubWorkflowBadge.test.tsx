@@ -10,12 +10,10 @@ describe("GithubWorkflowBadge", () => {
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    const options = {
-      workflowName: "Build and deploy",
-    };
+    const workflowName = "Build and deploy";
 
     expect(
-      render(<GithubWorkflowBadge pkg={pkg} options={options} />)
+      render(<GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />)
     ).toContain(
       render(
         <Badge
@@ -34,13 +32,17 @@ describe("GithubWorkflowBadge", () => {
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    const options = {
-      branch: "master",
-      workflowName: "Build and deploy",
-    };
+    const branch = "master";
+    const workflowName = "Build and deploy";
 
     expect(
-      render(<GithubWorkflowBadge pkg={pkg} options={options} />)
+      render(
+        <GithubWorkflowBadge
+          pkg={pkg}
+          branch={branch}
+          workflowName={workflowName}
+        />
+      )
     ).toContain(
       render(
         <Badge
@@ -58,13 +60,11 @@ describe("GithubWorkflowBadge", () => {
       name: "package-name",
     };
 
-    const options = {
-      workflowName: "Build and deploy",
-    };
+    const workflowName = "Build and deploy";
 
-    expect(render(<GithubWorkflowBadge pkg={pkg} options={options} />)).toBe(
-      ""
-    );
+    expect(
+      render(<GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />)
+    ).toBe("");
   });
 
   it("shows nothing if the repository is a bitbucket repo", () => {
@@ -73,12 +73,10 @@ describe("GithubWorkflowBadge", () => {
       repository: "bitbucket:user/repo",
     };
 
-    const options = {
-      workflowName: "Build and deploy",
-    };
+    const workflowName = "Build and deploy";
 
-    expect(render(<GithubWorkflowBadge pkg={pkg} options={options} />)).toBe(
-      ""
-    );
+    expect(
+      render(<GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />)
+    ).toBe("");
   });
 });
