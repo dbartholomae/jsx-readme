@@ -1,10 +1,11 @@
 /* @jsx MD */
 import type { Component } from "jsx-md";
-import MD, { Fragment, LineBreak, Text } from "jsx-md";
+import MD, { Fragment, LineBreak } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 import { BadgesFromPkg } from "./BadgesFromPkg";
 import { BadgeOptions } from "./badges";
 import { TitleFromPkg } from "./TitleFromPkg";
+import { DescriptionFromPkg } from "./DescriptionFromPkg";
 
 /** @internal */
 interface Props {
@@ -30,9 +31,7 @@ export const HeaderFromPkg: Component<Readonly<Props>> = ({
       <TitleFromPkg pkg={pkg} />
       <BadgesFromPkg pkg={pkg} overrideBadges={overrideBadges} />
       <LineBreak />
-      <Text>{pkg.description}</Text>
-      <LineBreak />
-      <LineBreak />
+      <DescriptionFromPkg pkg={pkg} />
     </Fragment>
   );
 };
