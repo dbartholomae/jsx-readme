@@ -1,11 +1,15 @@
 /* @jsx MD */
-import MD from "jsx-md";
+import MD, { Component } from "jsx-md";
 import { Badge } from "../Badge";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
-import { BadgeComponent } from "./utils/BadgeComponent";
+import { PackageJSON } from "../../PackageJSON";
 
-export const CodecovBadge: BadgeComponent = ({ pkg }) => {
-  const branch = "main";
+interface Props {
+  pkg: Readonly<PackageJSON>;
+  branch?: string;
+}
+
+export const CodecovBadge: Component<Props> = ({ pkg, branch = "main" }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {
     return null;
