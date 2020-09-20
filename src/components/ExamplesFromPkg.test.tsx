@@ -47,4 +47,22 @@ describe("ExamplesFromPkg", () => {
       ).toContain('import something from "test-package";');
     });
   });
+
+  it("renders nothing if directories is not defined", () => {
+    const pkg = {
+      name: "test-package",
+      directories: undefined,
+    };
+    expect(render(<ExamplesFromPkg pkg={pkg} />)).toBe("");
+  });
+
+  it("renders nothing if example directory is not defined", () => {
+    const pkg = {
+      name: "test-package",
+      directories: {
+        example: undefined,
+      },
+    };
+    expect(render(<ExamplesFromPkg pkg={pkg} />)).toBe("");
+  });
 });
