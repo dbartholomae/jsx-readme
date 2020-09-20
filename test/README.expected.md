@@ -28,23 +28,31 @@ Add `jsx-readme` to your `devDependencies` and install it. I recommend using it 
 /* @jsxFrag Fragment */
 import type { Component } from "jsx-readme";
 import MD, {
+  BadgesFromPkg,
+  DescriptionFromPkg,
   ExamplesFromPkg,
   Fragment,
-  HeaderFromPkg,
   HomepageFromPkg,
   renderToFile,
+  TitleFromPkg,
 } from "jsx-readme";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "../test/package.json";
 
 const Readme: Component = () => (
   <Fragment>
-    {/* Create a header with title, description and badges inferred from package.json */}
-    {/* Enable an additional badge via override. */}
-    <HeaderFromPkg
+    {/* Create a header with title, badges and description inferred from package.json */}
+    <TitleFromPkg pkg={pkg} />
+    <BadgesFromPkg
       pkg={pkg}
-      overrideBadges={{ codecov: true, githubWorkflow: "Build and deploy" }}
+      overrideBadges={{
+        /* Enable additional badges via override. */
+        codecov: true,
+        githubWorkflow: { workflowName: "Build and deploy" },
+      }}
     />
+    <LineBreak />
+    <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>Installation</Heading>
     Add <InlineCode>jsx-readme</InlineCode> to your{" "}
