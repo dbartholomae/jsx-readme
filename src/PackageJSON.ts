@@ -1,6 +1,9 @@
 export interface PackageJSON {
   description?: string;
   devDependencies?: Record<string, unknown>;
+  directories?: {
+    example?: string;
+  };
   homepage?: string;
   name: string;
   private?: boolean;
