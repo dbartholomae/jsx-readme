@@ -7,7 +7,14 @@ import { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 import { NeverFallback } from "./utils/NeverFallback";
 import { CodecovBadge } from "./CodecovBadge";
 
-export { GithubIssuesBadge, JsxReadmeBadge, NpmVersionBadge };
+export {
+  GithubIssuesBadge,
+  JsxReadmeBadge,
+  NpmVersionBadge,
+  NpmDownloadsBadge,
+  GithubWorkflowBadge,
+  CodecovBadge,
+};
 
 export const badges = {
   npmVersion: NpmVersionBadge,
