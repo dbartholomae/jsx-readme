@@ -6,3 +6,4 @@ export { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 export { CodecovBadge } from "./CodecovBadge";
 export { SemanticReleaseBadge } from "./SemanticReleaseBadge";
 export { DependenciesBadge } from "./DependenciesBadge";
+export { DevDependenciesBadge } from "./DevDependenciesBadge";
