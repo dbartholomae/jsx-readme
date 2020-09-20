@@ -6,9 +6,11 @@
 import type { Component } from "..";
 import MD, {
   BadgesFromPkg,
+  CodecovBadge,
   DescriptionFromPkg,
   ExamplesFromPkg,
   Fragment,
+  GithubWorkflowBadge,
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
@@ -20,13 +22,12 @@ const Readme: Component = () => (
   <Fragment>
     {/* Create a header with title, badges and description inferred from package.json */}
     <TitleFromPkg pkg={pkg} />
-    <BadgesFromPkg
+    <BadgesFromPkg pkg={pkg} />
+    {/* Add additional badges. */}
+    <CodecovBadge pkg={pkg} />
+    <GithubWorkflowBadge
+      options={{ workflowName: "Build and deploy" }}
       pkg={pkg}
-      overrideBadges={{
-        /* Enable additional badges via override. */
-        codecov: true,
-        githubWorkflow: { workflowName: "Build and deploy" },
-      }}
     />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
