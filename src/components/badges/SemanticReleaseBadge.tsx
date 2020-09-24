@@ -1,13 +1,9 @@
 /* @jsx MD */
-import MD, { Component } from "jsx-md";
+import MD from "jsx-md";
 import { Badge } from "../Badge";
-import { PackageJSON } from "../../PackageJSON";
+import { BadgeComponent } from "./utils/BadgeComponent";
 
-export interface Props {
-  pkg: Readonly<PackageJSON>;
-}
-
-export const SemanticReleaseBadge: Component<Props> = ({ pkg }) => {
+export const SemanticReleaseBadge: BadgeComponent = ({ pkg }) => {
   if (pkg.devDependencies?.["semantic-release"] === undefined) {
     return null;
   }
