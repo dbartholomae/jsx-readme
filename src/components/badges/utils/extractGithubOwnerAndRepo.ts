@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @internal
+ */
+
 import { Repository } from "../../../PackageJSON";
 import { extractFirstMatch } from "./extractFirstMatch";
 

@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @internal
+ */
+
 import { extractGithubOwnerAndRepo } from "./extractGithubOwnerAndRepo";
 import { Repository } from "../../../PackageJSON";
 

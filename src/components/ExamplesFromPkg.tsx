@@ -6,15 +6,19 @@ import * as fs from "fs";
 import * as path from "path";
 import { CodeFile } from "./CodeFile";
 
+/** @internal */
 interface Props {
   encoding?: BufferEncoding;
   replacePackageImportsWithPackageName?: boolean;
   pkg: PackageJSON;
 }
 
+/** Show all files from the example directory defined in package.json.² */
 export const ExamplesFromPkg: Component<Props> = ({
   pkg,
+  /** The encoding to use for loading all files. */
   encoding = "utf8",
+  /** Whether to replace all imports from '..' with imports from 'package-name' */
   replacePackageImportsWithPackageName = true,
 }) => {
   const examplesFolder = pkg.directories?.example;

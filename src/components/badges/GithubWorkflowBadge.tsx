@@ -4,12 +4,14 @@ import { Badge } from "../Badge";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
 import { PackageJSON } from "../../PackageJSON";
 
+/** @internal */
 interface Props {
   branch?: string;
   workflowName: string;
   pkg: Readonly<PackageJSON>;
 }
 
+/** Display a badge with the status of a GitHub Workflow */
 export const GithubWorkflowBadge: Component<Props> = ({
   pkg,
   branch = "main",

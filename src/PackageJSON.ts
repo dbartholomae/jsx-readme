@@ -1,3 +1,7 @@
+/**
+ * @packageDocumentation
+ * @internal
+ */
 export interface PackageJSON {
   description?: string;
   devDependencies?: Record<string, unknown>;

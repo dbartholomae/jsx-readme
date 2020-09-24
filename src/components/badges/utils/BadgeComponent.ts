@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @internal
+ */
+
 import { Component } from "jsx-md";
 import { PackageJSON } from "../../../PackageJSON";
 

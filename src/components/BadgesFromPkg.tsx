@@ -18,6 +18,7 @@ interface Props {
   pkg: Readonly<PackageJSON>;
 }
 
+/** @internal */
 export const badgeComponents = {
   npmVersion: NpmVersionBadge,
   npmDownloads: NpmDownloadsBadge,
@@ -30,6 +31,7 @@ export const badgeComponents = {
 
 type BadgeName = keyof typeof badgeComponents;
 
+/** @internal */
 export const defaultBadges: ReadonlyArray<BadgeName> = [
   "npmVersion",
   "npmDownloads",
@@ -40,8 +42,13 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "jsxReadme",
 ] as const;
 
+/** Renders a list of badges that can be inferred from `package.json`. */
 export const BadgesFromPkg: Component<Readonly<Props>> = ({
   pkg,
+  /**
+   * A list of badge names to not include,
+   * even if they could be inferred from package.json
+   */
   disabledBadges = [],
 }) => {
   const badgesToRender = defaultBadges.filter(

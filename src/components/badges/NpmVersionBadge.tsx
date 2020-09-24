@@ -3,6 +3,7 @@ import MD from "jsx-md";
 import { Badge } from "../Badge";
 import type { BadgeComponent } from "./utils/BadgeComponent";
 
+/** Display a badge with the most recent version of this package on npm. */
 export const NpmVersionBadge: BadgeComponent = ({ pkg }) => {
   if (pkg.private !== undefined && pkg.private) {
     return null;

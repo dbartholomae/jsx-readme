@@ -1,3 +1,8 @@
+/**
+ * @packageDocumentation
+ * @internal
+ */
+
 export function extractFirstMatch(
   str: string,
   extractionRegexes: RegExp[]

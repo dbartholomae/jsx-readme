@@ -1,5 +1,9 @@
 /* istanbul ignore file */
 
+/**
+ * @packageDocumentation
+ * @internal
+ */
 export { GithubIssuesBadge } from "./GithubIssuesBadge";
 export { JsxReadmeBadge } from "./JsxReadmeBadge";
 export { NpmVersionBadge } from "./NpmVersionBadge";

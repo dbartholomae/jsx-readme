@@ -3,10 +3,12 @@ import type { Component } from "jsx-md";
 import Md, { Fragment, Heading, LineBreak, Link } from "jsx-md";
 import type { PackageJSON } from "../PackageJSON";
 
+/** @internal */
 interface Props {
   pkg: Readonly<PackageJSON>;
 }
 
+/** Display a section linking to the homepage defined in package.json */
 export const HomepageFromPkg: Component<Readonly<Props>> = ({
   pkg: { homepage },
 }) => {

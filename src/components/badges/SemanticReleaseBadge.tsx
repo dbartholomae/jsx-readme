@@ -3,6 +3,7 @@ import MD from "jsx-md";
 import { Badge } from "../Badge";
 import { BadgeComponent } from "./utils/BadgeComponent";
 
+/** Display a badge explaining that this repo uses https://github.com/semantic-release/semantic-release */
 export const SemanticReleaseBadge: BadgeComponent = ({ pkg }) => {
   if (pkg.devDependencies?.["semantic-release"] === undefined) {
     return null;

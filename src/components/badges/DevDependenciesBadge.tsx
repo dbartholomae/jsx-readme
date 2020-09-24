@@ -4,6 +4,7 @@ import { Badge } from "../Badge";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
 import type { BadgeComponent } from "./utils/BadgeComponent";
 
+/** Display a badge showing out-of-date status of devDependencies via https://david-dm.org/ */
 export const DevDependenciesBadge: BadgeComponent = ({ pkg }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {

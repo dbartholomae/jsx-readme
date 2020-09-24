@@ -4,6 +4,7 @@ import { Badge } from "../Badge";
 import { extractGithubOwnerAndRepo } from "./utils/extractGithubOwnerAndRepo";
 import type { BadgeComponent } from "./utils/BadgeComponent";
 
+/** Show a badge with the count of open issues on GitHub */
 export const GithubIssuesBadge: BadgeComponent = ({ pkg }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
   if (ownerAndRepo === undefined) {
