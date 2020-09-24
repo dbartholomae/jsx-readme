@@ -46,15 +46,19 @@ export const ExamplesFromPkg: Component<Props> = ({
   return (
     <Fragment>
       <Heading level={2}>Examples</Heading>
-      {examples.map(({ fileName, content }) => (
-        <CodeFile
-          key={fileName}
-          fileName={fileName}
-          replacements={replacements}
-        >
-          {content}
-        </CodeFile>
-      ))}
+      {examples
+        .sort(({ fileName: fileNameA }, { fileName: fileNameB }) =>
+          fileNameA.localeCompare(fileNameB, "en", { sensitivity: "base" })
+        )
+        .map(({ fileName, content }) => (
+          <CodeFile
+            key={fileName}
+            fileName={fileName}
+            replacements={replacements}
+          >
+            {content}
+          </CodeFile>
+        ))}
     </Fragment>
   );
 };

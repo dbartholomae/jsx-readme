@@ -74,6 +74,35 @@ describe("ExamplesFromPkg", () => {
     });
   });
 
+  describe("with an examples directory 3 files", () => {
+    const pkg = {
+      name: "test-package",
+      directories: {
+        example: "examples",
+      },
+    };
+
+    beforeEach(() => {
+      mockFs({
+        examples: {
+          "a.json": "{}",
+          "c.json": "{}",
+          "B.json": "{}",
+        },
+      });
+    });
+
+    afterEach(() => {
+      mockFs.restore();
+    });
+
+    it("orders the files alphabetically by lower-case", () => {
+      expect(render(<ExamplesFromPkg pkg={pkg} />)).toMatch(
+        /.*a\.json.*B\.json.*c\.json.*/s
+      );
+    });
+  });
+
   it("renders nothing if directories is not defined", () => {
     const pkg = {
       name: "test-package",
