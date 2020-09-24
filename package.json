@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig.build.json",
-    "docs": "typedoc && touch docs/.nojekyll",
+    "docs": "typedoc && touch docs/.nojekyll && ts-node examples/README.md.tsx",
     "lint": "eslint src/**/*.ts src/**/*.tsx examples/**/*.tsx test/**/*.tsx",
     "test": "jest && pkg-ok",
     "watch": "tsc -w -p tsconfig.build.json"
