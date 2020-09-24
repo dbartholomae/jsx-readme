@@ -18,6 +18,76 @@ Add `jsx-readme` to your `devDependencies` and install it. I recommend using it 
 
 ## Examples
 
+### package.json
+
+```json
+{
+  "name": "jsx-readme",
+  "version": "0.0.0",
+  "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib && tsc -p tsconfig.build.json",
+    "docs": "typedoc && touch docs/.nojekyll",
+    "lint": "eslint src/**/*.ts src/**/*.tsx examples/**/*.tsx",
+    "test": "jest && pkg-ok"
+  },
+  "engines": {
+    "node": ">=12.4.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "Markdown",
+    "generator",
+    "JSX",
+    "MD",
+    "Readme"
+  ],
+  "author": "Daniel Bartholomae <daniel@bartholomae.name> (https://startup-cto.net)",
+  "license": "MIT",
+  "homepage": "https://dbartholomae.github.io/jsx-readme",
+  "repository": "git@github.com:dbartholomae/jsx-readme.git",
+  "bugs": "https://github.com/dbartholomae/jsx-readme/issues",
+  "directories": {
+    "lib": "lib",
+    "doc": "docs",
+    "example": "examples"
+  },
+  "dependencies": {
+    "jsx-md": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@semantic-release/git": "^9.0.0",
+    "@types/jest": "^26.0.10",
+    "@types/react": "^16.9.49",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.2.13",
+    "pkg-ok": "^2.3.1",
+    "prettier": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.1.1",
+    "ts-jest": "^26.2.0",
+    "tslib": "^2.0.1",
+    "typedoc": "^0.19.1",
+    "typedoc-plugin-param-names": "^1.0.2",
+    "typedoc-plugin-sourcefile-url": "^1.0.6",
+    "typescript": "^4.0.2"
+  }
+}
+```
+
 ### README.md.tsx
 
 ```tsx
@@ -39,7 +109,7 @@ import MD, {
   TitleFromPkg,
 } from "jsx-readme";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
-import pkg from "../test/package.json";
+import pkg from "./package.json";
 
 const Readme: Component = () => (
   <Fragment>

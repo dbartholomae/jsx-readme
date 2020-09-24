@@ -2,7 +2,7 @@
 import MD, { render } from "jsx-md";
 
 import { TitleFromPkg } from ".";
-import pkg from "../../test/package.json";
+import pkg from "../../examples/package.json";
 
 describe("TitleFromPkg", () => {
   it("renders the pkg title", () => {

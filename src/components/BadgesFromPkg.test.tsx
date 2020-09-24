@@ -1,7 +1,7 @@
 /* @jsx MD */
 import MD, { render } from "jsx-md";
 import { badgeComponents, BadgesFromPkg, defaultBadges } from "./BadgesFromPkg";
-import pkg from "../../test/package.json";
+import pkg from "../../examples/package.json";
 
 describe("BadgesFromPkg", () => {
   it.each(["npmVersion", "jsxReadme", "githubIssues"] as const)(

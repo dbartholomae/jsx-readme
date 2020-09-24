@@ -16,7 +16,7 @@ import MD, {
   TitleFromPkg,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
-import pkg from "../test/package.json";
+import pkg from "./package.json";
 
 const Readme: Component = () => (
   <Fragment>
