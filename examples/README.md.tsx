@@ -45,4 +45,4 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-void renderToFile("./test/README.md", <Readme />);
+void renderToFile("./README.md", <Readme />);

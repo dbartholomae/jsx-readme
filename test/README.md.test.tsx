@@ -9,7 +9,7 @@ describe("README creation script", () => {
     const expectedFile = fs.readFileSync("./test/README.expected.md", {
       encoding: "utf8",
     });
-    const actualFile = fs.readFileSync("./test/README.md", {
+    const actualFile = fs.readFileSync("./README.md", {
       encoding: "utf8",
     });
     expect(actualFile).toBe(expectedFile);
