@@ -12,7 +12,7 @@
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"ms-vscode.vscode-typescript-tslint-plugin"
-	]
+	],
 
-	"postCreateCommand": "pnpm install",
+	"postCreateCommand": "pnpm install"
 }
