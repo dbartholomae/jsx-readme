@@ -67,7 +67,7 @@ only merge a PR if:
   with scopes being limited to the names of the individual packages
   (e. g. `feat(compose): add typing for more than 6 parameters`)
 * The code is following our linting guidelines as defined via ESLint rules in
-  each project (run `rush lint` to check)
+  each project (run `npm lint` to check)
 * All tests pass, and the code has 100% test coverage (run `npm test` to check).
   If it does not make sense to cover a certain line of code, you can use
   a `/* istanbul ignore next */` comment.
