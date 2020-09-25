@@ -26,6 +26,8 @@ jobs:
         version: ^5.5.4
     - name: Install
       run: pnpm install
+    - name: Build
+      run: pnpm run build
     - name: Lint
       run: pnpm run lint
     - name: Run unit tests
