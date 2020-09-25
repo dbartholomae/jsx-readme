@@ -8,6 +8,7 @@ import {
   GithubIssuesBadge,
   JsxReadmeBadge,
   NpmDownloadsBadge,
+  NpmBundleSizeBadge,
   NpmVersionBadge,
   SemanticReleaseBadge,
 } from "./badges";
@@ -22,6 +23,7 @@ interface Props {
 export const badgeComponents = {
   npmVersion: NpmVersionBadge,
   npmDownloads: NpmDownloadsBadge,
+  npmBundleSize: NpmBundleSizeBadge,
   dependenciesBadge: DependenciesBadge,
   devDependenciesBadge: DevDependenciesBadge,
   githubIssues: GithubIssuesBadge,
@@ -32,9 +34,11 @@ export const badgeComponents = {
 type BadgeName = keyof typeof badgeComponents;
 
 /** @internal */
+/* This array's order determines the order in which components are displayed */
 export const defaultBadges: ReadonlyArray<BadgeName> = [
   "npmVersion",
   "npmDownloads",
+  "npmBundleSize",
   "githubIssues",
   "dependenciesBadge",
   "devDependenciesBadge",

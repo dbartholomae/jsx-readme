@@ -2,6 +2,7 @@
 
 [![npm package](https://badge.fury.io/js/jsx-readme.svg)](https://npmjs.org/package/jsx-readme)
 [![downloads](https://img.shields.io/npm/dw/jsx-readme.svg)](https://npm-stat.com/charts.html?package=jsx-readme)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/jsx-readme.svg)](https://bundlephobia.com/result?p=jsx-readme)
 [![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg)](https://github.com/dbartholomae/jsx-readme/issues)
 [![dependency status](https://david-dm.org/dbartholomae/jsx-readme.svg?theme=shields.io)](https://david-dm.org/dbartholomae/jsx-readme)
 [![devDependency status](https://david-dm.org/dbartholomae/jsx-readme/dev-status.svg)](https://david-dm.org/dbartholomae/jsx-readme?type=dev)
