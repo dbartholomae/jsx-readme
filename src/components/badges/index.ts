@@ -8,6 +8,7 @@ export { GithubIssuesBadge } from "./GithubIssuesBadge";
 export { JsxReadmeBadge } from "./JsxReadmeBadge";
 export { NpmVersionBadge } from "./NpmVersionBadge";
 export { NpmDownloadsBadge } from "./NpmDownloadsBadge";
+export { GithubTopLanguageBadge } from "./GithubTopLanguageBadge";
 export { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 export { CodecovBadge } from "./CodecovBadge";
 export { SemanticReleaseBadge } from "./SemanticReleaseBadge";
