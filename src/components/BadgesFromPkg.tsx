@@ -5,6 +5,7 @@ import type { PackageJSON } from "../PackageJSON";
 import {
   DependenciesBadge,
   DevDependenciesBadge,
+  GithubTopLanguageBadge,
   GithubIssuesBadge,
   JsxReadmeBadge,
   NpmDownloadsBadge,
@@ -26,6 +27,7 @@ export const badgeComponents = {
   npmBundleSize: NpmBundleSizeBadge,
   dependenciesBadge: DependenciesBadge,
   devDependenciesBadge: DevDependenciesBadge,
+  githubTopLanguageBadge: GithubTopLanguageBadge,
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
   semanticRelease: SemanticReleaseBadge,
@@ -42,6 +44,7 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "githubIssues",
   "dependenciesBadge",
   "devDependenciesBadge",
+  "githubTopLanguageBadge",
   "semanticRelease",
   "jsxReadme",
 ] as const;
