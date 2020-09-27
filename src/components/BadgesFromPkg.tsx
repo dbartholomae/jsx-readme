@@ -9,6 +9,7 @@ import {
   GithubIssuesBadge,
   JsxReadmeBadge,
   NpmDownloadsBadge,
+  DiscordBadge,
   NpmBundleSizeBadge,
   NpmVersionBadge,
   SemanticReleaseBadge,
@@ -30,6 +31,7 @@ export const badgeComponents = {
   githubTopLanguageBadge: GithubTopLanguageBadge,
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
+  discordBadge: DiscordBadge,
   semanticRelease: SemanticReleaseBadge,
 } as const;
 
@@ -46,6 +48,7 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "devDependenciesBadge",
   "githubTopLanguageBadge",
   "semanticRelease",
+  "discordBadge",
   "jsxReadme",
 ] as const;
 

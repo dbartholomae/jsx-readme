@@ -12,6 +12,8 @@ export interface PackageJSON {
   name: string;
   private?: boolean;
   repository?: string | Repository;
+  serverId: string;
+  inviteLink: string;
 }
 
 export interface Repository {
