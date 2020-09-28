@@ -10,10 +10,7 @@ interface Props {
   serverId: string;
 }
 
-export const DiscordBadge: Component<Props> = ({
-  inviteLink = "https://discord.com/invite/X9HRSK5",
-  serverId = "750063320614174871",
-}) => {
+export const DiscordBadge: Component<Props> = ({ inviteLink, serverId }) => {
   return (
     <Badge
       link={inviteLink}
