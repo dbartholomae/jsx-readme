@@ -123,8 +123,10 @@ const Readme: Component = () => (
     {/* Add additional badges. */}
     <CodecovBadge pkg={pkg} />
     <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
-    <DiscordBadge inviteLink="https://discord.com/invite/X9HRSK5" serverId="750063320614174871"  />
-
+    <DiscordBadge
+      inviteLink="https://discord.com/invite/X9HRSK5"
+      serverId="750063320614174871"
+    />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
