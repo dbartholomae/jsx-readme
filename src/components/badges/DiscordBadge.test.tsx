@@ -18,7 +18,7 @@ describe("DiscordBadge", () => {
           link="https://discord.com/invite/X9HRSK5"
           imageSource={`https://img.shields.io/discord/750063320614174871`}
         >
-          Discord Badge
+          chat
         </Badge>
       )
     );

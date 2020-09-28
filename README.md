@@ -11,7 +11,7 @@
 [![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)
 [![codecov](https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-readme)
 [![build status](https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy")
-[![Discord Badge](https://img.shields.io/discord/750063320614174871)](https://discord.com/invite/X9HRSK5)
+[![chat](https://img.shields.io/discord/750063320614174871)](https://discord.com/invite/X9HRSK5)
 
 Generate Readme files with a React\-like syntax and package\.json\-aware helpers\.
 
