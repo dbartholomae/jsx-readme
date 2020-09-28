@@ -5,14 +5,9 @@ import { DiscordBadge } from "./DiscordBadge";
 
 describe("DiscordBadge", () => {
   it("shows a discord badge", () => {
-    const pkg = {
-      name: "name",
-    };
-
     expect(
       render(
         <DiscordBadge
-          pkg={pkg}
           serverId="750063320614174871"
           inviteLink="https://discord.com/invite/X9HRSK5"
         />

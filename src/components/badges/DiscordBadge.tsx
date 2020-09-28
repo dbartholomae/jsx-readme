@@ -1,11 +1,15 @@
 /* @jsx MD */
-import MD from "jsx-md";
+import MD, { Component } from "jsx-md";
 import { Badge } from "../Badge";
-import type { BadgeComponent } from "./utils/BadgeComponent";
 
-/** Show a badge with the count of open issues on GitHub */
+/** Show a discord badge  on GitHub */
 
-export const DiscordBadge: BadgeComponent = ({ inviteLink, serverId }) => {
+interface Props {
+  inviteLink: string;
+  serverId: string;
+}
+
+export const DiscordBadge: Component<Props> = ({ inviteLink, serverId }) => {
   return (
     <Badge
       link={inviteLink}
