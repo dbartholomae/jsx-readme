@@ -9,6 +9,7 @@ import {
   GithubIssuesBadge,
   JsxReadmeBadge,
   NpmDownloadsBadge,
+  DiscordBadge,
   NpmBundleSizeBadge,
   NpmVersionBadge,
   SemanticReleaseBadge,
@@ -18,6 +19,8 @@ import {
 interface Props {
   disabledBadges?: ReadonlyArray<BadgeName>;
   pkg: Readonly<PackageJSON>;
+  inviteLink: string;
+  serverId: string;
 }
 
 /** @internal */
@@ -30,6 +33,7 @@ export const badgeComponents = {
   githubTopLanguageBadge: GithubTopLanguageBadge,
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
+  discordBadge: DiscordBadge,
   semanticRelease: SemanticReleaseBadge,
 } as const;
 
@@ -46,12 +50,15 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "devDependenciesBadge",
   "githubTopLanguageBadge",
   "semanticRelease",
+  "discordBadge",
   "jsxReadme",
 ] as const;
 
 /** Renders a list of badges that can be inferred from `package.json`. */
 export const BadgesFromPkg: Component<Readonly<Props>> = ({
   pkg,
+  inviteLink,
+  serverId,
   /**
    * A list of badge names to not include,
    * even if they could be inferred from package.json
@@ -65,7 +72,14 @@ export const BadgesFromPkg: Component<Readonly<Props>> = ({
     <Fragment>
       {badgesToRender.map((badgeName) => {
         const Badge = badgeComponents[badgeName];
-        return <Badge key={badgeName} pkg={pkg} />;
+        return (
+          <Badge
+            key={badgeName}
+            pkg={pkg}
+            inviteLink={inviteLink}
+            serverId={serverId}
+          />
+        );
       })}
     </Fragment>
   );
