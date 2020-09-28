@@ -28,3 +28,6 @@
 - name: "hacktoberfest"
   color: "FF8AE2"
   description: "Issues prepared for Hacktoberfest"
+- name: "invalid"
+  color: "FCBA03"
+  description: "PRs marked as invalid so they don't count for Hacktoberfest"
