@@ -14,6 +14,7 @@ import MD, {
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
+  DiscordBadge,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -26,6 +27,10 @@ const Readme: Component = () => (
     {/* Add additional badges. */}
     <CodecovBadge pkg={pkg} />
     <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
+    <DiscordBadge
+      inviteLink="https://discord.com/invite/X9HRSK5"
+      serverId="750063320614174871"
+    />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
