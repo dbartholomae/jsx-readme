@@ -8,7 +8,7 @@ interface Props {
   serverId: string;
 }
 
-/** Show a discord badge  on GitHub */
+/** Show a discord badge on GitHub */
 export const DiscordBadge: Component<Props> = ({ inviteLink, serverId }) => {
   return (
     <Badge
