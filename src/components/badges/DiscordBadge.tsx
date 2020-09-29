@@ -2,14 +2,13 @@
 import MD, { Component } from "jsx-md";
 import { Badge } from "../Badge";
 
-/** Show a discord badge  on GitHub */
-
 /** @internal */
 interface Props {
   inviteLink: string;
   serverId: string;
 }
 
+/** Show a discord badge  on GitHub */
 export const DiscordBadge: Component<Props> = ({ inviteLink, serverId }) => {
   return (
     <Badge
