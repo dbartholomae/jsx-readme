@@ -28,12 +28,12 @@ jobs:
       run: pnpm install
     - name: Build
       run: pnpm run build
-    - name: Build documentation
-      run: pnpm run docs
     - name: Lint
       run: pnpm run lint
     - name: Run unit tests
       run: pnpm test
+    - name: Build documentation
+      run: pnpm run docs
     - name: Upload code coverage to codecov
       uses: codecov/codecov-action@v1
 
