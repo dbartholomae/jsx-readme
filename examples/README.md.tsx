@@ -14,6 +14,7 @@ import MD, {
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
+  HacktoberfestBadge,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -26,6 +27,11 @@ const Readme: Component = () => (
     {/* Add additional badges. */}
     <CodecovBadge pkg={pkg} />
     <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
+    <HacktoberfestBadge
+      pkg={pkg}
+      year={2020}
+      suggestionLabel="good first issue"
+    />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}

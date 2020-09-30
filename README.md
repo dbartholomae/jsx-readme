@@ -9,6 +9,7 @@
 [![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)
 [![codecov](https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-readme)
 [![build status](https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy")
+[![hacktoberfest badge](https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue)](https://github.com/dbartholomae/jsx-readme)
 
 Generate Readme files with a React\-like syntax and package\.json\-aware helpers\.
 
@@ -107,6 +108,7 @@ import MD, {
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
+  HacktoberfestBadge,
 } from "jsx-readme";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -119,6 +121,11 @@ const Readme: Component = () => (
     {/* Add additional badges. */}
     <CodecovBadge pkg={pkg} />
     <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
+    <HacktoberfestBadge
+      pkg={pkg}
+      year={2020}
+      suggestionLabel="good first issue"
+    />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}

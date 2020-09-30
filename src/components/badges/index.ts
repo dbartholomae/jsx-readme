@@ -13,3 +13,4 @@ export { CodecovBadge } from "./CodecovBadge";
 export { SemanticReleaseBadge } from "./SemanticReleaseBadge";
 export { DependenciesBadge } from "./DependenciesBadge";
 export { DevDependenciesBadge } from "./DevDependenciesBadge";
+export { HacktoberfestBadge } from "./HacktoberfestBadge";
