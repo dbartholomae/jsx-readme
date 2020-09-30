@@ -16,3 +16,4 @@ export { DependenciesBadge } from "./DependenciesBadge";
 export { DevDependenciesBadge } from "./DevDependenciesBadge";
 export { NpmBundleSizeBadge } from "./NpmBundleSizeBadge";
 export { DiscordBadge } from "./DiscordBadge";
+export { HacktoberfestBadge } from "./HacktoberfestBadge";

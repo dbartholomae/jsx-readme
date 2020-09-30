@@ -15,6 +15,7 @@ import MD, {
   renderToFile,
   TitleFromPkg,
   DiscordBadge,
+  HacktoberfestBadge,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -30,6 +31,11 @@ const Readme: Component = () => (
     <DiscordBadge
       inviteLink="https://discord.com/invite/X9HRSK5"
       serverId="750063320614174871"
+    />
+    <HacktoberfestBadge
+      pkg={pkg}
+      year={2020}
+      suggestionLabel="good first issue"
     />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
