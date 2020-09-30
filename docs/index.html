@@ -78,7 +78,8 @@
 					<a href="https://dbartholomae.github.io/jsx-readme"><img src="https://img.shields.io/badge/jsx--readme-lightgrey" alt="jsx-readme"></a>
 					<a href="https://codecov.io/gh/dbartholomae/jsx-readme"><img src="https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg" alt="codecov"></a>
 					<a href="https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A%22Build%20and%20deploy%22"><img src="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main" alt="build status"></a>
-				<a href="https://discord.com/invite/X9HRSK5"><img src="https://img.shields.io/discord/750063320614174871" alt="chat"></a></p>
+					<a href="https://discord.com/invite/X9HRSK5"><img src="https://img.shields.io/discord/750063320614174871" alt="chat"></a>
+				<a href="https://github.com/dbartholomae/jsx-readme"><img src="https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue" alt="hacktoberfest badge"></a></p>
 				<p>Generate Readme files with a React-like syntax and package.json-aware helpers.</p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
@@ -175,6 +176,7 @@ import MD, {
   renderToFile,
   TitleFromPkg,
   DiscordBadge,
+  HacktoberfestBadge,
 } from &quot;jsx-readme&quot;;
 import { Heading, InlineCode, LineBreak } from &quot;jsx-md&quot;;
 import pkg from &quot;./package.json&quot;;
@@ -190,6 +192,11 @@ const Readme: Component = () =&gt; (
     &lt;DiscordBadge
       inviteLink=&quot;https://discord.com/invite/X9HRSK5&quot;
       serverId=&quot;750063320614174871&quot;
+    /&gt;
+    &lt;HacktoberfestBadge
+      pkg={pkg}
+      year={2020}
+      suggestionLabel=&quot;good first issue&quot;
     /&gt;
     &lt;LineBreak /&gt;
     &lt;DescriptionFromPkg pkg={pkg} /&gt;
@@ -264,6 +271,9 @@ void renderToFile(&quot;./README.md&quot;, &lt;Readme /&gt;);</code></pre>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_components_badges_githubworkflowbadge_.html">&quot;components/badges/<wbr>Github<wbr>Workflow<wbr>Badge&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_components_badges_hacktoberfestbadge_.html">&quot;components/badges/<wbr>Hacktoberfest<wbr>Badge&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_components_badges_jsxreadmebadge_.html">&quot;components/badges/<wbr>Jsx<wbr>Readme<wbr>Badge&quot;</a>
