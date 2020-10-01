@@ -6,6 +6,7 @@
  */
 export { GithubIssuesBadge } from "./GithubIssuesBadge";
 export { JsxReadmeBadge } from "./JsxReadmeBadge";
+export { LicenseBadge } from "./LicenseBadge";
 export { NpmVersionBadge } from "./NpmVersionBadge";
 export { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 export { GithubTopLanguageBadge } from "./GithubTopLanguageBadge";
