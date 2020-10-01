@@ -156,6 +156,11 @@ const Readme: Component = () => (
 void renderToFile("./README.md", <Readme />);
 ```
 
+## Contributing
+
+If you are interested in contributing to this repository, please read up on the details in our [contributing guidelines](./CONTRIBUTING.md).
+
+
 ## Homepage
 
 You can find more about this on [https://dbartholomae.github.io/jsx-readme](https://dbartholomae.github.io/jsx-readme).
