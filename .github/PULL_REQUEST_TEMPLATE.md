@@ -1,5 +1,5 @@
-<!-- Please only open PRs for issues in place. If there is no issue, please open the issue first. Then create this PR and link it to the issue. -->
-Closes #
+<!-- Please only open PRs for issues in place. If there is no issue, please open the issue first. Then create this PR and link it to the issue by adding the issue number in the line below. -->
+Closes #<!-- Replace this comment with the issue number -->
 
 ## Checklist:
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
