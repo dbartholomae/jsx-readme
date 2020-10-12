@@ -7,6 +7,7 @@ import type { Component } from "..";
 import MD, {
   BadgesFromPkg,
   CodecovBadge,
+  ContributingSection,
   DescriptionFromPkg,
   ExamplesFromPkg,
   Fragment,
@@ -55,6 +56,9 @@ const Readme: Component = () => (
     <ExamplesFromPkg pkg={pkg} />
     {/* Create a section linking to the homepage from package.json */}
     <HomepageFromPkg pkg={pkg} />
+    <LineBreak />
+    {/* Create a contributing section linking to the contributing guidelines file */}
+    <ContributingSection />
   </Fragment>
 );
 
