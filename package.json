@@ -1,6 +1,6 @@
 {
   "name": "jsx-readme",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
