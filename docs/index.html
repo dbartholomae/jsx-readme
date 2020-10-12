@@ -76,6 +76,7 @@
 					<a href="https://github.com/dbartholomae/jsx-readme"><img src="https://img.shields.io/github/languages/top/dbartholomae/jsx-readme" alt="GitHub Top language"></a>
 					<a href="https://github.com/semantic-release/semantic-release#badge"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic release"></a>
 					<a href="https://dbartholomae.github.io/jsx-readme"><img src="https://img.shields.io/badge/jsx--readme-lightgrey" alt="jsx-readme"></a>
+					<a href="https://github.com/dbartholomae/jsx-readme/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dbartholomae/jsx-readme" alt="license"></a>
 					<a href="https://codecov.io/gh/dbartholomae/jsx-readme"><img src="https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg" alt="codecov"></a>
 					<a href="https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A%22Build%20and%20deploy%22"><img src="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main" alt="build status"></a>
 					<a href="https://discord.com/invite/X9HRSK5"><img src="https://img.shields.io/discord/750063320614174871" alt="chat"></a>
@@ -168,6 +169,7 @@ import type { Component } from &quot;jsx-readme&quot;;
 import MD, {
   BadgesFromPkg,
   CodecovBadge,
+  ContributingSection,
   DescriptionFromPkg,
   ExamplesFromPkg,
   Fragment,
@@ -177,6 +179,7 @@ import MD, {
   TitleFromPkg,
   DiscordBadge,
   HacktoberfestBadge,
+  LicenseBadge,
 } from &quot;jsx-readme&quot;;
 import { Heading, InlineCode, LineBreak } from &quot;jsx-md&quot;;
 import pkg from &quot;./package.json&quot;;
@@ -187,6 +190,7 @@ const Readme: Component = () =&gt; (
     &lt;TitleFromPkg pkg={pkg} /&gt;
     &lt;BadgesFromPkg pkg={pkg} /&gt;
     {/* Add additional badges. */}
+    &lt;LicenseBadge pkg={pkg} /&gt;
     &lt;CodecovBadge pkg={pkg} /&gt;
     &lt;GithubWorkflowBadge pkg={pkg} workflowName=&quot;Build and deploy&quot; /&gt;
     &lt;DiscordBadge
@@ -214,6 +218,9 @@ const Readme: Component = () =&gt; (
     &lt;ExamplesFromPkg pkg={pkg} /&gt;
     {/* Create a section linking to the homepage from package.json */}
     &lt;HomepageFromPkg pkg={pkg} /&gt;
+    &lt;LineBreak /&gt;
+    {/* Create a contributing section linking to the contributing guidelines file */}
+    &lt;ContributingSection /&gt;
   &lt;/Fragment&gt;
 );
 
@@ -222,6 +229,10 @@ void renderToFile(&quot;./README.md&quot;, &lt;Readme /&gt;);</code></pre>
 					<h2>Homepage</h2>
 				</a>
 				<p>You can find more about this on <a href="https://dbartholomae.github.io/jsx-readme">https://dbartholomae.github.io/jsx-readme</a>.</p>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
+				</a>
+				<p>If you are interested in contributing to this repository, please read up on the details in our <a href="./CONTRIBUTING.md">contributing guidelines</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -238,6 +249,9 @@ void renderToFile(&quot;./README.md&quot;, &lt;Readme /&gt;);</code></pre>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_components_codefile_.html">&quot;components/<wbr>Code<wbr>File&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_components_contributingsection_.html">&quot;components/<wbr>Contributing<wbr>Section&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_components_descriptionfrompkg_.html">&quot;components/<wbr>Description<wbr>From<wbr>Pkg&quot;</a>
