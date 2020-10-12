@@ -4,13 +4,20 @@
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "bin": {
+    "jsx-readme": "lib/cli.js"
+  },
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig.build.json",
     "docs": "typedoc && touch docs/.nojekyll && ts-node examples/README.md.tsx",
     "lint": "eslint src/**/*.ts src/**/*.tsx examples/**/*.tsx test/**/*.tsx",
     "pretest": "npm run build",
     "test": "jest && pkg-ok",
-    "watch": "tsc -w -p tsconfig.build.json"
+    "watch": "tsc -w -p tsconfig.build.json",
+    "start-cli": "nodemon --watch 'src/**/*.ts' --exec ts-node src/cli.ts",
+    "build-cli": "tsc -p .",
+    "create-cli": "npm run build-cli && npm run test",
+    "test-cli": "ts-node src/cli.ts init ./test/"
   },
   "engines": {
     "node": ">=12.4.0"
@@ -36,7 +43,13 @@
     "example": "examples"
   },
   "dependencies": {
-    "jsx-md": "^1.2.0"
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "commander": "^6.1.0",
+    "figlet": "^1.5.0",
+    "fs-extra": "^9.0.1",
+    "jsx-md": "^1.2.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -44,19 +57,21 @@
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "^26.0.10",
     "@types/mock-fs": "^4.10.0",
+    "@types/node": "^14.11.2",
     "@types/react": "^16.9.49",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
     "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-jest-formatting": "^2.0.0",
-    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.20.6",
     "husky": "^4.2.5",
     "jest": "^26.4.2",
     "lint-staged": "^10.2.13",
     "mock-fs": "^4.13.0",
+    "nodemon": "^2.0.4",
     "pkg-ok": "^2.3.1",
     "prettier": "^2.1.0",
     "rimraf": "^3.0.2",
