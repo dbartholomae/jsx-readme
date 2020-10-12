@@ -18,7 +18,7 @@ Generate Readme files with a React\-like syntax and package\.json\-aware helpers
 
 ## Installation
 
-Add `jsx-readme` to your `devDependencies` and install it. I recommend using it with `ts-node`. Then all you need to do is add a file like in the example below and run it via `ts-node` whenever you want to create a new version of the `README`.
+Add `jsx-readme` to your `devDependencies` and install it. I recommend using it with `ts-node`. Then all you need to do is run `npx jsx-readme init [destinationPath]` where the `[destinationPath]` is where the `README.md.tsx` file will be outputted and once done you run the `README.md.tsx` via `ts-node` whenever you want to create a new version of the `README`.
 
 ## Examples
 

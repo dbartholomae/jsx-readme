@@ -43,8 +43,9 @@ const Readme: Component = () => (
     <Heading level={2}>Installation</Heading>
     Add <InlineCode>jsx-readme</InlineCode> to your{" "}
     <InlineCode>devDependencies</InlineCode> and install it. I recommend using
-    it with <InlineCode>ts-node</InlineCode>. Then all you need to do is add a
-    file like in the example below and run it via{" "}
+    it with <InlineCode>ts-node</InlineCode>. Then all you need to do is run {" "} <InlineCode>npx jsx-readme init [destinationPath]</InlineCode>
+    where the {" "} <InlineCode>[destinationPath]</InlineCode> is where the {" "} <InlineCode>README.md.tsx</InlineCode> file will be outputed and once done
+    you run the {" "} <InlineCode>README.md.tsx</InlineCode> via{" "}
     <InlineCode>ts-node</InlineCode> whenever you want to create a new version
     of the <InlineCode>README</InlineCode>.
     <LineBreak />
