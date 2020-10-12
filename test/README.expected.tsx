@@ -16,7 +16,6 @@ import MD, {
   TitleFromPkg,
   DiscordBadge,
   HacktoberfestBadge,
-  LicenseBadge,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -27,7 +26,6 @@ const Readme: Component = () => (
     <TitleFromPkg pkg={pkg} />
     <BadgesFromPkg pkg={pkg} />
     {/* Add additional badges. */}
-    <LicenseBadge pkg={pkg} />
     <CodecovBadge pkg={pkg} />
     <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
     <DiscordBadge
