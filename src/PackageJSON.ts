@@ -9,6 +9,7 @@ export interface PackageJSON {
     example?: string;
   };
   homepage?: string;
+  license?: string;
   name: string;
   private?: boolean;
   repository?: string | Repository;

@@ -18,6 +18,7 @@ import MD, {
   DiscordBadge,
   HacktoberfestBadge,
   LicenseBadge,
+  LicenseFromPkg,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -58,6 +59,8 @@ const Readme: Component = () => (
     <HomepageFromPkg pkg={pkg} />
     {/* Create a section linking to the contributing guidelines file */}
     <ContributingSection />
+    {/* Create a section linking to the license file. */}
+    <LicenseFromPkg pkg={pkg} />
   </Fragment>
 );
 

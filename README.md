@@ -116,6 +116,7 @@ import MD, {
   DiscordBadge,
   HacktoberfestBadge,
   LicenseBadge,
+  LicenseFromPkg,
 } from "jsx-readme";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -156,6 +157,8 @@ const Readme: Component = () => (
     <HomepageFromPkg pkg={pkg} />
     {/* Create a section linking to the contributing guidelines file */}
     <ContributingSection />
+    {/* Create a section linking to the license file. */}
+    <LicenseFromPkg pkg={pkg} />
   </Fragment>
 );
 
@@ -169,4 +172,8 @@ You can find more about this on [https://dbartholomae.github.io/jsx-readme](http
 ## Contributing
 
 If you are interested in contributing to this repository, please read up on the details in our [contributing guidelines](./CONTRIBUTING.md).
+
+## License
+
+MIT. See [LICENSE file](./LICENSE) for details.
 
