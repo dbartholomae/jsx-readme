@@ -21,6 +21,7 @@ export const HomepageFromPkg: Component<Readonly<Props>> = ({
       <Heading level={2}>Homepage</Heading>
       You can find more about this on <Link to={homepage}>{homepage}</Link>.
       <LineBreak />
+      <LineBreak />
     </Fragment>
   );
 };
