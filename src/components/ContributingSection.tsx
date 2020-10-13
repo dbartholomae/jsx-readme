@@ -20,6 +20,7 @@ export const ContributingSection: Component<Props> = ({
       </Text>{" "}
       <Link to={contributingFilePath}>contributing guidelines</Link>.
       <LineBreak />
+      <LineBreak />
     </Fragment>
   );
 };

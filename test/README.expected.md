@@ -154,8 +154,7 @@ const Readme: Component = () => (
     <ExamplesFromPkg pkg={pkg} />
     {/* Create a section linking to the homepage from package.json */}
     <HomepageFromPkg pkg={pkg} />
-    <LineBreak />
-    {/* Create a contributing section linking to the contributing guidelines file */}
+    {/* Create a section linking to the contributing guidelines file */}
     <ContributingSection />
   </Fragment>
 );
@@ -170,3 +169,4 @@ You can find more about this on [https://dbartholomae.github.io/jsx-readme](http
 ## Contributing
 
 If you are interested in contributing to this repository, please read up on the details in our [contributing guidelines](./CONTRIBUTING.md).
+
