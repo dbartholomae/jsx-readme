@@ -80,6 +80,7 @@
 					<a href="https://codecov.io/gh/dbartholomae/jsx-readme"><img src="https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg" alt="codecov"></a>
 					<a href="https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A%22Build%20and%20deploy%22"><img src="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main" alt="build status"></a>
 					<a href="https://discord.com/invite/X9HRSK5"><img src="https://img.shields.io/discord/750063320614174871" alt="chat"></a>
+					<a href="https://cla-assistant.io/dbartholomae/jsx-readme"><img src="https://cla-assistant.io/readme/badge/dbartholomae/jsx-readme" alt="CLA Assistant"></a>
 				<a href="https://github.com/dbartholomae/jsx-readme"><img src="https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue" alt="hacktoberfest badge"></a></p>
 				<p>Generate Readme files with a React-like syntax and package.json-aware helpers.</p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
@@ -174,6 +175,7 @@ import MD, {
   ExamplesFromPkg,
   Fragment,
   GithubWorkflowBadge,
+  CLAAssistantBadge,
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
@@ -198,6 +200,7 @@ const Readme: Component = () =&gt; (
       inviteLink=&quot;https://discord.com/invite/X9HRSK5&quot;
       serverId=&quot;750063320614174871&quot;
     /&gt;
+    &lt;CLAAssistantBadge pkg={pkg} /&gt;
     &lt;HacktoberfestBadge
       pkg={pkg}
       year={2020}
@@ -273,6 +276,9 @@ void renderToFile(&quot;./README.md&quot;, &lt;Readme /&gt;);</code></pre>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_components_titlefrompkg_.html">&quot;components/<wbr>Title<wbr>From<wbr>Pkg&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_components_badges_claassistantbadge_.html">&quot;components/badges/CLAAssistant<wbr>Badge&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_components_badges_circlecibadge_.html">&quot;components/badges/<wbr>CircleCIBadge&quot;</a>
