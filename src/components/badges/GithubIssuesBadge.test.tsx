@@ -4,14 +4,14 @@ import { GithubIssuesBadge } from "./GithubIssuesBadge";
 import { Badge } from "../Badge";
 
 describe("GithubIssuesBadge", () => {
-  it("shows a github-issues badge if repository is in npm shortform", () => {
+  it("shows a github-issues badge if repository is in npm shortform", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<GithubIssuesBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<GithubIssuesBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg"
           link="https://github.com/dbartholomae/jsx-readme/issues"
@@ -22,20 +22,20 @@ describe("GithubIssuesBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
+    expect(await render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
   });
 
-  it("shows nothing if the repository is a bitbucket repo", () => {
+  it("shows nothing if the repository is a bitbucket repo", async () => {
     const pkg = {
       name: "package-name",
       repository: "bitbucket:user/repo",
     };
 
-    expect(render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
+    expect(await render(<GithubIssuesBadge pkg={pkg} />)).toBe("");
   });
 });

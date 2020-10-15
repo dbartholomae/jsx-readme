@@ -4,7 +4,7 @@ import { Badge } from "../Badge";
 import { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 
 describe("GithubWorkflowBadge", () => {
-  it("shows a github-workflow badge if repository is in npm shortform", () => {
+  it("shows a github-workflow badge if repository is in npm shortform", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
@@ -13,9 +13,11 @@ describe("GithubWorkflowBadge", () => {
     const workflowName = "Build and deploy";
 
     expect(
-      render(<GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />)
+      await render(
+        <GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />
+      )
     ).toContain(
-      render(
+      await render(
         <Badge
           imageSource="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main"
           link='https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy"'
@@ -26,7 +28,7 @@ describe("GithubWorkflowBadge", () => {
     );
   });
 
-  it("shows a github-workflow badge with a non-default branch", () => {
+  it("shows a github-workflow badge with a non-default branch", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
@@ -36,7 +38,7 @@ describe("GithubWorkflowBadge", () => {
     const workflowName = "Build and deploy";
 
     expect(
-      render(
+      await render(
         <GithubWorkflowBadge
           pkg={pkg}
           branch={branch}
@@ -44,7 +46,7 @@ describe("GithubWorkflowBadge", () => {
         />
       )
     ).toContain(
-      render(
+      await render(
         <Badge
           imageSource="https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=master"
           link='https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy"'
@@ -55,7 +57,7 @@ describe("GithubWorkflowBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
@@ -63,11 +65,13 @@ describe("GithubWorkflowBadge", () => {
     const workflowName = "Build and deploy";
 
     expect(
-      render(<GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />)
+      await render(
+        <GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />
+      )
     ).toBe("");
   });
 
-  it("shows nothing if the repository is a bitbucket repo", () => {
+  it("shows nothing if the repository is a bitbucket repo", async () => {
     const pkg = {
       name: "package-name",
       repository: "bitbucket:user/repo",
@@ -76,7 +80,9 @@ describe("GithubWorkflowBadge", () => {
     const workflowName = "Build and deploy";
 
     expect(
-      render(<GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />)
+      await render(
+        <GithubWorkflowBadge pkg={pkg} workflowName={workflowName} />
+      )
     ).toBe("");
   });
 });

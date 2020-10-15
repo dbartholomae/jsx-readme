@@ -6,11 +6,11 @@ import pkg from "../../examples/package.json";
 describe("BadgesFromPkg", () => {
   it.each(["npmVersion", "jsxReadme", "githubIssues"] as const)(
     "shows an %s badge by default",
-    (badgeName) => {
+    async (badgeName) => {
       const Badge = badgeComponents[badgeName];
 
-      expect(render(<BadgesFromPkg pkg={pkg} />)).toContain(
-        render(<Badge pkg={pkg} />)
+      expect(await render(<BadgesFromPkg pkg={pkg} />)).toContain(
+        await render(<Badge pkg={pkg} />)
       );
     }
   );
@@ -18,10 +18,12 @@ describe("BadgesFromPkg", () => {
   describe("with all badges disabled", () => {
     const disabledBadges = defaultBadges;
 
-    it("does not show any badge", () => {
+    it("does not show any badge", async () => {
       const START_OF_A_BADGE = "[[!";
       expect(
-        render(<BadgesFromPkg pkg={pkg} disabledBadges={disabledBadges} />)
+        await render(
+          <BadgesFromPkg pkg={pkg} disabledBadges={disabledBadges} />
+        )
       ).not.toContain(START_OF_A_BADGE);
     });
   });

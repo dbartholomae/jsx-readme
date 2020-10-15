@@ -3,9 +3,9 @@ import MD, { render } from "jsx-md";
 import { Badge } from "./Badge";
 
 describe("Badge", () => {
-  it("renders an npm package badge", () => {
+  it("renders an npm package badge", async () => {
     expect(
-      render(
+      await render(
         <Badge
           link="https://npmjs.org/package/package-name"
           imageSource="https://badge.fury.io/js/package-name.svg"

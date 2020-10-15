@@ -4,14 +4,14 @@ import { Badge } from "../Badge";
 import { GithubTopLanguageBadge } from "./GithubTopLanguageBadge";
 
 describe("GithubTopLanguageBadge", () => {
-  it("shows a github-top-language badge if repository is in npm shortform", () => {
+  it("shows a github-top-language badge if repository is in npm shortform", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<GithubTopLanguageBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<GithubTopLanguageBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/languages/top/dbartholomae/jsx-readme"
           link="https://github.com/dbartholomae/jsx-readme"
@@ -22,20 +22,20 @@ describe("GithubTopLanguageBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<GithubTopLanguageBadge pkg={pkg} />)).toBe("");
+    expect(await render(<GithubTopLanguageBadge pkg={pkg} />)).toBe("");
   });
 
-  it("shows nothing if the repository is a bitbucket repo", () => {
+  it("shows nothing if the repository is a bitbucket repo", async () => {
     const pkg = {
       name: "package-name",
       repository: "bitbucket:user/repo",
     };
 
-    expect(render(<GithubTopLanguageBadge pkg={pkg} />)).toBe("");
+    expect(await render(<GithubTopLanguageBadge pkg={pkg} />)).toBe("");
   });
 });
