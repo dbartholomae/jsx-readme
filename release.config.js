@@ -10,5 +10,10 @@ module.exports = {
       },
     ],
     "@semantic-release/npm",
+    ["@semantic-release/github", {
+      addReleases: 'top',
+      labels: ['chore'],
+      releasedLabels: false,
+    }],
   ],
 };
