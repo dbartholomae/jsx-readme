@@ -12,6 +12,7 @@ import MD, {
   ExamplesFromPkg,
   Fragment,
   GithubWorkflowBadge,
+  CLAAssistantBadge,
   HomepageFromPkg,
   renderToFile,
   TitleFromPkg,
@@ -36,6 +37,7 @@ const Readme: Component = () => (
       inviteLink="https://discord.com/invite/X9HRSK5"
       serverId="750063320614174871"
     />
+    <CLAAssistantBadge pkg={pkg} />
     <HacktoberfestBadge
       pkg={pkg}
       year={2020}
