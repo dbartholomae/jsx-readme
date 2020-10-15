@@ -1,0 +1,3 @@
+run="npm test"
+language="typescript"
+onBoot="npm install"
