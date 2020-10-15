@@ -1,3 +1,0 @@
-run="npm test"
-language="Nodejs"
-onBoot="npm install"
