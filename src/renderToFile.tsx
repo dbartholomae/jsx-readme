@@ -7,8 +7,9 @@ export async function renderToFile(
   path: string,
   element: MarkdownElement
 ): Promise<void> {
+  const renderedElement = await render(element);
   return new Promise((resolve, reject) => {
-    fs.writeFile(path, render(element), (err) => {
+    fs.writeFile(path, renderedElement, (err) => {
       if (err) {
         return reject(err);
       }

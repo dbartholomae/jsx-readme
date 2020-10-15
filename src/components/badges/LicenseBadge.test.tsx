@@ -4,14 +4,14 @@ import { Badge } from "../Badge";
 import { LicenseBadge } from "./LicenseBadge";
 
 describe("LicenseBadge", () => {
-  it("shows a license badge if repository is in npm shortform", () => {
+  it("shows a license badge if repository is in npm shortform", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<LicenseBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<LicenseBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/license/dbartholomae/jsx-readme"
           link="https://github.com/dbartholomae/jsx-readme/blob/main/LICENSE"
@@ -22,7 +22,7 @@ describe("LicenseBadge", () => {
     );
   });
 
-  it("shows a license badge with a non-default branch", () => {
+  it("shows a license badge with a non-default branch", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
@@ -30,8 +30,8 @@ describe("LicenseBadge", () => {
 
     const branch = "master";
 
-    expect(render(<LicenseBadge pkg={pkg} branch={branch} />)).toContain(
-      render(
+    expect(await render(<LicenseBadge pkg={pkg} branch={branch} />)).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/license/dbartholomae/jsx-readme"
           link="https://github.com/dbartholomae/jsx-readme/blob/master/LICENSE"
@@ -42,7 +42,7 @@ describe("LicenseBadge", () => {
     );
   });
 
-  it("shows a license badge with a non-default license filename", () => {
+  it("shows a license badge with a non-default license filename", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
@@ -51,9 +51,9 @@ describe("LicenseBadge", () => {
     const licenseFileName = "LICENSE.txt";
 
     expect(
-      render(<LicenseBadge pkg={pkg} licenseFileName={licenseFileName} />)
+      await render(<LicenseBadge pkg={pkg} licenseFileName={licenseFileName} />)
     ).toContain(
-      render(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/license/dbartholomae/jsx-readme"
           link="https://github.com/dbartholomae/jsx-readme/blob/main/LICENSE.txt"
@@ -64,20 +64,20 @@ describe("LicenseBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<LicenseBadge pkg={pkg} />)).toBe("");
+    expect(await render(<LicenseBadge pkg={pkg} />)).toBe("");
   });
 
-  it("shows nothing if the repository is a bitbucket repo", () => {
+  it("shows nothing if the repository is a bitbucket repo", async () => {
     const pkg = {
       name: "package-name",
       repository: "bitbucket:user/repo",
     };
 
-    expect(render(<LicenseBadge pkg={pkg} />)).toBe("");
+    expect(await render(<LicenseBadge pkg={pkg} />)).toBe("");
   });
 });

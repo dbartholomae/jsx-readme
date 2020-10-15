@@ -1,5 +1,5 @@
 dependencies:
-  jsx-md: 1.2.0
+  jsx-md: 3.0.0
 devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
@@ -4178,12 +4178,12 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-z1xSldJ6imESSzOjd3NNkieVJKRlKYSOtMG8SFyCj2FIrvSaSuli/WjpBkEzCBoR9bYYYFgqJw61Xhu7Lcgk+w==
-  /jsx-md/1.2.0:
+  /jsx-md/3.0.0:
     dev: false
     engines:
       node: '>=12.4.0'
     resolution:
-      integrity: sha512-RIk5Bp1UNhfqsCDkm7PHhJoJJSEaKnGCuES/BEOZDSeJ4jbf5xltQky8F3HT5ku3i8Eu/YvMFpCH1ewyctaz5w==
+      integrity: sha512-80UbX0uQ1kql2S14EuonPU/DgVwJf0ZNGp+jSiaa+Er1Fp2jhMN9NEHCn3QbOPd3dS8tjlaE/D/XL8gKr5yykw==
   /kind-of/3.2.2:
     dependencies:
       is-buffer: 1.1.6
@@ -7074,7 +7074,7 @@ specifiers:
   eslint-plugin-react: ^7.20.6
   husky: ^4.2.5
   jest: ^26.4.2
-  jsx-md: ^1.2.0
+  jsx-md: ^3.0.0
   lint-staged: ^10.2.13
   mock-fs: ^4.13.0
   pkg-ok: ^2.3.1

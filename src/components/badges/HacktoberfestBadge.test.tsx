@@ -4,14 +4,14 @@ import { Badge } from "../Badge";
 import { HacktoberfestBadge } from "./HacktoberfestBadge";
 
 describe("HacktoberfestBadge", () => {
-  it("shows a hacktoberfest badge with suggestion label", () => {
+  it("shows a hacktoberfest badge with suggestion label", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
     expect(
-      render(
+      await render(
         <HacktoberfestBadge
           pkg={pkg}
           year={2020}
@@ -19,7 +19,7 @@ describe("HacktoberfestBadge", () => {
         />
       )
     ).toContain(
-      render(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue"
           link="https://github.com/dbartholomae/jsx-readme"
@@ -30,14 +30,16 @@ describe("HacktoberfestBadge", () => {
     );
   });
 
-  it("shows a hacktoberfest badge without suggestion label", () => {
+  it("shows a hacktoberfest badge without suggestion label", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<HacktoberfestBadge pkg={pkg} year={2020} />)).toContain(
-      render(
+    expect(
+      await render(<HacktoberfestBadge pkg={pkg} year={2020} />)
+    ).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme"
           link="https://github.com/dbartholomae/jsx-readme"
@@ -48,11 +50,11 @@ describe("HacktoberfestBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<HacktoberfestBadge pkg={pkg} year={2020} />)).toBe("");
+    expect(await render(<HacktoberfestBadge pkg={pkg} year={2020} />)).toBe("");
   });
 });

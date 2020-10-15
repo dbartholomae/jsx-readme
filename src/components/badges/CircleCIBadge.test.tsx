@@ -4,14 +4,14 @@ import { Badge } from "../Badge";
 import { CircleCIBadge } from "./CircleCIBadge";
 
 describe("CircleCIBadge", () => {
-  it("shows a CircleCIBadge badge with default branch", () => {
+  it("shows a CircleCIBadge badge with default branch", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:circleci/circleci-docs",
     };
 
-    expect(render(<CircleCIBadge pkg={pkg} />)).toBe(
-      render(
+    expect(await render(<CircleCIBadge pkg={pkg} />)).toBe(
+      await render(
         <Badge
           imageSource="https://circleci.com/gh/circleci/circleci-docs.svg?style=svg"
           link="https://circleci.com/gh/circleci/circleci-docs"
@@ -22,14 +22,16 @@ describe("CircleCIBadge", () => {
     );
   });
 
-  it("links correctly to a non-standard branch", () => {
+  it("links correctly to a non-standard branch", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:circleci/circleci-docs",
     };
 
-    expect(render(<CircleCIBadge pkg={pkg} branch="teesloane-patch-5" />)).toBe(
-      render(
+    expect(
+      await render(<CircleCIBadge pkg={pkg} branch="teesloane-patch-5" />)
+    ).toBe(
+      await render(
         <Badge
           imageSource="https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg"
           link="https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5"
@@ -40,26 +42,26 @@ describe("CircleCIBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<CircleCIBadge pkg={pkg} />)).toBe("");
+    expect(await render(<CircleCIBadge pkg={pkg} />)).toBe("");
   });
 
-  it("shows a CircleCIBadge badge with sheild style", () => {
+  it("shows a CircleCIBadge badge with sheild style", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:circleci/circleci-docs",
     };
 
     expect(
-      render(
+      await render(
         <CircleCIBadge pkg={pkg} style="shield" branch="teesloane-patch-5" />
       )
     ).toBe(
-      render(
+      await render(
         <Badge
           imageSource="https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=shield"
           link="https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5"

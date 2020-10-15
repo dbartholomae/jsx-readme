@@ -4,13 +4,13 @@ import { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 import { Badge } from "../Badge";
 
 describe("NpmDownloadsBadge", () => {
-  it("shows an npm downloads badge", () => {
+  it("shows an npm downloads badge", async () => {
     const pkg = {
       name: "jsx-readme",
     };
 
-    expect(render(<NpmDownloadsBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<NpmDownloadsBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/npm/dw/jsx-readme.svg"
           link="https://npm-stat.com/charts.html?package=jsx-readme"
@@ -21,11 +21,11 @@ describe("NpmDownloadsBadge", () => {
     );
   });
 
-  it("does not show an npm downloads badge if the package is private", () => {
+  it("does not show an npm downloads badge if the package is private", async () => {
     const pkg = {
       name: "jsx-readme",
       private: true,
     };
-    expect(render(<NpmDownloadsBadge pkg={pkg} />)).toBe("");
+    expect(await render(<NpmDownloadsBadge pkg={pkg} />)).toBe("");
   });
 });

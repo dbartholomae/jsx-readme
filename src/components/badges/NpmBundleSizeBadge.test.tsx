@@ -4,13 +4,13 @@ import { Badge } from "../Badge";
 import { NpmBundleSizeBadge } from "./NpmBundleSizeBadge";
 
 describe("NpmBundleSize", () => {
-  it("shows an npm bundle size badge", () => {
+  it("shows an npm bundle size badge", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<NpmBundleSizeBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<NpmBundleSizeBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://img.shields.io/bundlephobia/minzip/package-name.svg"
           link="https://bundlephobia.com/result?p=package-name"
@@ -21,11 +21,11 @@ describe("NpmBundleSize", () => {
     );
   });
 
-  it("does not show an npm bundle size badge if the package is private", () => {
+  it("does not show an npm bundle size badge if the package is private", async () => {
     const pkg = {
       name: "package-name",
       private: true,
     };
-    expect(render(<NpmBundleSizeBadge pkg={pkg} />)).toBe("");
+    expect(await render(<NpmBundleSizeBadge pkg={pkg} />)).toBe("");
   });
 });

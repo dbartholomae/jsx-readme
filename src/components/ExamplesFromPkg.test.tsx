@@ -25,25 +25,27 @@ describe("ExamplesFromPkg", () => {
       mockFs.restore();
     });
 
-    it("renders an 'Examples' heading", () => {
-      expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
+    it("renders an 'Examples' heading", async () => {
+      expect(await render(<ExamplesFromPkg pkg={pkg} />)).toContain(
         "## 🔬 Examples\n"
       );
     });
 
-    it("renders the example.json file as an ExampleFile", () => {
-      expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
-        render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
+    it("renders the example.json file as an ExampleFile", async () => {
+      expect(await render(<ExamplesFromPkg pkg={pkg} />)).toContain(
+        await render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
       );
     });
 
-    it("with latin1 encoding it renders the example.json file as an ExampleFile", () => {
-      expect(render(<ExamplesFromPkg pkg={pkg} encoding="latin1" />)).toContain(
-        render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
+    it("with latin1 encoding it renders the example.json file as an ExampleFile", async () => {
+      expect(
+        await render(<ExamplesFromPkg pkg={pkg} encoding="latin1" />)
+      ).toContain(
+        await render(<CodeFile fileName="example.json">{"{}"}</CodeFile>)
       );
     });
 
-    it("replaces .. imports by imports to the package name", () => {
+    it("replaces .. imports by imports to the package name", async () => {
       mockFs({
         examples: {
           "example.ts": 'import something from "..";',
@@ -51,11 +53,11 @@ describe("ExamplesFromPkg", () => {
       });
 
       expect(
-        render(<ExamplesFromPkg pkg={{ ...pkg, name: "test-package" }} />)
+        await render(<ExamplesFromPkg pkg={{ ...pkg, name: "test-package" }} />)
       ).toContain('import something from "test-package";');
     });
 
-    it("does not replace .. imports if replacePackageImportsWithPackageName is false", () => {
+    it("does not replace .. imports if replacePackageImportsWithPackageName is false", async () => {
       mockFs({
         examples: {
           "example.ts": 'import something from "..";',
@@ -63,7 +65,7 @@ describe("ExamplesFromPkg", () => {
       });
 
       expect(
-        render(
+        await render(
           <ExamplesFromPkg
             pkg={{
               ...pkg,
@@ -98,28 +100,28 @@ describe("ExamplesFromPkg", () => {
       mockFs.restore();
     });
 
-    it("orders the files alphabetically by lower-case", () => {
-      expect(render(<ExamplesFromPkg pkg={pkg} />)).toMatch(
+    it("orders the files alphabetically by lower-case", async () => {
+      expect(await render(<ExamplesFromPkg pkg={pkg} />)).toMatch(
         /.*a\.json.*B\.json.*c\.json.*/s
       );
     });
   });
 
-  it("renders nothing if directories is not defined", () => {
+  it("renders nothing if directories is not defined", async () => {
     const pkg = {
       name: "test-package",
       directories: undefined,
     };
-    expect(render(<ExamplesFromPkg pkg={pkg} />)).toBe("");
+    expect(await render(<ExamplesFromPkg pkg={pkg} />)).toBe("");
   });
 
-  it("renders nothing if example directory is not defined", () => {
+  it("renders nothing if example directory is not defined", async () => {
     const pkg = {
       name: "test-package",
       directories: {
         example: undefined,
       },
     };
-    expect(render(<ExamplesFromPkg pkg={pkg} />)).toBe("");
+    expect(await render(<ExamplesFromPkg pkg={pkg} />)).toBe("");
   });
 });

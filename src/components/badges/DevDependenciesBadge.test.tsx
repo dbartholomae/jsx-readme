@@ -4,14 +4,14 @@ import { DevDependenciesBadge } from ".";
 import { Badge } from "../Badge";
 
 describe("DevDependenciesBadge", () => {
-  it("shows a devDependencies badge if repository is in npm shortform", () => {
+  it("shows a devDependencies badge if repository is in npm shortform", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<DevDependenciesBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<DevDependenciesBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://david-dm.org/dbartholomae/jsx-readme/dev-status.svg"
           link="https://david-dm.org/dbartholomae/jsx-readme?type=dev"
@@ -22,20 +22,20 @@ describe("DevDependenciesBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<DevDependenciesBadge pkg={pkg} />)).toBe("");
+    expect(await render(<DevDependenciesBadge pkg={pkg} />)).toBe("");
   });
 
-  it("shows nothing if the repository is a bitbucket repo", () => {
+  it("shows nothing if the repository is a bitbucket repo", async () => {
     const pkg = {
       name: "package-name",
       repository: "bitbucket:user/repo",
     };
 
-    expect(render(<DevDependenciesBadge pkg={pkg} />)).toBe("");
+    expect(await render(<DevDependenciesBadge pkg={pkg} />)).toBe("");
   });
 });
