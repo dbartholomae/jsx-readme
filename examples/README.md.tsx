@@ -46,7 +46,7 @@ const Readme: Component = () => (
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
-    <Heading level={2}>Installation</Heading>
+    <Heading level={2}>🛠 Installation</Heading>
     Add <InlineCode>jsx-readme</InlineCode> to your{" "}
     <InlineCode>devDependencies</InlineCode> and install it. I recommend using
     it with <InlineCode>ts-node</InlineCode>. Then all you need to do is add a

@@ -26,7 +26,9 @@ describe("ExamplesFromPkg", () => {
     });
 
     it("renders an 'Examples' heading", () => {
-      expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain("## Examples\n");
+      expect(render(<ExamplesFromPkg pkg={pkg} />)).toContain(
+        "## 🔬 Examples\n"
+      );
     });
 
     it("renders the example.json file as an ExampleFile", () => {

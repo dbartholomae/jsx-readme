@@ -13,7 +13,7 @@ export const ContributingSection: Component<Props> = ({
 }: Props) => {
   return (
     <Fragment>
-      <Heading level={2}>Contributing</Heading>
+      <Heading level={2}>🖋️ Contributing</Heading>
       <Text>
         If you are interested in contributing to this repository, please read up
         on the details in our

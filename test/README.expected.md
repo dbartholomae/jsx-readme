@@ -18,11 +18,11 @@
 
 Generate Readme files with a React\-like syntax and package\.json\-aware helpers\.
 
-## Installation
+## 🛠 Installation
 
 Add `jsx-readme` to your `devDependencies` and install it. I recommend using it with `ts-node`. Then all you need to do is add a file like in the example below and run it via `ts-node` whenever you want to create a new version of the `README`.
 
-## Examples
+## 🔬 Examples
 
 ### package.json
 
@@ -145,7 +145,7 @@ const Readme: Component = () => (
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
-    <Heading level={2}>Installation</Heading>
+    <Heading level={2}>🛠 Installation</Heading>
     Add <InlineCode>jsx-readme</InlineCode> to your{" "}
     <InlineCode>devDependencies</InlineCode> and install it. I recommend using
     it with <InlineCode>ts-node</InlineCode>. Then all you need to do is add a
@@ -168,15 +168,15 @@ const Readme: Component = () => (
 void renderToFile("./README.md", <Readme />);
 ```
 
-## Homepage
+## 🏠 Homepage
 
 You can find more about this on [https://dbartholomae.github.io/jsx-readme](https://dbartholomae.github.io/jsx-readme).
 
-## Contributing
+## 🖋️ Contributing
 
 If you are interested in contributing to this repository, please read up on the details in our [contributing guidelines](./CONTRIBUTING.md).
 
-## License
+## 📜 License
 
 MIT. See [LICENSE file](./LICENSE) for details.
 

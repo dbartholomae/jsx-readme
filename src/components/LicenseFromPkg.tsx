@@ -20,7 +20,7 @@ export const LicenseFromPkg: Component<Readonly<Props>> = ({
 
   return (
     <Fragment>
-      <Heading level={2}>License</Heading>
+      <Heading level={2}>📜 License</Heading>
       {license}. See <Link to={licenseFilePath}>LICENSE file</Link> for details.
       <LineBreak />
       <LineBreak />

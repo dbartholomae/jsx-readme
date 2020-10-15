@@ -45,7 +45,7 @@ export const ExamplesFromPkg: Component<Props> = ({
 
   return (
     <Fragment>
-      <Heading level={2}>Examples</Heading>
+      <Heading level={2}>🔬 Examples</Heading>
       {examples
         .sort(({ fileName: fileNameA }, { fileName: fileNameB }) =>
           fileNameA.localeCompare(fileNameB, "en", { sensitivity: "base" })

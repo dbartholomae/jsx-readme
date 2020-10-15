@@ -15,7 +15,7 @@ describe("HomepageFromPkg", () => {
       homepage: "https://dbartholomae.github.io/jsx-readme",
       name: "test-package",
     };
-    expect(render(<HomepageFromPkg pkg={pkg} />)).toContain("## Homepage\n");
+    expect(render(<HomepageFromPkg pkg={pkg} />)).toContain("## 🏠 Homepage\n");
   });
 
   it("renders sentence with a link to the homepage", () => {
