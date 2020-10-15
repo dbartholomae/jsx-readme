@@ -36,7 +36,7 @@
     "example": "examples"
   },
   "dependencies": {
-    "jsx-md": "^3.0.0"
+    "jsx-md": "^4.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -47,8 +47,8 @@
     "@types/jest": "^26.0.10",
     "@types/mock-fs": "^4.10.0",
     "@types/react": "^16.9.49",
-    "@typescript-eslint/eslint-plugin": "^4.1.0",
-    "@typescript-eslint/parser": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
     "eslint": "^7.8.1",
     "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-jest-formatting": "^2.0.0",
