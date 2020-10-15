@@ -7,6 +7,7 @@ import type { Component } from "..";
 import MD, {
   BadgesFromPkg,
   CodecovBadge,
+  ContributingSection,
   DescriptionFromPkg,
   ExamplesFromPkg,
   Fragment,
@@ -17,6 +18,8 @@ import MD, {
   TitleFromPkg,
   DiscordBadge,
   HacktoberfestBadge,
+  LicenseBadge,
+  LicenseFromPkg,
 } from "..";
 import { Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -27,6 +30,7 @@ const Readme: Component = () => (
     <TitleFromPkg pkg={pkg} />
     <BadgesFromPkg pkg={pkg} />
     {/* Add additional badges. */}
+    <LicenseBadge pkg={pkg} />
     <CodecovBadge pkg={pkg} />
     <GithubWorkflowBadge pkg={pkg} workflowName="Build and deploy" />
     <DiscordBadge
@@ -55,6 +59,10 @@ const Readme: Component = () => (
     <ExamplesFromPkg pkg={pkg} />
     {/* Create a section linking to the homepage from package.json */}
     <HomepageFromPkg pkg={pkg} />
+    {/* Create a section linking to the contributing guidelines file */}
+    <ContributingSection />
+    {/* Create a section linking to the license file. */}
+    <LicenseFromPkg pkg={pkg} />
   </Fragment>
 );
 
