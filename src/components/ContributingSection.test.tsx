@@ -5,7 +5,7 @@ import { ContributingSection } from ".";
 
 describe("ContributingSection", () => {
   it("renders a 'Contributing' heading", () => {
-    expect(render(<ContributingSection />)).toContain("## Contributing\n");
+    expect(render(<ContributingSection />)).toContain("## 🖋️ Contributing\n");
   });
 
   it("renders sentence with a link to the contributing file", () => {
