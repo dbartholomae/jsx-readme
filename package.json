@@ -49,6 +49,7 @@
     "@types/react": "^16.9.49",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
+    "cracks": "^3.1.2",
     "eslint": "^7.8.1",
     "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-jest-formatting": "^2.0.0",

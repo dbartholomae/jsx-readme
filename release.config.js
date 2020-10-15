@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [
+    ["cracks", {
+      "paths": ["test", "package.json"]
+    }],
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
