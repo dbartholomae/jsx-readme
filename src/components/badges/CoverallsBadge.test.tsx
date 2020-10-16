@@ -4,14 +4,14 @@ import { Badge } from "../Badge";
 import { CoverallsBadge } from "./CoverallsBadge";
 
 describe("CoverallsBadge", () => {
-  it("shows a coveralls badge", () => {
+  it("shows a coveralls badge", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<CoverallsBadge pkg={pkg} />)).toContain(
-      render(
+    expect(await render(<CoverallsBadge pkg={pkg} />)).toContain(
+      await render(
         <Badge
           imageSource="https://coveralls.io/repos/github/dbartholomae/jsx-readme/badge.svg"
           link="https://coveralls.io/github/dbartholomae/jsx-readme"
@@ -22,14 +22,16 @@ describe("CoverallsBadge", () => {
     );
   });
 
-  it("links correctly to a non-standard branch", () => {
+  it("links correctly to a non-standard branch", async () => {
     const pkg = {
       name: "package-name",
       repository: "github:dbartholomae/jsx-readme",
     };
 
-    expect(render(<CoverallsBadge pkg={pkg} branch={"master"} />)).toContain(
-      render(
+    expect(
+      await render(<CoverallsBadge pkg={pkg} branch={"master"} />)
+    ).toContain(
+      await render(
         <Badge
           imageSource="https://coveralls.io/repos/github/dbartholomae/jsx-readme/badge.svg?branch=master"
           link="https://coveralls.io/github/dbartholomae/jsx-readme?branch=master"
@@ -40,11 +42,11 @@ describe("CoverallsBadge", () => {
     );
   });
 
-  it("shows nothing if there is no repository", () => {
+  it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
     };
 
-    expect(render(<CoverallsBadge pkg={pkg} />)).toBe("");
+    expect(await render(<CoverallsBadge pkg={pkg} />)).toBe("");
   });
 });
