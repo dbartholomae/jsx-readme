@@ -12,6 +12,7 @@ import {
   NpmBundleSizeBadge,
   NpmVersionBadge,
   SemanticReleaseBadge,
+  HitsBadge,
 } from "./badges";
 
 /** @internal */
@@ -31,6 +32,7 @@ export const badgeComponents = {
   githubIssues: GithubIssuesBadge,
   jsxReadme: JsxReadmeBadge,
   semanticRelease: SemanticReleaseBadge,
+  hits: HitsBadge,
 } as const;
 
 type BadgeName = keyof typeof badgeComponents;
@@ -47,6 +49,7 @@ export const defaultBadges: ReadonlyArray<BadgeName> = [
   "githubTopLanguageBadge",
   "semanticRelease",
   "jsxReadme",
+  "hits",
 ] as const;
 
 /** Renders a list of badges that can be inferred from `package.json`. */

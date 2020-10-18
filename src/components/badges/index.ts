@@ -20,3 +20,4 @@ export { DiscordBadge } from "./DiscordBadge";
 export { HacktoberfestBadge } from "./HacktoberfestBadge";
 export { CLAAssistantBadge } from "./CLAAssistantBadge";
 export { CircleCIBadge } from "./CircleCIBadge";
+export { HitsBadge } from "./HitsBadge";
