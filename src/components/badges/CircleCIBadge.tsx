@@ -32,14 +32,13 @@ export const CircleCIBadge: Component<Props> = ({
         CircleCI
       </Badge>
     );
-  } else {
-    return (
-      <Badge
-        link={`https://circleci.com/gh/${owner}/${repo}/tree/${branch}`}
-        imageSource={`https://circleci.com/gh/${owner}/${repo}/tree/${branch}.svg?style=${style}`}
-      >
-        CircleCI
-      </Badge>
-    );
   }
+  return (
+    <Badge
+      link={`https://circleci.com/gh/${owner}/${repo}/tree/${branch}`}
+      imageSource={`https://circleci.com/gh/${owner}/${repo}/tree/${branch}.svg?style=${style}`}
+    >
+      CircleCI
+    </Badge>
+  );
 };
