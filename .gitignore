@@ -2,3 +2,6 @@ node_modules
 coverage
 lib
 .eslintcache
+
+# JetBrains IDE
+.idea
