@@ -29,6 +29,10 @@ describe("ExamplesFromPkg", () => {
       expect(await render(<ExamplesFromPkg pkg={pkg} />)).toContain(
         "## 🔬 Examples\n"
       );
+
+      expect(
+        await render(<ExamplesFromPkg pkg={pkg} title="Examples" />)
+      ).toContain("## Examples\n");
     });
 
     it("renders the example.json file as an ExampleFile", async () => {

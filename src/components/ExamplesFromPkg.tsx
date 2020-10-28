@@ -11,7 +11,10 @@ interface Props {
   encoding?: BufferEncoding;
   replacePackageImportsWithPackageName?: boolean;
   pkg: PackageJSON;
+  title?: string;
 }
+
+const defaultTitle = "🔬 Examples";
 
 /** Show all files from the example directory defined in package.json.² */
 export const ExamplesFromPkg: Component<Props> = awaitComponent(
@@ -21,6 +24,7 @@ export const ExamplesFromPkg: Component<Props> = awaitComponent(
     encoding = "utf8",
     /** Whether to replace all imports from '..' with imports from 'package-name' */
     replacePackageImportsWithPackageName = true,
+    title,
   }) => {
     const examplesFolder = pkg.directories?.example;
     if (examplesFolder === undefined) {
@@ -48,7 +52,7 @@ export const ExamplesFromPkg: Component<Props> = awaitComponent(
 
     return (
       <Fragment>
-        <Heading level={2}>🔬 Examples</Heading>
+        <Heading level={2}>{title || defaultTitle}</Heading>
         {examples
           .sort(({ fileName: fileNameA }, { fileName: fileNameB }) =>
             fileNameA.localeCompare(fileNameB, "en", { sensitivity: "base" })
