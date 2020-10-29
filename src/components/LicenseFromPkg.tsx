@@ -9,13 +9,12 @@ interface Props {
   pkg: Readonly<PackageJSON>;
   title?: string;
 }
-const defaultTitle = "📜 License";
 
 /** Display a section indicating the license defined in package.json */
 export const LicenseFromPkg: Component<Readonly<Props>> = ({
   pkg: { license },
   licenseFilePath = "./LICENSE",
-  title,
+  title = "📜 License",
 }) => {
   if (license === undefined) {
     return null;
@@ -23,7 +22,7 @@ export const LicenseFromPkg: Component<Readonly<Props>> = ({
 
   return (
     <Fragment>
-      <Heading level={2}>{title || defaultTitle}</Heading>
+      <Heading level={2}>{title}</Heading>
       {license}. See <Link to={licenseFilePath}>LICENSE file</Link> for details.
       <LineBreak />
       <LineBreak />

@@ -9,12 +9,10 @@ interface Props {
   title?: string;
 }
 
-const defaultTitle = "🏠 Homepage";
-
 /** Display a section linking to the homepage defined in package.json */
 export const HomepageFromPkg: Component<Readonly<Props>> = ({
   pkg: { homepage },
-  title,
+  title = "🏠 Homepage",
 }) => {
   if (homepage === undefined) {
     return null;
@@ -22,7 +20,7 @@ export const HomepageFromPkg: Component<Readonly<Props>> = ({
 
   return (
     <Fragment>
-      <Heading level={2}>{title || defaultTitle}</Heading>
+      <Heading level={2}>{title}</Heading>
       You can find more about this on <Link to={homepage}>{homepage}</Link>.
       <LineBreak />
       <LineBreak />

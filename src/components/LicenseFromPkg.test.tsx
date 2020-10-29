@@ -15,9 +15,9 @@ describe("LicenseFromPkg", () => {
       name: "test-package",
       license: "MIT",
     };
-    expect(await render(<LicenseFromPkg pkg={pkg} />)).toContain(
-      "## 📜 License\n"
-    );
+    expect(
+      await render(<LicenseFromPkg pkg={pkg} title="License" />)
+    ).toContain("## License\n");
   });
 
   it("renders sentence with a link to the license", async () => {
