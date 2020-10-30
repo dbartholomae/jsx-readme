@@ -8,6 +8,9 @@ describe("ContributingSection", () => {
     expect(await render(<ContributingSection />)).toContain(
       "## 🖋️ Contributing\n"
     );
+    expect(
+      await render(<ContributingSection title="Contributing" />)
+    ).toContain("## Contributing\n");
   });
 
   it("renders sentence with a link to the contributing file", async () => {
