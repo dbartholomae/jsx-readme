@@ -27,14 +27,13 @@ export const CoverallsBadge: Component<Props> = ({ branch, pkg }) => {
         coveralls
       </Badge>
     );
-  } else {
-    return (
-      <Badge
-        link={`https://coveralls.io/github/${owner}/${repo}?branch=${branch}`}
-        imageSource={`https://coveralls.io/repos/github/${owner}/${repo}/badge.svg?branch=${branch}`}
-      >
-        coveralls
-      </Badge>
-    );
   }
+  return (
+    <Badge
+      link={`https://coveralls.io/github/${owner}/${repo}?branch=${branch}`}
+      imageSource={`https://coveralls.io/repos/github/${owner}/${repo}/badge.svg?branch=${branch}`}
+    >
+      coveralls
+    </Badge>
+  );
 };
