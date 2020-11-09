@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/dbartholomae/jsx-readme/compare/v1.12.0...v1.13.0) (2020-11-09)
+
+
+### Features
+
+* **CoverallsBadge:** add badge and test ([dfda615](https://github.com/dbartholomae/jsx-readme/commit/dfda615dc8ecca663a4f95c384ebf4fe9b641c3d))
+
 # [1.12.0](https://github.com/dbartholomae/jsx-readme/compare/v1.11.0...v1.12.0) (2020-10-30)
 
 
