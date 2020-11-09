@@ -12,6 +12,7 @@ export { NpmDownloadsBadge } from "./NpmDownloadsBadge";
 export { GithubTopLanguageBadge } from "./GithubTopLanguageBadge";
 export { GithubWorkflowBadge } from "./GithubWorkflowBadge";
 export { CodecovBadge } from "./CodecovBadge";
+export { CoverallsBadge } from "./CoverallsBadge";
 export { SemanticReleaseBadge } from "./SemanticReleaseBadge";
 export { DependenciesBadge } from "./DependenciesBadge";
 export { DevDependenciesBadge } from "./DevDependenciesBadge";
