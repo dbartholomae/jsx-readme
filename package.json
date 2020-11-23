@@ -46,7 +46,7 @@
     "@semantic-release/github": "^7.1.1",
     "@types/jest": "^26.0.10",
     "@types/mock-fs": "^4.10.0",
-    "@types/react": "^16.9.49",
+    "@types/react": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
     "eslint": "^7.8.1",
