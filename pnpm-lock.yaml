@@ -8,11 +8,11 @@ devDependencies:
   '@semantic-release/github': 7.1.1_semantic-release@17.1.1
   '@types/jest': 26.0.10
   '@types/mock-fs': 4.10.0
-  '@types/react': 16.9.49
+  '@types/react': 17.0.0
   '@typescript-eslint/eslint-plugin': 4.4.1_81b5cd01250413b12f4818c001f48928
   '@typescript-eslint/parser': 4.4.1_eslint@7.8.1+typescript@4.0.2
   eslint: 7.8.1
-  eslint-config-prettier: 6.11.0_eslint@7.8.1
+  eslint-config-prettier: 7.1.0_eslint@7.8.1
   eslint-plugin-jest: 24.0.1_eslint@7.8.1+typescript@4.0.2
   eslint-plugin-jest-formatting: 2.0.0_eslint@7.8.1
   eslint-plugin-prettier: 3.1.4_eslint@7.8.1+prettier@2.1.0
@@ -1064,13 +1064,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
-  /@types/react/16.9.49:
+  /@types/react/17.0.0:
     dependencies:
       '@types/prop-types': 15.7.3
       csstype: 3.0.3
     dev: true
     resolution:
-      integrity: sha512-DtLFjSj0OYAdVLBbyjhuV9CdGVHCkHn2R+xr3XkBvK2rS1Y1tkc14XSGjYgm5Fjjr90AxH9tiSzc1pCFMGO06g==
+      integrity: sha512-aj/L7RIMsRlWML3YB6KZiXB3fV2t41+5RBGYF8z+tAKU43Px8C3cYUZsDvf1/+Bm4FK21QWBrDutu8ZJ/70qOw==
   /@types/retry/0.12.0:
     dev: true
     resolution:
@@ -2410,16 +2410,15 @@ packages:
       source-map: 0.6.1
     resolution:
       integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==
-  /eslint-config-prettier/6.11.0_eslint@7.8.1:
+  /eslint-config-prettier/7.1.0_eslint@7.8.1:
     dependencies:
       eslint: 7.8.1
-      get-stdin: 6.0.0
     dev: true
     hasBin: true
     peerDependencies:
-      eslint: '>=3.14.1'
+      eslint: '>=7.0.0'
     resolution:
-      integrity: sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
+      integrity: sha512-9sm5/PxaFG7qNJvJzTROMM1Bk1ozXVTKI0buKOyb0Bsr1hrwi0H/TzxF/COtf1uxikIK8SwhX7K6zg78jAzbeA==
   /eslint-plugin-jest-formatting/2.0.0_eslint@7.8.1:
     dependencies:
       eslint: 7.8.1
@@ -2931,12 +2930,6 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-pjzuKtY64GYfWizNAJ0fr9VqttZkNiK2iS430LtIHzjBEr6bX8Am2zm4sW4Ro5wjWW5cAlRL1qAMTcXbjNAO2Q==
-  /get-stdin/6.0.0:
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
   /get-stdin/8.0.0:
     dev: true
     engines:
@@ -7139,11 +7132,11 @@ specifiers:
   '@semantic-release/github': ^7.1.1
   '@types/jest': ^26.0.10
   '@types/mock-fs': ^4.10.0
-  '@types/react': ^16.9.49
+  '@types/react': ^17.0.0
   '@typescript-eslint/eslint-plugin': ^4.4.1
   '@typescript-eslint/parser': ^4.4.1
   eslint: ^7.8.1
-  eslint-config-prettier: ^6.10.1
+  eslint-config-prettier: ^7.0.0
   eslint-plugin-jest: ^24.0.1
   eslint-plugin-jest-formatting: ^2.0.0
   eslint-plugin-prettier: ^3.1.2
