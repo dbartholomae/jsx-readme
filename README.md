@@ -21,7 +21,32 @@ Generate Readme files with a React\-like syntax and package\.json\-aware helpers
 
 ## 🛠 Installation
 
-Add `jsx-readme` to your `devDependencies` and install it. I recommend using it with `ts-node`. Then all you need to do is add a file like in the example below and run it via `ts-node` whenever you want to create a new version of the `README`.
+Add `jsx-readme` and `ts-node` to your `devDependencies`.
+```sh
+npm i jsx-readme ts-node -D
+```
+Add these configs to your `tsconfig.json`:
+```json
+
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "jsx": "react"
+  }
+}
+      
+```
+Create a README.MD template (you may copy the example from this repo examples/README.md.tsx and edit to your taste). Add the following script to your `package.json`:
+```json
+
+{
+  "scripts": {
+    "generate:readme": "ts-node README.md.tsx"
+  }
+}
+      
+```
+
 
 ## 🔬 Examples
 
@@ -121,7 +146,7 @@ import MD, {
   LicenseBadge,
   LicenseFromPkg,
 } from "jsx-readme";
-import { Heading, InlineCode, LineBreak } from "jsx-md";
+import { CodeBlock, Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
 
 const Readme: Component = () => (
@@ -147,12 +172,35 @@ const Readme: Component = () => (
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>🛠 Installation</Heading>
-    Add <InlineCode>jsx-readme</InlineCode> to your{" "}
-    <InlineCode>devDependencies</InlineCode> and install it. I recommend using
-    it with <InlineCode>ts-node</InlineCode>. Then all you need to do is add a
-    file like in the example below and run it via{" "}
-    <InlineCode>ts-node</InlineCode> whenever you want to create a new version
-    of the <InlineCode>README</InlineCode>.
+    Add <InlineCode>jsx-readme</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
+    to your <InlineCode>devDependencies</InlineCode>.
+    <LineBreak />
+    <CodeBlock language="sh">npm i jsx-readme ts-node -D</CodeBlock>
+    Add these configs to your <InlineCode>tsconfig.json</InlineCode>:
+    <LineBreak />
+    <CodeBlock language="json">
+      {`
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "jsx": "react"
+  }
+}
+      `}
+    </CodeBlock>
+    Create a README.MD template (you may copy the example from this repo
+    examples/README.md.tsx and edit to your taste). Add the following script to
+    your <InlineCode>package.json</InlineCode>:
+    <LineBreak />
+    <CodeBlock language="json">
+      {`
+{
+  "scripts": {
+    "generate:readme": "ts-node README.md.tsx"
+  }
+}
+      `}
+    </CodeBlock>
     <LineBreak />
     <LineBreak />
     {/* Create an example section based on all files from the example directory set up in package.json */}
