@@ -1,5 +1,5 @@
 {
-  "param-name": "props",
+  "namedParamName": "props",
   "plugin": ["typedoc-plugin-param-names", "typedoc-plugin-sourcefile-url"],
   "stripInternal": true,
   "tsconfig": "./tsconfig.build.json",
