@@ -1,7 +1,7 @@
 {
+  "entryPoints": ["./src/index.ts"],
   "namedParamName": "props",
   "plugin": ["typedoc-plugin-param-names", "typedoc-plugin-sourcefile-url"],
-  "stripInternal": true,
-  "tsconfig": "./tsconfig.build.json",
+  "tsconfig": "./tsconfig.docs.json",
   "sourcefile-url-prefix": "https://github.com/dbartholomae/jsx-readme/blob/main/src/"
 }
