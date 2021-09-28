@@ -41,5 +41,10 @@ describe("extractGithubOwnerAndRepo", () => {
         repo: "jsx-readme",
       });
     });
+
+    it("returns undefined if repo is not hosted on GitHub", () => {
+      const url = "https://bitbucket.org/dbartholomae/jsx-readme.git";
+      expect(extractGithubOwnerAndRepo(createRepository(url))).toBeUndefined();
+    });
   });
 });

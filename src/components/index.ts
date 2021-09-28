@@ -8,6 +8,7 @@ export * from "./badges";
 export { Badge } from "./Badge";
 export { BadgesFromPkg } from "./BadgesFromPkg";
 export { ContributingSection } from "./ContributingSection";
+export { ContributorsSection } from "./ContributorsSection";
 export { ExamplesFromPkg } from "./ExamplesFromPkg";
 export { HomepageFromPkg } from "./HomepageFromPkg";
 export { LicenseFromPkg } from "./LicenseFromPkg";

@@ -145,6 +145,7 @@ import MD, {
   HacktoberfestBadge,
   LicenseBadge,
   LicenseFromPkg,
+  ContributorsSection,
 } from "jsx-readme";
 import { CodeBlock, Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -209,6 +210,8 @@ const Readme: Component = () => (
     <HomepageFromPkg pkg={pkg} />
     {/* Create a section linking to the contributing guidelines file */}
     <ContributingSection />
+    {/* Create a section linking to the contributors of the repo */}
+    <ContributorsSection pkg={pkg} />
     {/* Create a section linking to the license file. */}
     <LicenseFromPkg pkg={pkg} />
   </Fragment>
@@ -224,6 +227,10 @@ You can find more about this on [https://dbartholomae.github.io/jsx-readme](http
 ## 🖋️ Contributing
 
 If you are interested in contributing to this repository, please read up on the details in our [contributing guidelines](./CONTRIBUTING.md).
+
+## ‍💼 Contributors
+
+This package only works thanks to [all of our contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors).
 
 ## 📜 License
 
