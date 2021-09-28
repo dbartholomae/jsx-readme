@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/dbartholomae/jsx-readme/compare/v1.14.0...v1.15.0) (2021-09-28)
+
+
+### Features
+
+* Work in progress for generating a contribution file ([688f90c](https://github.com/dbartholomae/jsx-readme/commit/688f90c728b4c8303ea5aa6f948aa77502088ed3))
+
 # [1.14.0](https://github.com/dbartholomae/jsx-readme/compare/v1.13.0...v1.14.0) (2021-09-28)
 
 
