@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/dbartholomae/jsx-readme/compare/v1.13.0...v1.14.0) (2021-09-28)
+
+
+### Features
+
+* **ContributorsSection:** add ContributorsSection ([ff44f88](https://github.com/dbartholomae/jsx-readme/commit/ff44f88b076bc75824622a59f6adfa0f7f102e29))
+
 # [1.13.0](https://github.com/dbartholomae/jsx-readme/compare/v1.12.0...v1.13.0) (2020-11-09)
 
 
