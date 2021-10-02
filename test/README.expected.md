@@ -145,7 +145,7 @@ import MD, {
   HacktoberfestBadge,
   LicenseBadge,
   LicenseFromPkg,
-  ContributorsSection,
+  ContributorsSectionFromPkg,
 } from "jsx-readme";
 import { CodeBlock, Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -211,7 +211,7 @@ const Readme: Component = () => (
     {/* Create a section linking to the contributing guidelines file */}
     <ContributingSection />
     {/* Create a section linking to the contributors of the repo */}
-    <ContributorsSection pkg={pkg} />
+    <ContributorsSectionFromPkg pkg={pkg} />
     {/* Create a section linking to the license file. */}
     <LicenseFromPkg pkg={pkg} />
   </Fragment>
@@ -231,6 +231,21 @@ If you are interested in contributing to this repository, please read up on the 
 ## ‍💼 Contributors
 
 This package only works thanks to [all of our contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors).
+
+[![dbartholomae](https://avatars.githubusercontent.com/u/3396992?size=100 "dbartholomae")](https://github.com/dbartholomae "dbartholomae's GitHub profile'")
+[![mergify[bot]](https://avatars.githubusercontent.com/u/37929162?size=100 "mergify[bot]")](https://github.com/mergify[bot] "mergify[bot]'s GitHub profile'")
+[![semantic-release-bot](https://avatars.githubusercontent.com/u/32174276?size=100 "semantic-release-bot")](https://github.com/semantic-release-bot "semantic-release-bot's GitHub profile'")
+[![dependabot[bot]](https://avatars.githubusercontent.com/u/49699333?size=100 "dependabot[bot]")](https://github.com/dependabot[bot] "dependabot[bot]'s GitHub profile'")
+[![KwanJunWen](https://avatars.githubusercontent.com/u/40483304?size=100 "KwanJunWen")](https://github.com/KwanJunWen "KwanJunWen's GitHub profile'")
+[![MDShields7](https://avatars.githubusercontent.com/u/32501364?size=100 "MDShields7")](https://github.com/MDShields7 "MDShields7's GitHub profile'")
+[![AJMcDee](https://avatars.githubusercontent.com/u/22745495?size=100 "AJMcDee")](https://github.com/AJMcDee "AJMcDee's GitHub profile'")
+[![tancredosouza](https://avatars.githubusercontent.com/u/13404051?size=100 "tancredosouza")](https://github.com/tancredosouza "tancredosouza's GitHub profile'")
+[![Ruchika30](https://avatars.githubusercontent.com/u/16018506?size=100 "Ruchika30")](https://github.com/Ruchika30 "Ruchika30's GitHub profile'")
+[![anshdhinhgra47](https://avatars.githubusercontent.com/u/56676059?size=100 "anshdhinhgra47")](https://github.com/anshdhinhgra47 "anshdhinhgra47's GitHub profile'")
+[![gedaiu](https://avatars.githubusercontent.com/u/4217037?size=100 "gedaiu")](https://github.com/gedaiu "gedaiu's GitHub profile'")
+[![i-am-jeetu](https://avatars.githubusercontent.com/u/66921514?size=100 "i-am-jeetu")](https://github.com/i-am-jeetu "i-am-jeetu's GitHub profile'")
+
+[+ 2 contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors)
 
 ## 📜 License
 
