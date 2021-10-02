@@ -9,5 +9,6 @@ import MD, { Component, Fragment } from "jsx-md";
 export { Component, Fragment };
 
 export * from "./components";
+export * from "./containers";
 export * from "./renderToFile";
 export default MD;
