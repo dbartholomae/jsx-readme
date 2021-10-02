@@ -16,4 +16,5 @@ module.exports = {
   },
   testRegex: ".*test\\.(t|j)sx?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  modulePathIgnorePatterns: ["src/containers/"],
 };
