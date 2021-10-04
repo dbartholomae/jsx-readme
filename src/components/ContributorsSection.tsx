@@ -1,8 +1,8 @@
 /* @jsx MD */
 import { Component } from "jsx-md";
 import MD, { Fragment, Heading, LineBreak, Link, Text } from "jsx-md";
-import { ContributorsList } from "./ContributorsList";
-import type { Contributor } from "./ContributorsList";
+import { ContributorsTable } from "./ContributorsTable";
+import type { Contributor } from "./ContributorsTable";
 
 /** @internal */
 interface Props {
@@ -25,12 +25,15 @@ export const ContributorsSection: Component<Props> = ({
     <Text>This package only works thanks to</Text>{" "}
     <Link to={`https://github.com/${owner}/${repo}/graphs/contributors`}>
       all of our contributors
+      {contributors.length <= 0 &&
+        additionalContributorsCount &&
+        ` (${additionalContributorsCount})`}
     </Link>
     .
     <LineBreak />
     <LineBreak />
-    <ContributorsList contributors={contributors} />
-    {additionalContributorsCount && (
+    <ContributorsTable contributors={contributors} />
+    {contributors.length > 0 && additionalContributorsCount && (
       <Fragment>
         <LineBreak />
         <LineBreak />
