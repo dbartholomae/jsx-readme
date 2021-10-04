@@ -54,7 +54,7 @@ Create a README.MD template (you may copy the example from this repo examples/RE
 
 ```json
 {
-  "name": "jsx-readme",
+  "name": "jsx-readme-test-fixture",
   "version": "0.0.0",
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
   "main": "lib/index.js",
@@ -80,9 +80,9 @@ Create a README.MD template (you may copy the example from this repo examples/RE
   ],
   "author": "Daniel Bartholomae <daniel@bartholomae.name> (https://startup-cto.net)",
   "license": "MIT",
-  "homepage": "https://dbartholomae.github.io/jsx-readme",
-  "repository": "git@github.com:dbartholomae/jsx-readme.git",
-  "bugs": "https://github.com/dbartholomae/jsx-readme/issues",
+  "homepage": "https://dbartholomae.github.io/jsx-readme-test-fixture",
+  "repository": "git@github.com:dbartholomae/jsx-readme-test-fixture.git",
+  "bugs": "https://github.com/dbartholomae/jsx-readme-test-fixture/issues",
   "directories": {
     "lib": "lib",
     "doc": "docs",
@@ -125,7 +125,7 @@ Create a README.MD template (you may copy the example from this repo examples/RE
 ```tsx
 // We need to tell the JSX transpiler that in this file,
 // instead of React we use the custom createElement and Fragment
-// functions from jsx-readme
+// functions from jsx-readme-test-fixture
 /* @jsx MD */
 /* @jsxFrag Fragment */
 import type { Component } from "jsx-readme";
@@ -173,10 +173,10 @@ const Readme: Component = () => (
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>🛠 Installation</Heading>
-    Add <InlineCode>jsx-readme</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
+    Add <InlineCode>jsx-readme-test-fixture</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
     to your <InlineCode>devDependencies</InlineCode>.
     <LineBreak />
-    <CodeBlock language="sh">npm i jsx-readme ts-node -D</CodeBlock>
+    <CodeBlock language="sh">npm i jsx-readme-test-fixture ts-node -D</CodeBlock>
     Add these configs to your <InlineCode>tsconfig.json</InlineCode>:
     <LineBreak />
     <CodeBlock language="json">
@@ -217,7 +217,7 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-void renderToFile("./README.md", <Readme />);
+void renderToFile("./test/README.actual.md", <Readme />);
 ```
 
 ## 🏠 Homepage
@@ -232,20 +232,9 @@ If you are interested in contributing to this repository, please read up on the 
 
 This package only works thanks to [all of our contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors).
 
-[![dbartholomae](https://avatars.githubusercontent.com/u/3396992?size=100 "dbartholomae")](https://github.com/dbartholomae "dbartholomae's GitHub profile'")
-[![mergify[bot]](https://avatars.githubusercontent.com/u/37929162?size=100 "mergify[bot]")](https://github.com/mergify[bot] "mergify[bot]'s GitHub profile'")
-[![semantic-release-bot](https://avatars.githubusercontent.com/u/32174276?size=100 "semantic-release-bot")](https://github.com/semantic-release-bot "semantic-release-bot's GitHub profile'")
-[![dependabot[bot]](https://avatars.githubusercontent.com/u/49699333?size=100 "dependabot[bot]")](https://github.com/dependabot[bot] "dependabot[bot]'s GitHub profile'")
-[![KwanJunWen](https://avatars.githubusercontent.com/u/40483304?size=100 "KwanJunWen")](https://github.com/KwanJunWen "KwanJunWen's GitHub profile'")
-[![MDShields7](https://avatars.githubusercontent.com/u/32501364?size=100 "MDShields7")](https://github.com/MDShields7 "MDShields7's GitHub profile'")
-[![AJMcDee](https://avatars.githubusercontent.com/u/22745495?size=100 "AJMcDee")](https://github.com/AJMcDee "AJMcDee's GitHub profile'")
-[![tancredosouza](https://avatars.githubusercontent.com/u/13404051?size=100 "tancredosouza")](https://github.com/tancredosouza "tancredosouza's GitHub profile'")
-[![Ruchika30](https://avatars.githubusercontent.com/u/16018506?size=100 "Ruchika30")](https://github.com/Ruchika30 "Ruchika30's GitHub profile'")
-[![anshdhinhgra47](https://avatars.githubusercontent.com/u/56676059?size=100 "anshdhinhgra47")](https://github.com/anshdhinhgra47 "anshdhinhgra47's GitHub profile'")
-[![gedaiu](https://avatars.githubusercontent.com/u/4217037?size=100 "gedaiu")](https://github.com/gedaiu "gedaiu's GitHub profile'")
-[![i-am-jeetu](https://avatars.githubusercontent.com/u/66921514?size=100 "i-am-jeetu")](https://github.com/i-am-jeetu "i-am-jeetu's GitHub profile'")
+<table><tr><td align="center"><a title="semantic-release-bot's GitHub profile'" href="https://github.com/semantic-release-bot"><img alt="semantic-release-bot" src="https://avatars.githubusercontent.com/u/32174276?s=100" width="100px"></a><br /><a title="semantic-release-bot's GitHub profile'" href="https://github.com/semantic-release-bot"><sub><b>semantic-release-bot</b></sub></a></td><td align="center"><a title="KwanJunWen's GitHub profile'" href="https://github.com/KwanJunWen"><img alt="KwanJunWen" src="https://avatars.githubusercontent.com/u/40483304?s=100" width="100px"></a><br /><a title="KwanJunWen's GitHub profile'" href="https://github.com/KwanJunWen"><sub><b>KwanJunWen</b></sub></a></td><td align="center"><a title="MDShields7's GitHub profile'" href="https://github.com/MDShields7"><img alt="MDShields7" src="https://avatars.githubusercontent.com/u/32501364?s=100" width="100px"></a><br /><a title="MDShields7's GitHub profile'" href="https://github.com/MDShields7"><sub><b>MDShields7</b></sub></a></td><td align="center"><a title="AJMcDee's GitHub profile'" href="https://github.com/AJMcDee"><img alt="AJMcDee" src="https://avatars.githubusercontent.com/u/22745495?s=100" width="100px"></a><br /><a title="AJMcDee's GitHub profile'" href="https://github.com/AJMcDee"><sub><b>AJMcDee</b></sub></a></td><td align="center"><a title="tancredosouza's GitHub profile'" href="https://github.com/tancredosouza"><img alt="tancredosouza" src="https://avatars.githubusercontent.com/u/13404051?s=100" width="100px"></a><br /><a title="tancredosouza's GitHub profile'" href="https://github.com/tancredosouza"><sub><b>tancredosouza</b></sub></a></td><td align="center"><a title="Ruchika30's GitHub profile'" href="https://github.com/Ruchika30"><img alt="Ruchika30" src="https://avatars.githubusercontent.com/u/16018506?s=100" width="100px"></a><br /><a title="Ruchika30's GitHub profile'" href="https://github.com/Ruchika30"><sub><b>Ruchika30</b></sub></a></td></tr><tr><td align="center"><a title="anshdhinhgra47's GitHub profile'" href="https://github.com/anshdhinhgra47"><img alt="anshdhinhgra47" src="https://avatars.githubusercontent.com/u/56676059?s=100" width="100px"></a><br /><a title="anshdhinhgra47's GitHub profile'" href="https://github.com/anshdhinhgra47"><sub><b>anshdhinhgra47</b></sub></a></td><td align="center"><a title="gedaiu's GitHub profile'" href="https://github.com/gedaiu"><img alt="gedaiu" src="https://avatars.githubusercontent.com/u/4217037?s=100" width="100px"></a><br /><a title="gedaiu's GitHub profile'" href="https://github.com/gedaiu"><sub><b>gedaiu</b></sub></a></td><td align="center"><a title="i-am-jeetu's GitHub profile'" href="https://github.com/i-am-jeetu"><img alt="i-am-jeetu" src="https://avatars.githubusercontent.com/u/66921514?s=100" width="100px"></a><br /><a title="i-am-jeetu's GitHub profile'" href="https://github.com/i-am-jeetu"><sub><b>i-am-jeetu</b></sub></a></td><td align="center"><a title="Pipo93's GitHub profile'" href="https://github.com/Pipo93"><img alt="Pipo93" src="https://avatars.githubusercontent.com/u/12968697?s=100" width="100px"></a><br /><a title="Pipo93's GitHub profile'" href="https://github.com/Pipo93"><sub><b>Pipo93</b></sub></a></td><td align="center"><a title="jruipinto's GitHub profile'" href="https://github.com/jruipinto"><img alt="jruipinto" src="https://avatars.githubusercontent.com/u/44852805?s=100" width="100px"></a><br /><a title="jruipinto's GitHub profile'" href="https://github.com/jruipinto"><sub><b>jruipinto</b></sub></a></td></tr></table>
 
-[+ 2 contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors)
+[+ 3 contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors)
 
 ## 📜 License
 
