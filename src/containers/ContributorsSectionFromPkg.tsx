@@ -8,7 +8,7 @@ import { ContributorsSection } from "../components";
 import { extractGithubOwnerAndRepo } from "../components/badges/utils/extractGithubOwnerAndRepo";
 import { PackageJSON } from "../PackageJSON";
 
-import type { Contributor } from "../components/ContributorsList";
+import type { Contributor } from "../components/ContributorsTable";
 
 // Fetch total contributors count using pagination trick. See https://stackoverflow.com/a/44347632.
 const fetchTotalContributorsCount = async (
@@ -49,11 +49,10 @@ const fetchContributors = async (
     }
     contributors = contributors.concat(
       resp.data
-        // NOTE: Exclude "Bot" and repo owner as contributors does'nt work as total contributors count will include them as well.
-        // .filter(
-        //   (contributor) =>
-        //     contributor.type !== "Bot" && contributor.login !== owner
-        // )
+        .filter(
+          (contributor) =>
+            contributor.type !== "Bot" && contributor.login !== owner
+        )
         .reduce<Array<Contributor>>(
           (result, { id, login }) =>
             id && login ? result.concat({ id, name: login }) : result,
@@ -76,7 +75,7 @@ export const ContributorsSectionFromPkg: Component<Props> = awaitComponent(
   async ({
     title = "‍💼 Contributors",
     pkg,
-    githubAccessToken,
+    githubAccessToken = process.env.GITHUB_TOKEN,
     contributorsMaxDisplayLength = 12,
   }) => {
     const repoData = extractGithubOwnerAndRepo(pkg.repository);
@@ -86,9 +85,7 @@ export const ContributorsSectionFromPkg: Component<Props> = awaitComponent(
 
     const { repo, owner } = repoData;
 
-    const auth = githubAccessToken || process.env.GITHUB_TOKEN;
-
-    const octokit = new Octokit({ auth });
+    const octokit = new Octokit({ auth: githubAccessToken });
 
     const totalCountributors = await fetchTotalContributorsCount(
       octokit,
