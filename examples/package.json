@@ -1,5 +1,5 @@
 {
-  "name": "jsx-readme",
+  "name": "jsx-readme-test-fixture",
   "version": "0.0.0",
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
   "main": "lib/index.js",
@@ -25,9 +25,9 @@
   ],
   "author": "Daniel Bartholomae <daniel@bartholomae.name> (https://startup-cto.net)",
   "license": "MIT",
-  "homepage": "https://dbartholomae.github.io/jsx-readme",
-  "repository": "git@github.com:dbartholomae/jsx-readme.git",
-  "bugs": "https://github.com/dbartholomae/jsx-readme/issues",
+  "homepage": "https://dbartholomae.github.io/jsx-readme-test-fixture",
+  "repository": "git@github.com:dbartholomae/jsx-readme-test-fixture.git",
+  "bugs": "https://github.com/dbartholomae/jsx-readme-test-fixture/issues",
   "directories": {
     "lib": "lib",
     "doc": "docs",

@@ -1,29 +1,29 @@
-# jsx-readme
+# jsx-readme-test-fixture
 
-[![npm package](https://badge.fury.io/js/jsx-readme.svg)](https://npmjs.org/package/jsx-readme)
-[![downloads](https://img.shields.io/npm/dw/jsx-readme.svg)](https://npm-stat.com/charts.html?package=jsx-readme)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/jsx-readme.svg)](https://bundlephobia.com/result?p=jsx-readme)
-[![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme.svg)](https://github.com/dbartholomae/jsx-readme/issues)
-[![dependency status](https://david-dm.org/dbartholomae/jsx-readme.svg?theme=shields.io)](https://david-dm.org/dbartholomae/jsx-readme)
-[![devDependency status](https://david-dm.org/dbartholomae/jsx-readme/dev-status.svg)](https://david-dm.org/dbartholomae/jsx-readme?type=dev)
-[![GitHub Top language](https://img.shields.io/github/languages/top/dbartholomae/jsx-readme)](https://github.com/dbartholomae/jsx-readme)
+[![npm package](https://badge.fury.io/js/jsx-readme-test-fixture.svg)](https://npmjs.org/package/jsx-readme-test-fixture)
+[![downloads](https://img.shields.io/npm/dw/jsx-readme-test-fixture.svg)](https://npm-stat.com/charts.html?package=jsx-readme-test-fixture)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/jsx-readme-test-fixture.svg)](https://bundlephobia.com/result?p=jsx-readme-test-fixture)
+[![open issues](https://img.shields.io/github/issues-raw/dbartholomae/jsx-readme-test-fixture.svg)](https://github.com/dbartholomae/jsx-readme-test-fixture/issues)
+[![dependency status](https://david-dm.org/dbartholomae/jsx-readme-test-fixture.svg?theme=shields.io)](https://david-dm.org/dbartholomae/jsx-readme-test-fixture)
+[![devDependency status](https://david-dm.org/dbartholomae/jsx-readme-test-fixture/dev-status.svg)](https://david-dm.org/dbartholomae/jsx-readme-test-fixture?type=dev)
+[![GitHub Top language](https://img.shields.io/github/languages/top/dbartholomae/jsx-readme-test-fixture)](https://github.com/dbartholomae/jsx-readme-test-fixture)
 [![semantic release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release#badge)
 [![jsx-readme](https://img.shields.io/badge/jsx--readme-lightgrey)](https://dbartholomae.github.io/jsx-readme)
-[![hits](http://hits.dwyl.com/dbartholomae/jsx-readme.svg)](http://hits.dwyl.com/dbartholomae/jsx-readme)
-[![license](https://img.shields.io/github/license/dbartholomae/jsx-readme)](https://github.com/dbartholomae/jsx-readme/blob/main/LICENSE)
-[![codecov](https://codecov.io/gh/dbartholomae/jsx-readme/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-readme)
-[![build status](https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy")
+[![hits](http://hits.dwyl.com/dbartholomae/jsx-readme-test-fixture.svg)](http://hits.dwyl.com/dbartholomae/jsx-readme-test-fixture)
+[![license](https://img.shields.io/github/license/dbartholomae/jsx-readme-test-fixture)](https://github.com/dbartholomae/jsx-readme-test-fixture/blob/main/LICENSE)
+[![codecov](https://codecov.io/gh/dbartholomae/jsx-readme-test-fixture/branch/main/graph/badge.svg)](https://codecov.io/gh/dbartholomae/jsx-readme-test-fixture)
+[![build status](https://github.com/dbartholomae/jsx-readme-test-fixture/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme-test-fixture/actions?query=workflow%3A"Build%20and%20deploy")
 [![chat](https://img.shields.io/discord/750063320614174871)](https://discord.com/invite/X9HRSK5)
-[![CLA Assistant](https://cla-assistant.io/readme/badge/dbartholomae/jsx-readme)](https://cla-assistant.io/dbartholomae/jsx-readme)
-[![hacktoberfest badge](https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue)](https://github.com/dbartholomae/jsx-readme)
+[![CLA Assistant](https://cla-assistant.io/readme/badge/dbartholomae/jsx-readme-test-fixture)](https://cla-assistant.io/dbartholomae/jsx-readme-test-fixture)
+[![hacktoberfest badge](https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme-test-fixture?suggestion_label=good%20first%20issue)](https://github.com/dbartholomae/jsx-readme-test-fixture)
 
 Generate Readme files with a React\-like syntax and package\.json\-aware helpers\.
 
 ## 🛠 Installation
 
-Add `jsx-readme` and `ts-node` to your `devDependencies`.
+Add `jsx-readme-test-fixture` and `ts-node` to your `devDependencies`.
 ```sh
-npm i jsx-readme ts-node -D
+npm i jsx-readme-test-fixture ts-node -D
 ```
 Add these configs to your `tsconfig.json`:
 ```json
@@ -54,7 +54,7 @@ Create a README.MD template (you may copy the example from this repo examples/RE
 
 ```json
 {
-  "name": "jsx-readme",
+  "name": "jsx-readme-test-fixture",
   "version": "0.0.0",
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
   "main": "lib/index.js",
@@ -80,9 +80,9 @@ Create a README.MD template (you may copy the example from this repo examples/RE
   ],
   "author": "Daniel Bartholomae <daniel@bartholomae.name> (https://startup-cto.net)",
   "license": "MIT",
-  "homepage": "https://dbartholomae.github.io/jsx-readme",
-  "repository": "git@github.com:dbartholomae/jsx-readme.git",
-  "bugs": "https://github.com/dbartholomae/jsx-readme/issues",
+  "homepage": "https://dbartholomae.github.io/jsx-readme-test-fixture",
+  "repository": "git@github.com:dbartholomae/jsx-readme-test-fixture.git",
+  "bugs": "https://github.com/dbartholomae/jsx-readme-test-fixture/issues",
   "directories": {
     "lib": "lib",
     "doc": "docs",
@@ -125,10 +125,10 @@ Create a README.MD template (you may copy the example from this repo examples/RE
 ```tsx
 // We need to tell the JSX transpiler that in this file,
 // instead of React we use the custom createElement and Fragment
-// functions from jsx-readme
+// functions from jsx-readme-test-fixture
 /* @jsx MD */
 /* @jsxFrag Fragment */
-import type { Component } from "jsx-readme";
+import type { Component } from "jsx-readme-test-fixture";
 import MD, {
   BadgesFromPkg,
   CodecovBadge,
@@ -146,7 +146,7 @@ import MD, {
   LicenseBadge,
   LicenseFromPkg,
   ContributorsSectionFromPkg,
-} from "jsx-readme";
+} from "jsx-readme-test-fixture";
 import { CodeBlock, Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
 
@@ -173,10 +173,10 @@ const Readme: Component = () => (
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>🛠 Installation</Heading>
-    Add <InlineCode>jsx-readme</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
+    Add <InlineCode>jsx-readme-test-fixture</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
     to your <InlineCode>devDependencies</InlineCode>.
     <LineBreak />
-    <CodeBlock language="sh">npm i jsx-readme ts-node -D</CodeBlock>
+    <CodeBlock language="sh">npm i jsx-readme-test-fixture ts-node -D</CodeBlock>
     Add these configs to your <InlineCode>tsconfig.json</InlineCode>:
     <LineBreak />
     <CodeBlock language="json">
@@ -217,12 +217,12 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-void renderToFile("./README.md", <Readme />);
+void renderToFile("./test/README.actual.md", <Readme />);
 ```
 
 ## 🏠 Homepage
 
-You can find more about this on [https://dbartholomae.github.io/jsx-readme](https://dbartholomae.github.io/jsx-readme).
+You can find more about this on [https://dbartholomae.github.io/jsx-readme-test-fixture](https://dbartholomae.github.io/jsx-readme-test-fixture).
 
 ## 🖋️ Contributing
 
@@ -230,22 +230,11 @@ If you are interested in contributing to this repository, please read up on the 
 
 ## ‍💼 Contributors
 
-This package only works thanks to [all of our contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors).
+This package only works thanks to [all of our contributors](https://github.com/dbartholomae/jsx-readme-test-fixture/graphs/contributors).
 
-[![dbartholomae](https://avatars.githubusercontent.com/u/3396992?size=100 "dbartholomae")](https://github.com/dbartholomae "dbartholomae's GitHub profile'")
-[![mergify[bot]](https://avatars.githubusercontent.com/u/37929162?size=100 "mergify[bot]")](https://github.com/mergify[bot] "mergify[bot]'s GitHub profile'")
-[![semantic-release-bot](https://avatars.githubusercontent.com/u/32174276?size=100 "semantic-release-bot")](https://github.com/semantic-release-bot "semantic-release-bot's GitHub profile'")
-[![dependabot[bot]](https://avatars.githubusercontent.com/u/49699333?size=100 "dependabot[bot]")](https://github.com/dependabot[bot] "dependabot[bot]'s GitHub profile'")
-[![KwanJunWen](https://avatars.githubusercontent.com/u/40483304?size=100 "KwanJunWen")](https://github.com/KwanJunWen "KwanJunWen's GitHub profile'")
-[![MDShields7](https://avatars.githubusercontent.com/u/32501364?size=100 "MDShields7")](https://github.com/MDShields7 "MDShields7's GitHub profile'")
-[![AJMcDee](https://avatars.githubusercontent.com/u/22745495?size=100 "AJMcDee")](https://github.com/AJMcDee "AJMcDee's GitHub profile'")
-[![tancredosouza](https://avatars.githubusercontent.com/u/13404051?size=100 "tancredosouza")](https://github.com/tancredosouza "tancredosouza's GitHub profile'")
-[![Ruchika30](https://avatars.githubusercontent.com/u/16018506?size=100 "Ruchika30")](https://github.com/Ruchika30 "Ruchika30's GitHub profile'")
-[![anshdhinhgra47](https://avatars.githubusercontent.com/u/56676059?size=100 "anshdhinhgra47")](https://github.com/anshdhinhgra47 "anshdhinhgra47's GitHub profile'")
-[![gedaiu](https://avatars.githubusercontent.com/u/4217037?size=100 "gedaiu")](https://github.com/gedaiu "gedaiu's GitHub profile'")
-[![i-am-jeetu](https://avatars.githubusercontent.com/u/66921514?size=100 "i-am-jeetu")](https://github.com/i-am-jeetu "i-am-jeetu's GitHub profile'")
+<table><tr><td align="center"><a title="junwen-k's GitHub profile'" href="https://github.com/junwen-k"><img alt="junwen-k" src="https://avatars.githubusercontent.com/u/40173716?s=100" width="100px"></a><br /><a title="junwen-k's GitHub profile'" href="https://github.com/junwen-k"><sub><b>junwen-k</b></sub></a></td></tr></table>
 
-[+ 2 contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors)
+[+ 1 contributors](https://github.com/dbartholomae/jsx-readme-test-fixture/graphs/contributors)
 
 ## 📜 License
 

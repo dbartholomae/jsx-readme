@@ -1,6 +1,6 @@
 // We need to tell the JSX transpiler that in this file,
 // instead of React we use the custom createElement and Fragment
-// functions from jsx-readme
+// functions from jsx-readme-test-fixture
 /* @jsx MD */
 /* @jsxFrag Fragment */
 import type { Component } from "..";
@@ -48,10 +48,10 @@ const Readme: Component = () => (
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
     <Heading level={2}>🛠 Installation</Heading>
-    Add <InlineCode>jsx-readme</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
+    Add <InlineCode>jsx-readme-test-fixture</InlineCode> and <InlineCode>ts-node</InlineCode>{" "}
     to your <InlineCode>devDependencies</InlineCode>.
     <LineBreak />
-    <CodeBlock language="sh">npm i jsx-readme ts-node -D</CodeBlock>
+    <CodeBlock language="sh">npm i jsx-readme-test-fixture ts-node -D</CodeBlock>
     Add these configs to your <InlineCode>tsconfig.json</InlineCode>:
     <LineBreak />
     <CodeBlock language="json">
@@ -92,4 +92,4 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-void renderToFile("./README.md", <Readme />);
+void renderToFile("./test/README.actual.md", <Readme />);
