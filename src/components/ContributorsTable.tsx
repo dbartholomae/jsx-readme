@@ -38,11 +38,11 @@ export const ContributorsTable: Component<Props> = ({
           {contributors.map((contributor) => (
             <Fragment key={contributor.id}>
               {'<td align="center">'}
-              {`<a title="${contributor.name}'s GitHub profile'" href="https://github.com/${contributor.name}">`}
+              {`<a title="${contributor.name}'s GitHub profile" href="https://github.com/${contributor.name}">`}
               {`<img alt="${contributor.name}" src="https://avatars.githubusercontent.com/u/${contributor.id}?s=${avatarSize}" width="${avatarSize}px">`}
               {"</a>"}
               {"<br />"}
-              {`<a title="${contributor.name}'s GitHub profile'" href="https://github.com/${contributor.name}">`}
+              {`<a title="${contributor.name}'s GitHub profile" href="https://github.com/${contributor.name}">`}
               {"<sub>"}
               {"<b>"}
               {contributor.name}

@@ -18,7 +18,7 @@ describe("ContributorsTable", () => {
     expect(
       await render(<ContributorsTable contributors={contributors} />)
     ).toContain(
-      '<table><tr><td align="center"><a title="dbartholomae\'s GitHub profile\'" href="https://github.com/dbartholomae"><img alt="dbartholomae" src="https://avatars.githubusercontent.com/u/1?s=100" width="100px"></a><br /><a title="dbartholomae\'s GitHub profile\'" href="https://github.com/dbartholomae"><sub><b>dbartholomae</b></sub></a></td><td align="center"><a title="junwen-k\'s GitHub profile\'" href="https://github.com/junwen-k"><img alt="junwen-k" src="https://avatars.githubusercontent.com/u/2?s=100" width="100px"></a><br /><a title="junwen-k\'s GitHub profile\'" href="https://github.com/junwen-k"><sub><b>junwen-k</b></sub></a></td></tr></table>'
+      '<table><tr><td align="center"><a title="dbartholomae\'s GitHub profile" href="https://github.com/dbartholomae"><img alt="dbartholomae" src="https://avatars.githubusercontent.com/u/1?s=100" width="100px"></a><br /><a title="dbartholomae\'s GitHub profile" href="https://github.com/dbartholomae"><sub><b>dbartholomae</b></sub></a></td><td align="center"><a title="junwen-k\'s GitHub profile" href="https://github.com/junwen-k"><img alt="junwen-k" src="https://avatars.githubusercontent.com/u/2?s=100" width="100px"></a><br /><a title="junwen-k\'s GitHub profile" href="https://github.com/junwen-k"><sub><b>junwen-k</b></sub></a></td></tr></table>'
     );
   });
 
