@@ -49,10 +49,7 @@ const fetchContributors = async (
     }
     contributors = contributors.concat(
       resp.data
-        .filter(
-          (contributor) =>
-            contributor.type !== "Bot" && contributor.login !== owner
-        )
+        .filter((contributor) => contributor.type !== "Bot")
         .reduce<Array<Contributor>>(
           (result, { id, login }) =>
             id && login ? result.concat({ id, name: login }) : result,
