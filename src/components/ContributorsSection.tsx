@@ -25,7 +25,7 @@ export const ContributorsSection: Component<Props> = ({
     <Text>This package only works thanks to</Text>{" "}
     <Link to={`https://github.com/${owner}/${repo}/graphs/contributors`}>
       all of our contributors
-      {contributors.length <= 0 &&
+      {contributors.length === 0 &&
         additionalContributorsCount &&
         ` (${additionalContributorsCount})`}
     </Link>
@@ -33,7 +33,7 @@ export const ContributorsSection: Component<Props> = ({
     <LineBreak />
     <LineBreak />
     <ContributorsTable contributors={contributors} />
-    {contributors.length > 0 && additionalContributorsCount && (
+    {contributors.length > 0 && !!additionalContributorsCount && (
       <Fragment>
         <LineBreak />
         <LineBreak />

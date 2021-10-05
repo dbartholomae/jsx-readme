@@ -57,7 +57,7 @@ describe("ContributorsSection", () => {
         />
       )
     ).toContain(
-      '<table><tr><td align="center"><a title="dbartholomae\'s GitHub profile\'" href="https://github.com/dbartholomae"><img alt="dbartholomae" src="https://avatars.githubusercontent.com/u/1?s=100" width="100px"></a><br /><a title="dbartholomae\'s GitHub profile\'" href="https://github.com/dbartholomae"><sub><b>dbartholomae</b></sub></a></td></tr></table>'
+      '<table><tr><td align="center"><a title="dbartholomae\'s GitHub profile" href="https://github.com/dbartholomae"><img alt="dbartholomae" src="https://avatars.githubusercontent.com/u/1?s=100" width="100px"></a><br /><a title="dbartholomae\'s GitHub profile" href="https://github.com/dbartholomae"><sub><b>dbartholomae</b></sub></a></td></tr></table>'
     );
   });
 
