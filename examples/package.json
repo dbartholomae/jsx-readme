@@ -1,5 +1,5 @@
 {
-  "name": "jsx-readme-test-fixture",
+  "name": "jsx-readme",
   "version": "0.0.0",
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
   "main": "lib/index.js",
