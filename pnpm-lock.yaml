@@ -1,5 +1,7 @@
 dependencies:
+  '@octokit/core': 3.5.1
   jsx-md: 4.0.1
+  parse-link-header: 1.0.1
 devDependencies:
   '@commitlint/cli': 13.2.0_typescript@4.0.2
   '@commitlint/config-conventional': 13.2.0
@@ -8,6 +10,7 @@ devDependencies:
   '@semantic-release/github': 8.0.1_semantic-release@18.0.0
   '@types/jest': 27.0.2
   '@types/mock-fs': 4.10.0
+  '@types/parse-link-header': 1.0.0
   '@types/react': 17.0.0
   '@typescript-eslint/eslint-plugin': 4.4.1_81b5cd01250413b12f4818c001f48928
   '@typescript-eslint/parser': 4.4.1_eslint@7.8.1+typescript@4.0.2
@@ -772,7 +775,6 @@ packages:
   /@octokit/auth-token/2.5.0:
     dependencies:
       '@octokit/types': 6.31.1
-    dev: true
     resolution:
       integrity: sha512-r5FVUJCOLl19AxiuZD2VRZ/ORjp/4IN98Of6YJoJOkY75CIBuYfmiNHGrDwXr+aLGG55igl9QrxX3hbiXlLb+g==
   /@octokit/core/3.5.1:
@@ -784,7 +786,6 @@ packages:
       '@octokit/types': 6.31.1
       before-after-hook: 2.2.2
       universal-user-agent: 6.0.0
-    dev: true
     resolution:
       integrity: sha512-omncwpLVxMP+GLpLPgeGJBF6IWJFjXDS5flY5VbppePYX9XehevbDykRH9PdCdvqt9TS5AOTiDide7h0qrkHjw==
   /@octokit/endpoint/6.0.5:
@@ -792,7 +793,6 @@ packages:
       '@octokit/types': 5.4.1
       is-plain-object: 4.1.1
       universal-user-agent: 6.0.0
-    dev: true
     resolution:
       integrity: sha512-70K5u6zd45ItOny6aHQAsea8HHQjlQq85yqOMe+Aj8dkhN2qSJ9T+Q3YjUjEYfPRBcuUWNgMn62DQnP/4LAIiQ==
   /@octokit/graphql/4.8.0:
@@ -800,11 +800,9 @@ packages:
       '@octokit/request': 5.6.1
       '@octokit/types': 6.31.1
       universal-user-agent: 6.0.0
-    dev: true
     resolution:
       integrity: sha512-0gv+qLSBLKF0z8TKaSKTsS39scVKF9dbMxJpj3U0vC7wjNWFuIpL/z76Qe2fiuCbDRcJSavkXsVtMS6/dtQQsg==
   /@octokit/openapi-types/10.6.1:
-    dev: true
     resolution:
       integrity: sha512-53YKy8w8+sHQhUONhTiYt6MqNqPolejYr6rK/3VOevpORAIYGQEX2pmXnnhgdSsjHy176e5ZBgVt0ppOGziS7g==
   /@octokit/plugin-paginate-rest/2.16.5_@octokit+core@3.5.1:
@@ -839,7 +837,6 @@ packages:
       '@octokit/types': 6.31.1
       deprecation: 2.3.1
       once: 1.4.0
-    dev: true
     resolution:
       integrity: sha512-1VIvgXxs9WHSjicsRwq8PlR2LR2x6DwsJAaFgzdi0JfJoGSO8mYI/cHJQ+9FbN21aa+DrgNLnwObmyeSC8Rmpg==
   /@octokit/request/5.6.1:
@@ -850,7 +847,6 @@ packages:
       is-plain-object: 5.0.0
       node-fetch: 2.6.1
       universal-user-agent: 6.0.0
-    dev: true
     resolution:
       integrity: sha512-Ls2cfs1OfXaOKzkcxnqw5MR6drMA/zWX/LIS/p8Yjdz7QKTPQLMsB3R+OvoxE6XnXeXEE2X7xe4G4l4X0gRiKQ==
   /@octokit/rest/18.11.2:
@@ -865,13 +861,11 @@ packages:
   /@octokit/types/5.4.1:
     dependencies:
       '@types/node': 14.6.4
-    dev: true
     resolution:
       integrity: sha512-OlMlSySBJoJ6uozkr/i03nO5dlYQyE05vmQNZhAh9MyO4DPBP88QlwsDVLmVjIMFssvIZB6WO0ctIGMRG+xsJQ==
   /@octokit/types/6.31.1:
     dependencies:
       '@octokit/openapi-types': 10.6.1
-    dev: true
     resolution:
       integrity: sha512-xkF46eaYcpT8ieO78mZWhMq3bt37zIsP5BUkN+zWgX+mTYDB7jOtUP1MOxcSF8hhJhsjjlB1YDgQAhX0z0oqPw==
   /@semantic-release/changelog/6.0.0_semantic-release@18.0.0:
@@ -1119,7 +1113,6 @@ packages:
     resolution:
       integrity: sha512-FQ5alSzmHMmliqcL36JqIA4Yyn9jyJKvRSGV3mvPh108VFatX7naJDzSG4fnFQNZFq9dIx0Dzoe6ddflMB2Xkg==
   /@types/node/14.6.4:
-    dev: true
     resolution:
       integrity: sha512-Wk7nG1JSaMfMpoMJDKUsWYugliB2Vy55pdjLpmLixeyMi7HizW2I/9QoxsPCkXl3dO+ZOVqPumKaDUv5zJu2uQ==
   /@types/normalize-package-data/2.4.0:
@@ -1130,6 +1123,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+  /@types/parse-link-header/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-fCA3btjE7QFeRLfcD0Sjg+6/CnmC66HpMBoRfRzd2raTaWMJV21CCZ0LO8MOqf8onl5n0EPfjq4zDhbyX8SVwA==
   /@types/prettier/2.2.3:
     dev: true
     resolution:
@@ -1621,7 +1618,6 @@ packages:
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
   /before-after-hook/2.2.2:
-    dev: true
     resolution:
       integrity: sha512-3pZEU3NT5BFUo/AD5ERPWOgQOCZITni6iavr5AUw5AUwQjMlI0kzu5btnyD39AF0gUEsDPwJT+oY1ORBJijPjQ==
   /bottleneck/2.19.5:
@@ -2131,7 +2127,6 @@ packages:
     resolution:
       integrity: sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
   /deprecation/2.3.1:
-    dev: true
     resolution:
       integrity: sha512-xmHIy4F3scKVwMsQ4WnVaS8bHOx0DmVwRywosKhaILI0ywMDWPtBSku2HNxRvF7jtwDRsoEwYQSfbxj8b7RlJQ==
   /detect-newline/3.1.0:
@@ -3207,13 +3202,11 @@ packages:
     resolution:
       integrity: sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
   /is-plain-object/4.1.1:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-5Aw8LLVsDlZsETVMhoMXzqsXwQqr/0vlnBYzIXJbYo2F4yYlhLHs+Ez7Bod7IIQKWkJbJfxrWD7pA1Dw1TKrwA==
   /is-plain-object/5.0.0:
-    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -4412,7 +4405,6 @@ packages:
     resolution:
       integrity: sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw==
   /node-fetch/2.6.1:
-    dev: true
     engines:
       node: 4.x || >=6.0.0
     resolution:
@@ -4616,7 +4608,6 @@ packages:
   /once/1.4.0:
     dependencies:
       wrappy: 1.0.2
-    dev: true
     resolution:
       integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
   /onetime/5.1.2:
@@ -4796,6 +4787,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-+mi/lmVVNKFNVyLXV31ERiy2CY5E1/F6QtJFEzoChPRwwngMNXRDQ9GJ5WdE2Z2P4AujsOi0/+2qHID68KwfIQ==
+  /parse-link-header/1.0.1:
+    dependencies:
+      xtend: 4.0.2
+    dev: false
+    resolution:
+      integrity: sha1-vt/g0hGK64S+deewJUGeyKYRQKc=
   /parse5/6.0.1:
     dev: true
     resolution:
@@ -6044,7 +6041,6 @@ packages:
     resolution:
       integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==
   /universal-user-agent/6.0.0:
-    dev: true
     resolution:
       integrity: sha512-isyNax3wXoKaulPDZWHQqbmIx1k2tb9fb3GGDBRxCscfYV2Ch7WxPArBsFEG8s/safwXTT7H4QGhaIkTp9447w==
   /universalify/0.1.2:
@@ -6196,7 +6192,6 @@ packages:
     resolution:
       integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   /wrappy/1.0.2:
-    dev: true
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
   /write-file-atomic/3.0.3:
@@ -6239,7 +6234,6 @@ packages:
     resolution:
       integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
   /xtend/4.0.2:
-    dev: true
     engines:
       node: '>=0.4'
     resolution:
@@ -6322,11 +6316,13 @@ packages:
 specifiers:
   '@commitlint/cli': ^13.1.0
   '@commitlint/config-conventional': ^13.1.0
+  '@octokit/core': ^3.5.1
   '@semantic-release/changelog': ^6.0.0
   '@semantic-release/git': ^10.0.0
   '@semantic-release/github': ^8.0.0
   '@types/jest': ^27.0.0
   '@types/mock-fs': ^4.10.0
+  '@types/parse-link-header': ^1.0.0
   '@types/react': ^17.0.0
   '@typescript-eslint/eslint-plugin': ^4.4.1
   '@typescript-eslint/parser': ^4.4.1
@@ -6341,6 +6337,7 @@ specifiers:
   jsx-md: ^4.0.1
   lint-staged: ^11.0.0
   mock-fs: ^5.0.0
+  parse-link-header: ^1.0.1
   pkg-ok: ^2.3.1
   prettier: ^2.1.0
   rimraf: ^3.0.2

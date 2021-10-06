@@ -1,3 +1,23 @@
+# [1.17.0](https://github.com/dbartholomae/jsx-readme/compare/v1.16.0...v1.17.0) (2021-10-06)
+
+
+### Bug Fixes
+
+* **ContributorsSection:** fix additional contributors count check ([7aaaaa0](https://github.com/dbartholomae/jsx-readme/commit/7aaaaa076e6e9cef0dc9763260931678db695ac1))
+* fix typo ContributorsTable component ([d27155d](https://github.com/dbartholomae/jsx-readme/commit/d27155d3d55cdcbd8b3e47b5981531f933413e66))
+* **ContributorsSectionFromPkg:** filter Bots and owner and use function default value ([6732531](https://github.com/dbartholomae/jsx-readme/commit/673253155742f344729523e9a7d4fb73ce0bd1a9))
+* **types:** fix runTypeScriptFile type error when running test ([d088487](https://github.com/dbartholomae/jsx-readme/commit/d0884870a9ca3c9c499fc21da224ea376fad5cd6))
+
+
+### Features
+
+* **Contributors:** add ContributorsList component ([f910344](https://github.com/dbartholomae/jsx-readme/commit/f910344f23d7e0d42a80979c922b6dce323026cd))
+* **ContributorsSection:** rework ContributorSection to a pure rendering component ([78925ec](https://github.com/dbartholomae/jsx-readme/commit/78925ecdd4e029ab954e6effdd7f15cc4eb6126a))
+* **ContributorsSection:** update ContributorsSection ([049fd40](https://github.com/dbartholomae/jsx-readme/commit/049fd4070274cde0f80cb93cbeaa43ab7fe6e854))
+* **ContributorsSectionFromPkg:** add ContributorsSectionFromPkg container ([50e205e](https://github.com/dbartholomae/jsx-readme/commit/50e205ec2e83d2e2ed88ad6691e88dce7c1016a6))
+* **ContributorsSectionFromPkg:** add owner as contributors ([7114abb](https://github.com/dbartholomae/jsx-readme/commit/7114abb1741072c9eef948f1d00d1d6b314c7c5e))
+* **ContributorsTable:** upgrade ContributorsList to ContributorsTable ([33d757d](https://github.com/dbartholomae/jsx-readme/commit/33d757de9cb5e09140ac8711dac2b75abc4b2c1a))
+
 # [1.16.0](https://github.com/dbartholomae/jsx-readme/compare/v1.15.0...v1.16.0) (2021-10-06)
 
 
