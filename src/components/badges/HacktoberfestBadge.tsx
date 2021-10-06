@@ -7,14 +7,14 @@ import { PackageJSON } from "../../PackageJSON";
 /** @internal */
 interface Props {
   suggestionLabel?: string;
-  year: number;
+  year?: number;
   pkg: Readonly<PackageJSON>;
 }
 
 /** Display a badge showing which open-source projects are participating in Hacktoberfest via https://shields.io/ */
 export const HacktoberfestBadge: Component<Props> = ({
   pkg,
-  year,
+  year = new Date().getFullYear(),
   suggestionLabel = "",
 }) => {
   const ownerAndRepo = extractGithubOwnerAndRepo(pkg.repository);
