@@ -3,7 +3,7 @@
 // functions from jsx-readme
 /* @jsx MD */
 /* @jsxFrag Fragment */
-import type { Component } from "..";
+import type { Component } from "jsx-md";
 import MD, {
   BadgesFromPkg,
   CodecovBadge,
@@ -21,7 +21,7 @@ import MD, {
   LicenseBadge,
   LicenseFromPkg,
   ContributorsSectionFromPkg,
-} from "..";
+} from "./src";
 import { CodeBlock, Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
 
@@ -92,4 +92,4 @@ const Readme: Component = () => (
   </Fragment>
 );
 
-void renderToFile("./test/README.actual.md", <Readme />);
+void renderToFile("./README.md", <Readme />);
