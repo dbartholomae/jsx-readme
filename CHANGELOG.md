@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/dbartholomae/jsx-readme/compare/v1.15.0...v1.16.0) (2021-10-06)
+
+
+### Features
+
+* **HacktoberfestBadge:** default to current year if year not set ([a84160e](https://github.com/dbartholomae/jsx-readme/commit/a84160e99f2ce60ccc81461e98d2fdfc0fbf1627))
+
 # [1.15.0](https://github.com/dbartholomae/jsx-readme/compare/v1.14.0...v1.15.0) (2021-09-28)
 
 
