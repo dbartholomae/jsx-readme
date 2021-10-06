@@ -50,6 +50,26 @@ describe("HacktoberfestBadge", () => {
     );
   });
 
+  it("shows a hacktoberfest badge with current year if year prop is not set", async () => {
+    const pkg = {
+      name: "package-name",
+      repository: "github:dbartholomae/jsx-readme",
+    };
+
+    expect(
+      await render(<HacktoberfestBadge pkg={pkg} />)
+    ).toContain(
+      await render(
+        <Badge
+          imageSource={`https://img.shields.io/github/hacktoberfest/${new Date().getFullYear()}/dbartholomae/jsx-readme`}
+          link="https://github.com/dbartholomae/jsx-readme"
+        >
+          hacktoberfest badge
+        </Badge>
+      )
+    );
+  });
+
   it("shows nothing if there is no repository", async () => {
     const pkg = {
       name: "package-name",
