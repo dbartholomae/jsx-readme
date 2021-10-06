@@ -20,13 +20,16 @@ const fetchTotalContributorsCount = async (
     "GET /repos/{owner}/{repo}/contributors{?per_page}",
     { owner, repo, per_page: 1 }
   );
+  /* istanbul ignore next: hard to test as it relies on GitHub API */
   if (!resp.headers.link) {
     return 0;
   }
   const links = parseLinkHeader(resp.headers.link);
+  /* istanbul ignore next: hard to test as it relies on GitHub API */
   if (!links) {
     return 0;
   }
+  /* istanbul ignore next: hard to test as it relies on GitHub API */
   return parseInt(links.last?.page);
 };
 
@@ -52,11 +55,13 @@ const fetchContributors = async (
         .filter((contributor) => contributor.type !== "Bot")
         .reduce<Array<Contributor>>(
           (result, { id, login }) =>
+            /* istanbul ignore next: hard to test as it relies on GitHub API */
             id && login ? result.concat({ id, name: login }) : result,
           []
         )
     );
   }
+  /* istanbul ignore next */
   return contributors.slice(0, fetchUntil);
 };
 
