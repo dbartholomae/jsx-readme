@@ -15,7 +15,7 @@
 [![build status](https://github.com/dbartholomae/jsx-readme/workflows/Build%20and%20deploy/badge.svg?branch=main)](https://github.com/dbartholomae/jsx-readme/actions?query=workflow%3A"Build%20and%20deploy")
 [![chat](https://img.shields.io/discord/750063320614174871)](https://discord.com/invite/X9HRSK5)
 [![CLA Assistant](https://cla-assistant.io/readme/badge/dbartholomae/jsx-readme)](https://cla-assistant.io/dbartholomae/jsx-readme)
-[![hacktoberfest badge](https://img.shields.io/github/hacktoberfest/2020/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue)](https://github.com/dbartholomae/jsx-readme)
+[![hacktoberfest badge](https://img.shields.io/github/hacktoberfest/2021/dbartholomae/jsx-readme?suggestion_label=good%20first%20issue)](https://github.com/dbartholomae/jsx-readme)
 
 Generate Readme files with a React\-like syntax and package\.json\-aware helpers\.
 

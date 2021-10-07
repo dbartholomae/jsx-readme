@@ -39,11 +39,7 @@ const Readme: Component = () => (
       serverId="750063320614174871"
     />
     <CLAAssistantBadge pkg={pkg} />
-    <HacktoberfestBadge
-      pkg={pkg}
-      year={2020}
-      suggestionLabel="good first issue"
-    />
+    <HacktoberfestBadge pkg={pkg} suggestionLabel="good first issue" />
     <LineBreak />
     <DescriptionFromPkg pkg={pkg} />
     {/* You can use the components from jsx-md to build custom markdown. */}
