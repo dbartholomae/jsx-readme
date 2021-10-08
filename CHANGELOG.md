@@ -1,3 +1,11 @@
+# [1.18.0](https://github.com/dbartholomae/jsx-readme/compare/v1.17.0...v1.18.0) (2021-10-08)
+
+
+### Features
+
+* **FundingSectionFromPkg:** add component ([65cff9f](https://github.com/dbartholomae/jsx-readme/commit/65cff9f0e56fc313e31cdc716c1813952373a541))
+* **FundingSectionFromPkg:** export component ([ff922dc](https://github.com/dbartholomae/jsx-readme/commit/ff922dcdde6e8b793af33a43b345b35a899bcb76))
+
 # [1.17.0](https://github.com/dbartholomae/jsx-readme/compare/v1.16.0...v1.17.0) (2021-10-06)
 
 
