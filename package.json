@@ -26,6 +26,7 @@
     "Readme"
   ],
   "author": "Daniel Bartholomae <daniel@bartholomae.name> (https://startup-cto.net)",
+  "funding": "https://github.com/sponsors/dbartholomae",
   "license": "MIT",
   "homepage": "https://dbartholomae.github.io/jsx-readme",
   "repository": "git@github.com:dbartholomae/jsx-readme.git",
