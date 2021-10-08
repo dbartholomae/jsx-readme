@@ -12,7 +12,13 @@ describe("FundingSectionFromPkg", () => {
     expect(await render(<FundingSectionFromPkg pkg={pkg} />)).toContain(
       "## 🤝 Show your support"
     );
+  });
 
+  it("renders a different header if title is set", async () => {
+    const pkg = {
+      name: "test-package",
+      funding: "http://example.com/donate",
+    };
     expect(
       await render(
         <FundingSectionFromPkg pkg={pkg} title="Show your support" />
