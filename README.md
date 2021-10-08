@@ -236,6 +236,13 @@ This package only works thanks to [all of our contributors](https://github.com/d
 
 [+ 3 contributors](https://github.com/dbartholomae/jsx-readme/graphs/contributors)
 
+## 🤝 Show your support
+
+Give a ⭐ if this package helped you! You can also support the development of this package by funding.
+
+* [github.com](https://github.com/sponsors/dbartholomae)
+
+
 ## 📜 License
 
 MIT. See [LICENSE file](./LICENSE) for details.
