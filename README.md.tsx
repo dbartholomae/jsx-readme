@@ -21,6 +21,7 @@ import MD, {
   LicenseBadge,
   LicenseFromPkg,
   ContributorsSectionFromPkg,
+  FundingSectionFromPkg,
 } from "./src";
 import { CodeBlock, Heading, InlineCode, LineBreak } from "jsx-md";
 import pkg from "./package.json";
@@ -83,6 +84,8 @@ const Readme: Component = () => (
     <ContributingSection />
     {/* Create a section linking to the contributors of the repo */}
     <ContributorsSectionFromPkg pkg={pkg} />
+    {/* Create a funding section based on funding information set up in package.json */}
+    <FundingSectionFromPkg pkg={pkg} />
     {/* Create a section linking to the license file. */}
     <LicenseFromPkg pkg={pkg} />
   </Fragment>
