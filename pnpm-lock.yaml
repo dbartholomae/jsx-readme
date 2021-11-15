@@ -32,9 +32,7 @@ specifiers:
   ts-jest: ^27.0.1
   ts-node: ^10.0.0
   tslib: ^2.0.1
-  typedoc: ^0.21.0
-  typedoc-plugin-param-names: ^3.0.1
-  typedoc-plugin-sourcefile-url: ^1.0.6
+  typedoc: ^0.22.9
   typescript: ^4.0.2
 
 dependencies:
@@ -71,9 +69,7 @@ devDependencies:
   ts-jest: 27.0.1_jest@27.0.1+typescript@4.0.2
   ts-node: 10.0.0_typescript@4.0.2
   tslib: 2.0.1
-  typedoc: 0.21.9_typescript@4.0.2
-  typedoc-plugin-param-names: 3.1.0_typedoc@0.21.9
-  typedoc-plugin-sourcefile-url: 1.0.6_typedoc@0.21.9
+  typedoc: 0.22.9_typescript@4.0.2
   typescript: 4.0.2
 
 packages:
@@ -689,7 +685,7 @@ packages:
       chalk: 4.1.1
       collect-v8-coverage: 1.0.1
       exit: 0.1.2
-      glob: 7.1.6
+      glob: 7.2.0
       graceful-fs: 4.2.4
       istanbul-lib-coverage: 3.0.0
       istanbul-lib-instrument: 4.0.3
@@ -3391,7 +3387,7 @@ packages:
       babel-jest: 27.0.1_@babel+core@7.11.4
       chalk: 4.1.1
       deepmerge: 4.2.2
-      glob: 7.1.6
+      glob: 7.2.0
       graceful-fs: 4.2.4
       is-ci: 3.0.0
       jest-circus: 27.0.1_ts-node@10.0.0
@@ -3655,7 +3651,7 @@ packages:
       cjs-module-lexer: 1.2.1
       collect-v8-coverage: 1.0.1
       exit: 0.1.2
-      glob: 7.1.6
+      glob: 7.2.0
       graceful-fs: 4.2.4
       jest-haste-map: 27.0.1
       jest-message-util: 27.0.1
@@ -4163,8 +4159,8 @@ packages:
     hasBin: true
     dev: true
 
-  /marked/3.0.4:
-    resolution: {integrity: sha512-jBo8AOayNaEcvBhNobg6/BLhdsK3NvnKWJg33MAAPbvTWiG4QBn9gpW1+7RssrKu4K1dKlN+0goVQwV41xEfOA==}
+  /marked/3.0.8:
+    resolution: {integrity: sha512-0gVrAjo5m0VZSJb4rpL59K1unJAMb/hm8HRXqasD8VeC8m91ytDPMritgFSlKonfdt+rRYYpP/JfLxgIX8yoSw==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: true
@@ -5185,8 +5181,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shiki/0.9.11:
-    resolution: {integrity: sha512-tjruNTLFhU0hruCPoJP0y+B9LKOmcqUhTpxn7pcJB3fa+04gFChuEmxmrUfOJ7ZO6Jd+HwMnDHgY3lv3Tqonuw==}
+  /shiki/0.9.12:
+    resolution: {integrity: sha512-VXcROdldv0/Qu0w2XvzU4IrvTeBNs/Kj/FCmtcEXGz7Tic/veQzliJj6tEiAgoKianhQstpYmbPDStHU5Opqcw==}
     dependencies:
       jsonc-parser: 3.0.0
       onigasm: 2.2.5
@@ -5536,7 +5532,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@istanbuljs/schema': 0.1.2
-      glob: 7.1.6
+      glob: 7.2.0
       minimatch: 3.0.4
     dev: true
 
@@ -5776,43 +5772,18 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typedoc-default-themes/0.12.10:
-    resolution: {integrity: sha512-fIS001cAYHkyQPidWXmHuhs8usjP5XVJjWB8oZGqkTowZaz3v7g3KDZeeqE82FBrmkAnIBOY3jgy7lnPnqATbA==}
-    engines: {node: '>= 8'}
-    dev: true
-
-  /typedoc-plugin-param-names/3.1.0_typedoc@0.21.9:
-    resolution: {integrity: sha512-9hksXV6jmvzK6rUiwbo5tKRCISOcU40GHh8MvR6boYtfKuZv57FVRpsZUJ/bhdu1jl8dk3Xz8BKKm/Mu47Jt0Q==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      typedoc: '>=0.21 <0.23'
-    dependencies:
-      typedoc: 0.21.9_typescript@4.0.2
-    dev: true
-
-  /typedoc-plugin-sourcefile-url/1.0.6_typedoc@0.21.9:
-    resolution: {integrity: sha512-xHq9DzkoQywS7FyPneMm2/Hr9GRoCpjSQXkVN0W6SCJKP7fguqg2tasgh+8l5/mW6YSYvqCqEbkSYLbuD4Y6gA==}
-    peerDependencies:
-      typedoc: '>=0.16.0'
-    dependencies:
-      typedoc: 0.21.9_typescript@4.0.2
-    dev: true
-
-  /typedoc/0.21.9_typescript@4.0.2:
-    resolution: {integrity: sha512-VRo7aII4bnYaBBM1lhw4bQFmUcDQV8m8tqgjtc7oXl87jc1Slbhfw2X5MccfcR2YnEClHDWgsiQGgNB8KJXocA==}
+  /typedoc/0.22.9_typescript@4.0.2:
+    resolution: {integrity: sha512-84PjudoXVcap6bwdZFbYIUWlgdz/iLV09ZHwrCzhtHWXaDQG6mlosJ8te6DSThuRkRvQjp46HO+qY/P7Gpm78g==}
     engines: {node: '>= 12.10.0'}
     hasBin: true
     peerDependencies:
       typescript: 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x
     dependencies:
       glob: 7.2.0
-      handlebars: 4.7.7
       lunr: 2.3.9
-      marked: 3.0.4
+      marked: 3.0.8
       minimatch: 3.0.4
-      progress: 2.0.3
-      shiki: 0.9.11
-      typedoc-default-themes: 0.12.10
+      shiki: 0.9.12
       typescript: 4.0.2
     dev: true
 
