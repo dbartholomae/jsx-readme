@@ -39,7 +39,7 @@
   "dependencies": {
     "@octokit/core": "^3.5.1",
     "jsx-md": "^4.0.1",
-    "parse-link-header": "^1.0.1"
+    "parse-link-header": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
