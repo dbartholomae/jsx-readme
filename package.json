@@ -2,7 +2,7 @@
   "name": "jsx-readme",
   "version": "1.10.0",
   "description": "Generate Readme files with a React-like syntax and package.json-aware helpers.",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rimraf lib && tsc -p tsconfig.build.json",
