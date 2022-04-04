@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import { runTypeScriptFile } from "./utils/runTypeScriptFile";
+import { withUnixLineSeparators } from "./utils/withUnixLineSeparators";
 
 describe("README creation script", () => {
   it("creates the test fixture README file of the repo", async () => {
@@ -12,6 +13,8 @@ describe("README creation script", () => {
     const actualFile = await fs.readFile("./test/README.actual.md", {
       encoding: "utf8",
     });
-    expect(actualFile).toBe(expectedFile);
+    expect(withUnixLineSeparators(actualFile)).toBe(
+      withUnixLineSeparators(expectedFile)
+    );
   }, 20000);
 });
