@@ -2,7 +2,7 @@ import child_process from "child_process";
 
 export async function runTypeScriptFile(scriptPath: string): Promise<void> {
   const childProcess = child_process.exec(
-    `./node_modules/.bin/ts-node ${scriptPath}`
+    `node -r @swc-node/register ${scriptPath}`
   );
   await new Promise<void>((resolve, reject) => {
     childProcess.on("exit", (code) => {
