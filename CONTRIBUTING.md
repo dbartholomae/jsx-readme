@@ -92,7 +92,7 @@ repository.
 We recommend to read up on tools you are unfamiliar with.
 
 After all tools are installed, please run `pnpm install` to install all
-dependencies and then `pnpm test` and `pnpm run build` to ensure that everything is set up correctly.
+dependencies, `pnpm run build` to build the package, and then `pnpm test` to ensure that everything is set up correctly.
 
 Now you can create a new branch describing the change you are about to make,
 e. g. `fix_typo_in_documentation`, and start coding.
