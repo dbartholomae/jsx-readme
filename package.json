@@ -37,7 +37,7 @@
     "example": "examples"
   },
   "dependencies": {
-    "@octokit/core": "^3.5.1",
+    "@octokit/core": "^4.1.0",
     "jsx-md": "^4.0.1",
     "parse-link-header": "^2.0.0"
   },
