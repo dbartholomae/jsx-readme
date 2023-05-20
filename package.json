@@ -13,7 +13,7 @@
     "watch": "tsc -w -p tsconfig.build.json"
   },
   "engines": {
-    "node": ">=12.4.0"
+    "node": ">=14.4.0"
   },
   "files": [
     "lib"
@@ -37,7 +37,7 @@
     "example": "examples"
   },
   "dependencies": {
-    "@octokit/core": "^3.5.1",
+    "@octokit/core": "^4.2.1",
     "jsx-md": "^4.0.1",
     "parse-link-header": "^2.0.0"
   },
