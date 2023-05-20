@@ -30,7 +30,7 @@ const fetchTotalContributorsCount = async (
     return 0;
   }
   /* istanbul ignore next: hard to test as it relies on GitHub API */
-  return parseInt(links.last?.page);
+  return parseInt(links.last?.page ?? "0");
 };
 
 // List repository contributors using v3 GitHub API, See https://docs.github.com/en/rest/reference/repos#list-repository-contributors.
