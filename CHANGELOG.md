@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/dbartholomae/jsx-readme/compare/v1.18.0...v2.0.0) (2023-05-20)
+
+
+### Bug Fixes
+
+* update to octokit version 4 ([1cb10a8](https://github.com/dbartholomae/jsx-readme/commit/1cb10a813be54734f83ce6cb3f0a30c3762b588f))
+* **ContributorsSectionFromPkg:** handle edge case for contributor count ([353dc32](https://github.com/dbartholomae/jsx-readme/commit/353dc3271e13aba346cb2b3cd238ae577bfb08f1))
+
+
+### BREAKING CHANGES
+
+* No longer support Node 12. New version supports Node 14 and higher.
+
 # [1.18.0](https://github.com/dbartholomae/jsx-readme/compare/v1.17.0...v1.18.0) (2021-10-08)
 
 
