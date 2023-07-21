@@ -72,7 +72,7 @@ devDependencies:
     version: 5.0.0(eslint-config-prettier@8.8.0)(eslint@8.45.0)(prettier@3.0.0)
   eslint-plugin-react:
     specifier: ^7.32.2
-    version: 7.32.2(eslint@8.45.0)
+    version: 7.33.0(eslint@8.45.0)
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -158,7 +158,7 @@ packages:
       debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.3
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -184,7 +184,7 @@ packages:
       '@babel/helper-validator-option': 7.21.0
       browserslist: 4.21.5
       lru-cache: 5.1.1
-      semver: 6.3.0
+      semver: 6.3.1
     dev: true
 
   /@babel/helper-environment-visitor@7.21.5:
@@ -2389,7 +2389,7 @@ packages:
       json-stringify-safe: 5.0.1
       lodash: 4.17.21
       meow: 8.1.2
-      semver: 6.3.0
+      semver: 6.3.1
       split: 1.0.1
       through2: 4.0.2
     dev: true
@@ -2822,8 +2822,8 @@ packages:
       synckit: 0.8.5
     dev: true
 
-  /eslint-plugin-react@7.32.2(eslint@8.45.0):
-    resolution: {integrity: sha512-t2fBMa+XzonrrNkyVirzKlvn5RXzzPwRHtMvLAtVZrt8oxgnTQaYbU6SXTOO1mwQgp1y5+toMSKInnzGr0Knqg==}
+  /eslint-plugin-react@7.33.0(eslint@8.45.0):
+    resolution: {integrity: sha512-qewL/8P34WkY8jAqdQxsiL82pDUeT7nhs8IsuXgfgnsEloKCT4miAV9N9kGtx7/KM9NH/NCGUE7Edt9iGxLXFw==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
@@ -2842,7 +2842,7 @@ packages:
       object.values: 1.1.6
       prop-types: 15.8.1
       resolve: 2.0.0-next.4
-      semver: 6.3.0
+      semver: 6.3.1
       string.prototype.matchall: 4.0.8
     dev: true
 
@@ -3529,15 +3529,6 @@ packages:
     deprecated: Please update to ini >=1.3.6 to avoid a prototype pollution issue
     dev: true
 
-  /internal-slot@1.0.3:
-    resolution: {integrity: sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      get-intrinsic: 1.2.1
-      has: 1.0.3
-      side-channel: 1.0.4
-    dev: true
-
   /internal-slot@1.0.5:
     resolution: {integrity: sha512-Y+R5hJrzs52QCG2laLn4udYVnxsfny9CpOhNhUvk/SSSVyF6T27FzRbF0sroPidSu3X8oEAkOn2K804mjpt6UQ==}
     engines: {node: '>= 0.4'}
@@ -3786,7 +3777,7 @@ packages:
       '@babel/parser': 7.21.8
       '@istanbuljs/schema': 0.1.2
       istanbul-lib-coverage: 3.2.0
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4335,7 +4326,7 @@ packages:
     engines: {node: '>=4.0'}
     dependencies:
       array-includes: 3.1.6
-      object.assign: 4.1.2
+      object.assign: 4.1.4
     dev: true
 
   /jsx-md@4.0.1:
@@ -4581,7 +4572,7 @@ packages:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
     dependencies:
-      semver: 6.3.0
+      semver: 6.3.1
     dev: true
 
   /make-error@1.3.6:
@@ -4936,16 +4927,6 @@ packages:
   /object-keys@1.1.1:
     resolution: {integrity: sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==}
     engines: {node: '>= 0.4'}
-    dev: true
-
-  /object.assign@4.1.2:
-    resolution: {integrity: sha512-ixT2L5THXsApyiUPYKmW+2EHpXXe5Ii3M+f4e+aJFAHao5amFRW6J0OO6c/LU8Be47utCx2GL89hxGB6XSmKuQ==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.2.0
-      has-symbols: 1.0.3
-      object-keys: 1.1.1
     dev: true
 
   /object.assign@4.1.4:
@@ -5686,8 +5667,8 @@ packages:
     hasBin: true
     dev: true
 
-  /semver@6.3.0:
-    resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
+  /semver@6.3.1:
+    resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
     dev: true
 
@@ -5914,7 +5895,7 @@ packages:
       es-abstract: 1.21.2
       get-intrinsic: 1.2.1
       has-symbols: 1.0.3
-      internal-slot: 1.0.3
+      internal-slot: 1.0.5
       regexp.prototype.flags: 1.5.0
       side-channel: 1.0.4
     dev: true
