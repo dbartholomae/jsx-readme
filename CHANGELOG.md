@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dbartholomae/jsx-readme/compare/v2.0.0...v3.0.0) (2023-08-21)
+
+
+### chore
+
+* update octokit dependency ([d9c9dc2](https://github.com/dbartholomae/jsx-readme/commit/d9c9dc265d19c0d683baebddf6102a9b0b369970))
+
+
+### BREAKING CHANGES
+
+* Using any component that loads data from GitHub now requires NodeJS 18 or later
+
 # [2.0.0](https://github.com/dbartholomae/jsx-readme/compare/v1.18.0...v2.0.0) (2023-05-20)
 
 
